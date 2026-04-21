@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── SEO ── -->
+  <title>Bar Hopping Tour in Shinjuku — Learn Japanese Over Drinks | Chat Japanese</title>
+  <meta name="description" content="Join our Friday night bar hopping tour in Shinjuku. Learn Japanese ordering phrases from a professional teacher, then practice at two local izakayas tourists never find. All-inclusive $75." />
+  <meta name="keywords" content="Japanese language tour Tokyo, izakaya bar hopping Shinjuku, learn Japanese while traveling, Japanese school Tokyo, conversational Japanese tour, Chat Japanese tour" />
+  <link rel="canonical" href="https://www.chat-japanese-school.com/tour" />
+
+  <!-- ── OGP ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bar Hopping Tour in Shinjuku — Learn Japanese Over Drinks" />
+  <meta property="og:description" content="A Friday night experience: Japanese lesson + two local izakayas in Shinjuku. $75 all-inclusive." />
+  <meta property="og:image" content="/manus-storage/tour-hero_1fe379f4.webp" />
+  <meta property="og:url" content="https://www.chat-japanese-school.com/tour" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ── Structured Data ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Conversational Bar Hopping in Shinjuku",
+    "description": "A Friday evening language experience: Japanese lesson at a local café, followed by bar hopping at two hidden izakayas in Shinjuku. Led by a professional Japanese teacher.",
+    "touristType": "Language learners, travelers",
+    "offers": {
+      "@type": "Offer",
+      "price": "75",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "provider": {
+      "@type": "LanguageSchool",
+      "name": "Chat Japanese",
+      "url": "https://www.chat-japanese-school.com"
+    },
+    "itinerary": {
+      "@type": "ItemList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Japanese lesson at a local café in Shinjuku — 17:00" },
+        { "@type": "ListItem", "position": 2, "name": "First izakaya at Omoide Yokocho — 18:00" },
+        { "@type": "ListItem", "position": 3, "name": "Second izakaya — locals-only hidden spot — 19:00" },
+        { "@type": "ListItem", "position": 4, "name": "End of tour — 20:00" }
+      ]
+    }
+  }
+  </script>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- ── Hero image preload (mobile first) ── -->
+  <link rel="preload" as="image" href="/manus-storage/tour-hero-mobile_41315536.webp" media="(max-width: 799px)" />
+  <link rel="preload" as="image" href="/manus-storage/tour-hero_1fe379f4.webp" media="(min-width: 800px)" />
+
+  <!-- ── Shared CSS ── -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ════════════════════════════════════════
+       TOUR PAGE — page-specific styles
+       Mobile-first design
+    ════════════════════════════════════════ */
+
+    /* ── Hero ── */
+    .tour-hero {
+      position: relative;
+      width: 100%;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .tour-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .tour-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    /* Gradient overlay — dark at bottom for legibility */
+    .tour-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.08) 0%,
+        rgba(0,0,0,0.12) 40%,
+        rgba(0,0,0,0.72) 75%,
+        rgba(0,0,0,0.88) 100%
+      );
+    }
+
+    .tour-hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 2.5rem 1.5rem 3.5rem;
+      color: #fff;
+    }
+
+    .tour-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(249,155,48,0.18);
+      border: 1px solid rgba(249,155,48,0.5);
+      color: #f9c46a;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .tour-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 9vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .tour-hero-title em {
+      font-style: italic;
+      color: #f9c46a;
+    }
+
+    .tour-hero-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.65;
+      margin-bottom: 0.75rem;
+      max-width: 480px;
+    }
+
+    .tour-hero-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 2rem;
+    }
+
+    .tour-hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--brand);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .tour-hero-cta:hover {
+      background: #e8891a;
+      transform: translateY(-1px);
+    }
+
+    .tour-hero-price {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      margin-left: 1.25rem;
+      color: rgba(255,255,255,0.75);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .tour-hero-price strong {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* ── Section base ── */
+    .tour-section {
+      padding: 4rem 1.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .tour-section-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 0.5rem;
+    }
+
+    .tour-section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 6vw, 2.6rem);
+      font-weight: 300;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .tour-section-title em {
+      font-style: italic;
+      color: var(--brand);
+    }
+
+    .tour-section-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem;
+      color: var(--ink-muted);
+      line-height: 1.75;
+    }
+
+    /* ── Overview pills ── */
+    .tour-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.4rem;
+    }
+
+    .tour-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      padding: 0.35rem 0.85rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--ink);
+    }
+
+    .tour-pill svg {
+      width: 13px;
+      height: 13px;
+      stroke: var(--brand);
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    /* ── Divider ── */
+    .tour-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 1.5rem;
+    }
+
+    /* ── Benefits ── */
+    .benefits-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1.8rem;
+    }
+
+    .benefit-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .benefit-num {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fff8f0;
+      border: 1.5px solid #f9c46a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--brand);
+      margin-top: 0.1rem;
+    }
+
+    .benefit-text h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    .benefit-text p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+
+    /* ── Schedule ── */
+    .schedule-bg {
+      background: #1a1410;
+      padding: 0;
+    }
+
+    .schedule-inner {
+      padding: 4rem 1.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .schedule-inner .tour-section-label { color: #f9c46a; }
+    .schedule-inner .tour-section-title { color: #f5f0e8; }
+    .schedule-inner .tour-section-title em { color: #f9c46a; }
+
+    .timeline {
+      margin-top: 2rem;
+      position: relative;
+    }
+
+    /* Vertical line */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      top: 0;
+      bottom: 0;
+      width: 1.5px;
+      background: rgba(249,196,106,0.4);
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      margin-bottom: 2.25rem;
+      position: relative;
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-dot {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(249,155,48,0.18);
+      border: 1.5px solid rgba(249,155,48,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .timeline-dot svg {
+      width: 18px;
+      height: 18px;
+      stroke: #f9c46a;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .timeline-body {
+      padding-top: 0.5rem;
+    }
+
+    .timeline-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f9c46a;
+      margin-bottom: 0.2rem;
+    }
+
+    .timeline-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: #f5f0e8;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(245,240,232,0.72);
+      line-height: 1.6;
+    }
+
+    /* ── Pricing ── */
+    .pricing-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      margin-top: 1.8rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    .pricing-amount {
+      display: flex;
+      align-items: baseline;
+      gap: 0.3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .pricing-currency {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--ink-muted);
+      margin-top: 0.3rem;
+    }
+
+    .pricing-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .pricing-per {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    .pricing-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      color: var(--brand);
+      font-weight: 500;
+      margin-bottom: 1.4rem;
+    }
+
+    .pricing-includes {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .pricing-includes li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: var(--ink);
+    }
+
+    .pricing-includes li svg {
+      width: 16px;
+      height: 16px;
+      stroke: #16a34a;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .pricing-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 1rem;
+      background: var(--brand);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .pricing-cta:hover {
+      background: #e8891a;
+      transform: translateY(-1px);
+    }
+
+    .pricing-note {
+      text-align: center;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      margin-top: 0.85rem;
+    }
+
+    /* ── Desktop tweaks ── */
+    @media (min-width: 768px) {
+      .tour-section { padding: 5rem 2rem; }
+      .tour-hero-content { padding: 3rem 3rem 4.5rem; max-width: 680px; }
+      .schedule-inner { padding: 5rem 2rem; }
+      .timeline::before { left: 26px; }
+      .timeline-dot { width: 52px; height: 52px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR (shared)
+════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="/manus-storage/logo-chat-japanese_f42f7582.webp" alt="Chat Japanese logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
+        <div>
+          <div class="nav-logo-name">
+            <span class="chat">Chat</span><span class="japanese">Japanese</span>
+          </div>
+          <div class="nav-logo-sub">Japanese School</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li class="has-dropdown" id="nav-courses">
+          <button onclick="toggleNav('nav-courses')">
+            Courses
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="#">Intensive Course</a>
+            <a href="#">1-Week Course</a>
+            <a href="#">Weekend Course</a>
+          </div>
+        </li>
+        <li class="has-dropdown" id="nav-locations">
+          <button onclick="toggleNav('nav-locations')">
+            Locations
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="#">Tokyo</a>
+            <a href="#">Yokohama</a>
+            <a href="#">Kamakura</a>
+            <a href="#">Osaka</a>
+            <a href="#">Kyoto</a>
+          </div>
+        </li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="tour.html" class="active">Tour</a></li>
+        <li class="has-dropdown" id="nav-company">
+          <button onclick="toggleNav('nav-company')">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="#">About Us</a>
+            <a href="#">Our Team</a>
+            <a href="#">Blog</a>
+          </div>
+        </li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="apply.html?course=Tour" class="nav-apply">Apply Now</a>
+        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Courses
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="#">Intensive Course</a>
+      <a href="#">1-Week Course</a>
+      <a href="#">Weekend Course</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Locations
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="#">Tokyo</a>
+      <a href="#">Yokohama</a>
+      <a href="#">Kamakura</a>
+      <a href="#">Osaka</a>
+      <a href="#">Kyoto</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="#">Pricing</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link active" href="tour.html">Tour</a></div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Company
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="#">About Us</a>
+      <a href="#">Our Team</a>
+      <a href="#">Blog</a>
+    </div>
+  </div>
+  <div style="margin-top:2rem;">
+    <a href="apply.html?course=Tour" class="btn-primary">Apply Now →</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     1. HERO
+════════════════════════════════════════ -->
+<section class="tour-hero" aria-label="Tour hero">
+  <div class="tour-hero-bg">
+    <picture>
+      <source srcset="/manus-storage/tour-hero_1fe379f4.webp" media="(min-width: 800px)" />
+      <img
+        src="/manus-storage/tour-hero-mobile_41315536.webp"
+        alt="Travelers laughing and practicing Japanese at a local izakaya in Shinjuku"
+        fetchpriority="high"
+        decoding="sync"
+      />
+    </picture>
+  </div>
+  <div class="tour-hero-content">
+    <div class="tour-hero-tag">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Every Friday · Shinjuku
+    </div>
+    <h1 class="tour-hero-title">
+      Conversational<br>
+      Bar Hopping<br>
+      <em>in Shinjuku</em>
+    </h1>
+    <p class="tour-hero-tagline">
+      Practice real Japanese over drinks — learn to order, chat with locals, and discover the hidden izakayas that tourists never find.
+    </p>
+    <p class="tour-hero-meta">Friday evenings · Shinjuku, Tokyo · All levels welcome</p>
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+      <a href="apply.html?course=Tour" class="tour-hero-cta">
+        Book Your Spot
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <span class="tour-hero-price"><strong>$75</strong> all-inclusive</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     2. OVERVIEW
+════════════════════════════════════════ -->
+<section aria-label="Tour overview">
+  <div class="tour-section">
+    <p class="tour-section-label">What is this?</p>
+    <h2 class="tour-section-title">
+      Learn Japanese<br>
+      the way locals <em>actually talk</em>
+    </h2>
+    <p class="tour-section-body">
+      Every Friday evening, we meet at a cozy local café in Shinjuku for a 45-minute Japanese lesson with one of our professional teachers. Then we head out — bar hopping through two of our favourite izakayas where you put everything you just learned into practice, ordering drinks and food in Japanese, chatting with the staff, and making friends along the way.
+    </p>
+    <p class="tour-section-body" style="margin-top:0.75rem;">
+      This isn't a tourist experience. It's the Friday night that locals have — and you're invited.
+    </p>
+    <div class="tour-pills">
+      <span class="tour-pill">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Small groups only
+      </span>
+      <span class="tour-pill">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        3 hours
+      </span>
+      <span class="tour-pill">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Shinjuku, Tokyo
+      </span>
+      <span class="tour-pill">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        $75 all-inclusive
+      </span>
+    </div>
+  </div>
+</section>
+
+<hr class="tour-divider" />
+
+<!-- ════════════════════════════════════════
+     3. BENEFITS
+════════════════════════════════════════ -->
+<section aria-label="Tour features">
+  <div class="tour-section">
+    <p class="tour-section-label">Why it works</p>
+    <h2 class="tour-section-title">
+      Three things that make<br>
+      this <em>different</em>
+    </h2>
+    <div class="benefits-list">
+
+      <div class="benefit-card">
+        <div class="benefit-num">1</div>
+        <div class="benefit-text">
+          <h3>Learn before you order</h3>
+          <p>
+            Before we hit the first bar, your teacher walks you through exactly what to say — how to order food and drinks in Japanese, the names of dishes you'll actually see on the menu, and a few dining customs that will make locals smile. No awkward guessing at the counter.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-num">2</div>
+        <div class="benefit-text">
+          <h3>Izakayas tourists never find</h3>
+          <p>
+            We take you to the kind of places that don't have English menus, don't appear on TripAdvisor, and are packed with locals every Friday night. These are our partner venues — the staff know us, and they love when our students try to speak Japanese.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-num">3</div>
+        <div class="benefit-text">
+          <h3>A safe space to make mistakes</h3>
+          <p>
+            Because we've partnered with these venues, you're not just a random tourist stumbling in. The staff are patient, encouraging, and genuinely happy to help you practice. Mess up your order? They'll laugh with you, not at you — and help you try again.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     4. SCHEDULE (dark background)
+════════════════════════════════════════ -->
+<section class="schedule-bg" aria-label="Tour schedule" style="background:#1a1410;">
+  <div class="schedule-inner">
+    <p class="tour-section-label">The evening</p>
+    <h2 class="tour-section-title">
+      Your Friday<br>
+      <em>night itinerary</em>
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot">
+          <!-- Book / lesson icon -->
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-time">17:00</div>
+          <div class="timeline-title">Japanese Lesson — Local café, Shinjuku</div>
+          <div class="timeline-desc">
+            Meet your group at a neighbourhood café. Your teacher — a professional from the Chat Japanese team — runs a 45-minute session focused on ordering phrases, food vocabulary, and dining etiquette. Practical, fun, and exactly what you'll need in the next two hours.
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">
+          <!-- Cheers / drinks icon -->
+          <svg viewBox="0 0 24 24"><path d="M8 22h8"/><path d="M12 11v11"/><path d="m19 3-7 8-7-8Z"/></svg>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-time">18:00</div>
+          <div class="timeline-title">First Stop — Omoide Yokocho</div>
+          <div class="timeline-desc">
+            We head to one of the most atmospheric alleys in Shinjuku — narrow, smoky, and full of character. You'll order your first round entirely in Japanese. The staff here are used to our students and always make it a great experience.
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">
+          <!-- Map pin / hidden spot icon -->
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-title">Second Stop — Locals-only hidden izakaya</div>
+          <div class="timeline-desc">
+            This one isn't on any map. It's the kind of place you only find if a local takes you there. Squeeze in, order something from the handwritten menu, and have a real conversation with the people around you. This is the moment the lesson clicks.
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">
+          <!-- Star / end icon -->
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="timeline-body">
+          <div class="timeline-time">20:00</div>
+          <div class="timeline-title">End of tour</div>
+          <div class="timeline-desc">
+            We wrap up at the second bar. Feel free to stay on and keep the conversation going — or head home with a head full of new vocabulary and a great Friday night story.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     5. PRICING
+════════════════════════════════════════ -->
+<section aria-label="Tour pricing">
+  <div class="tour-section">
+    <p class="tour-section-label">Pricing</p>
+    <h2 class="tour-section-title">
+      One price.<br>
+      <em>Everything included.</em>
+    </h2>
+    <p class="tour-section-body">
+      No hidden fees, no separate bar tabs, no awkward bill-splitting. You pay once and enjoy the whole evening.
+    </p>
+
+    <div class="pricing-card">
+      <div class="pricing-amount">
+        <span class="pricing-currency">$</span>
+        <span class="pricing-number">75</span>
+        <span class="pricing-per">/ person</span>
+      </div>
+      <p class="pricing-tagline">All-inclusive Friday night experience</p>
+
+      <ul class="pricing-includes">
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          45-min Japanese lesson with a professional teacher
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Drinks & food at two izakayas (all covered)
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Small group — max 8 participants
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          Guided by a Chat Japanese local teacher
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          No Japanese required — all levels welcome
+        </li>
+      </ul>
+
+      <a href="apply.html?course=Tour" class="pricing-cta">
+        Reserve My Spot — $75
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <p class="pricing-note">No payment needed to apply — we'll confirm your spot by email.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     FOOTER (shared)
+════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">
+          <span class="chat">Chat</span><br><span class="japanese">Japanese</span>
+        </div>
+        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences across Japan.</p>
+        <a href="apply.html" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Apply Now →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="#">Intensive Course</a></li>
+          <li><a href="#">1-Week Course</a></li>
+          <li><a href="#">Weekend Course</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="#">Tokyo</a></li>
+          <li><a href="#">Yokohama</a></li>
+          <li><a href="#">Kamakura</a></li>
+          <li><a href="#">Osaka</a></li>
+          <li><a href="#">Kyoto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="tour.html">Tour</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Chat Japanese. All rights reserved.</p>
+      <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Shared JS ── -->
+<script src="main.js"></script>
+
+<!-- ── Active nav highlight ── -->
+<script>
+  document.querySelectorAll('.nav-links a[href="tour.html"]').forEach(el => {
+    el.style.color = 'var(--brand)';
+    el.style.fontWeight = '600';
+  });
+</script>
+
+</body>
+</html>
