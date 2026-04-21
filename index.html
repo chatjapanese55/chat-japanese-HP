@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Chat Japanese — Japanese Language School | Learn Japanese in Japan</title>
+  <meta name="description" content="Chat Japanese is an immersive Japanese language school in Tokyo, Yokohama, Osaka and Kyoto. Learn Japanese through café lessons, city walks, and real conversations with local instructors. Courses from $130." />
+  <meta name="keywords" content="Japanese language school Japan, learn Japanese in Japan, Japanese school Tokyo, Japanese school Osaka, conversational Japanese, study Japanese abroad" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.chat-japanese-school.com/" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.chat-japanese-school.com/" />
+  <meta property="og:title" content="Chat Japanese — Japanese Language School | Learn Japanese in Japan" />
+  <meta property="og:description" content="Immersive Japanese language school in Tokyo, Yokohama, Osaka and Kyoto. Learn through café lessons, city walks, and real conversations with local instructors." />
+  <meta property="og:site_name" content="Chat Japanese" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LanguageSchool","name":"Chat Japanese","description":"Immersive Japanese language school offering conversational Japanese courses through café lessons, city walks, and cultural experiences in Japan.","url":"https://www.chat-japanese-school.com/","email":"chatjapanese55@gmail.com","areaServed":["Tokyo","Yokohama","Osaka","Kyoto","Kamakura"],"availableLanguage":["Japanese","English"],"offers":{"@type":"Offer","priceCurrency":"USD","price":"130"}}
+  </script>
+
+  <!-- Fonts: Anton + Cormorant Garamond + DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Preload city images -->
+  <link rel="preload" as="image" href="/manus-storage/tokyo-city-opt_feb0f96f.webp" />
+  <link rel="preload" as="image" href="/manus-storage/yokohama-harbor-opt_957f8201.webp" />
+  <link rel="preload" as="image" href="/manus-storage/osaka-dotonbori-opt_7676b996.webp" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="/" class="nav-logo">
+        <img src="/manus-storage/logo-chat-japanese_f42f7582.webp" alt="Chat Japanese logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
+        <div>
+          <div class="nav-logo-name">
+            <span class="chat">Chat</span><span class="japanese">Japanese</span>
+          </div>
+          <div class="nav-logo-sub">Japanese School</div>
+        </div>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links">
+        <li class="has-dropdown" id="nav-courses">
+          <button onclick="toggleNav('nav-courses')">
+            Courses
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/courses/intensive">Intensive Course</a>
+            <a href="/courses/1-week">1-Week Course</a>
+            <a href="/courses/weekend">Weekend Course</a>
+          </div>
+        </li>
+        <li class="has-dropdown" id="nav-locations">
+          <button onclick="toggleNav('nav-locations')">
+            Locations
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/locations/tokyo">Tokyo</a>
+            <a href="/locations/yokohama">Yokohama</a>
+            <a href="/locations/kamakura">Kamakura</a>
+            <a href="/locations/osaka">Osaka</a>
+            <a href="/locations/kyoto">Kyoto</a>
+          </div>
+        </li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/tour">Tour</a></li>
+        <li class="has-dropdown" id="nav-company">
+          <button onclick="toggleNav('nav-company')">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/company/about">About Us</a>
+            <a href="/company/team">Our Team</a>
+            <a href="/company/blog">Blog</a>
+          </div>
+        </li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="/apply" class="nav-apply">Apply Now</a>
+        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Courses
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/courses/intensive">Intensive Course</a>
+      <a href="/courses/1-week">1-Week Course</a>
+      <a href="/courses/weekend">Weekend Course</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Locations
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/locations/tokyo">Tokyo</a>
+      <a href="/locations/yokohama">Yokohama</a>
+      <a href="/locations/kamakura">Kamakura</a>
+      <a href="/locations/osaka">Osaka</a>
+      <a href="/locations/kyoto">Kyoto</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing">Pricing</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/tour">Tour</a></div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Company
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/company/about">About Us</a>
+      <a href="/company/team">Our Team</a>
+      <a href="/company/blog">Blog</a>
+    </div>
+  </div>
+  <div style="margin-top:2rem;">
+    <a href="/apply" class="btn-primary">Apply Now →</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     1. HERO
+============================================================ -->
+<section id="hero">
+  <div id="hero-bg">
+    <img
+      src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/hero-main-N6dG7chF3uEhHJ9RyBnb8L.webp"
+      alt="Chat Japanese — café lesson with local instructor in Japan"
+      fetchpriority="high"
+      decoding="sync"
+    />
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>Tokyo · Yokohama · Osaka · Kyoto</span>
+      </div>
+      <h1 class="hero-h1">
+        <span class="hero-brand"><span class="hero-chat">Chat</span><span class="hero-japanese">Japanese</span></span><br>
+        <span class="hero-tagline">— Japanese School<br><em>to Connect</em><br>with Local</span>
+      </h1>
+      <p class="hero-sub">
+        A language school built for travelers — learn through café lessons,
+        city walks, and authentic cultural experiences.
+      </p>
+      <div class="hero-btns">
+        <a href="/apply" class="btn-primary">Apply Now →</a>
+        <a href="#our-value" class="btn-ghost" onclick="smoothScroll(event,'our-value')">Learn More</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-val">From $130</div>
+          <div class="hero-stat-label">Cheapest in Japan</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val">2 Days</div>
+          <div class="hero-stat-label">Min. course length</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-val">3 Courses</div>
+          <div class="hero-stat-label">Immersive options</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. OUR VALUE
+============================================================ -->
+<section id="our-value">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Our Value</span>
+      <h2>Two ways we make<br><em>Japanese real</em></h2>
+      <p>Every element of Chat Japanese is designed around one idea: real language lives in real places, with real people.</p>
+    </div>
+
+    <div class="value-cards">
+      <!-- Card 1 -->
+      <a href="#connect-real-japan" class="value-card fade-up" onclick="smoothScroll(event,'connect-real-japan')">
+        <div class="value-circle-wrap">
+          <div class="value-circle">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/connect-real-japan-v2-YNbBXwpj4JrRRZWXJ23PsB.webp"
+              alt="Connect with Real Japan"
+              loading="lazy" decoding="async"
+            />
+          </div>
+          <div class="value-badge">01</div>
+        </div>
+        <div class="value-card-body">
+          <h3>Connect with<br>Real Japan</h3>
+          <p>Real conversations, real places, real people. Lessons happen where life actually unfolds — in cafés, markets, and hidden alleyways.</p>
+          <div class="value-explore">
+            Explore
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="#travel-lessons" class="value-card fade-up" style="transition-delay:0.1s" onclick="smoothScroll(event,'travel-lessons')">
+        <div class="value-circle-wrap">
+          <div class="value-circle">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/travel-lessons-QV9EGHDcaoVD4cnTttqPgL.webp"
+              alt="Travel × Lessons"
+              loading="lazy" decoding="async"
+            />
+          </div>
+          <div class="value-badge">02</div>
+        </div>
+        <div class="value-card-body">
+          <h3>Travel ×<br>Lessons</h3>
+          <p>Why choose between sightseeing and study? Our courses are designed around Japan's most vibrant cities.</p>
+          <div class="value-explore">
+            Explore
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. CONNECT WITH REAL JAPAN
+============================================================ -->
+<section id="connect-real-japan">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <span class="section-label">Connect with Real Japan</span>
+      <h2>What makes our approach<br><em>truly different</em></h2>
+    </div>
+
+    <div class="connect-rows">
+      <!-- Row 1 -->
+      <div class="connect-row fade-up">
+        <div class="connect-row-img">
+          <img src="/manus-storage/connect-real-japan-opt_93f6c998.webp" alt="Conversation-first Japanese learning" loading="lazy" decoding="async" />
+        </div>
+        <div class="connect-row-body">
+          <div class="connect-row-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Conversation First</h3>
+          <p>No textbooks, no grammar drills. Our lessons are built around real situations — ordering at a local restaurant, chatting with shopkeepers, navigating the city. You'll be speaking from day one.</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="connect-row reverse fade-up">
+        <div class="connect-row-img">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/cafe-lesson-LQY9V3MPSS9N4xC6r8biV3.webp" alt="Café lessons and city walk in Japan" loading="lazy" decoding="async" />
+        </div>
+        <div class="connect-row-body">
+          <div class="connect-row-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Café Lessons × City Walk</h3>
+          <p>Our classroom is a cozy local café. After the lesson, we hit the streets together — discovering <strong>Hidden Gems</strong> that tourists never find. We explore them side by side, just like locals do.</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="connect-row fade-up">
+        <div class="connect-row-img">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/local-teacher-S6BPeH6TfyE2FNtmgutLSY.webp" alt="100% local Japanese instructors" loading="lazy" decoding="async" />
+        </div>
+        <div class="connect-row-body">
+          <div class="connect-row-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>100% Local Instructors</h3>
+          <p>Every single one of our instructors is a local Japanese person. Not just teachers — they're your guides to the real Japan. Their insider knowledge, stories, and connections are part of the curriculum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. TRAVEL × LESSONS
+============================================================ -->
+<section id="travel-lessons">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <span class="section-label">Travel × Lessons</span>
+      <h2>Learn as you move.<br><em>Move as you learn.</em></h2>
+      <p>Why choose between sightseeing and studying? Each course is built around a city — so your classroom is the city itself.</p>
+    </div>
+
+    <!-- Journey -->
+    <div class="journey fade-up">
+
+      <!-- Desktop -->
+      <div class="journey-desktop">
+        <div class="journey-line"></div>
+
+        <!-- Arrow 1 -->
+        <div class="journey-arrow" style="left:33.33%">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="20" fill="rgba(249,155,48,0.14)" stroke="#f99b30" stroke-width="2"/>
+            <path d="M17 13L27 22L17 31" stroke="#f99b30" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <!-- Arrow 2 -->
+        <div class="journey-arrow" style="left:66.66%">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="22" cy="22" r="20" fill="rgba(249,155,48,0.14)" stroke="#f99b30" stroke-width="2"/>
+            <path d="M17 13L27 22L17 31" stroke="#f99b30" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="journey-cities">
+          <div class="journey-city">
+            <div class="journey-city-circle-wrap">
+              <div class="journey-city-circle">
+                <img src="/manus-storage/tokyo-city-opt_feb0f96f.webp" alt="Tokyo Japan" loading="eager" decoding="async" />
+              </div>
+              <div class="journey-city-badge">1</div>
+            </div>
+            <div class="journey-city-name">Tokyo</div>
+            <div class="journey-city-dur">1 Week</div>
+            <div class="journey-city-course">Intensive · 1-Week</div>
+          </div>
+          <div class="journey-city">
+            <div class="journey-city-circle-wrap">
+              <div class="journey-city-circle">
+                <img src="/manus-storage/yokohama-harbor-opt_957f8201.webp" alt="Yokohama Japan" loading="eager" decoding="async" />
+              </div>
+              <div class="journey-city-badge">2</div>
+            </div>
+            <div class="journey-city-name">Yokohama</div>
+            <div class="journey-city-dur">1 Week</div>
+            <div class="journey-city-course">1-Week Course</div>
+          </div>
+          <div class="journey-city">
+            <div class="journey-city-circle-wrap">
+              <div class="journey-city-circle">
+                <img src="/manus-storage/osaka-dotonbori-opt_7676b996.webp" alt="Osaka Japan" loading="eager" decoding="async" />
+              </div>
+              <div class="journey-city-badge">3</div>
+            </div>
+            <div class="journey-city-name">Osaka</div>
+            <div class="journey-city-dur">Weekend</div>
+            <div class="journey-city-course">Weekend Course</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile -->
+      <div class="journey-mobile">
+        <!-- Tokyo -->
+        <div class="journey-mobile-item">
+          <div class="journey-mobile-left">
+            <div class="journey-mobile-circle">
+              <img src="/manus-storage/tokyo-city-opt_feb0f96f.webp" alt="Tokyo" loading="eager" decoding="async" />
+              <div class="journey-mobile-badge">1</div>
+            </div>
+            <div class="journey-mobile-connector" style="flex:1;padding:8px 0 0;">
+              <div style="width:1px;flex:1;background:rgba(249,155,48,0.3);min-height:32px;"></div>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="14" r="13" fill="rgba(249,155,48,0.13)" stroke="#f99b30" stroke-width="1.5"/>
+                <path d="M9 9.5L14 16.5L19 9.5" stroke="#f99b30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div style="width:1px;flex:1;background:rgba(249,155,48,0.3);min-height:8px;"></div>
+            </div>
+          </div>
+          <div class="journey-mobile-text">
+            <div class="city-name">Tokyo</div>
+            <div class="city-dur">1 Week</div>
+            <div class="city-course">Intensive · 1-Week</div>
+          </div>
+        </div>
+        <!-- Yokohama -->
+        <div class="journey-mobile-item">
+          <div class="journey-mobile-left">
+            <div class="journey-mobile-circle">
+              <img src="/manus-storage/yokohama-harbor-opt_957f8201.webp" alt="Yokohama" loading="eager" decoding="async" />
+              <div class="journey-mobile-badge">2</div>
+            </div>
+            <div class="journey-mobile-connector" style="flex:1;padding:8px 0 0;">
+              <div style="width:1px;flex:1;background:rgba(249,155,48,0.3);min-height:32px;"></div>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="14" r="13" fill="rgba(249,155,48,0.13)" stroke="#f99b30" stroke-width="1.5"/>
+                <path d="M9 9.5L14 16.5L19 9.5" stroke="#f99b30" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div style="width:1px;flex:1;background:rgba(249,155,48,0.3);min-height:8px;"></div>
+            </div>
+          </div>
+          <div class="journey-mobile-text">
+            <div class="city-name">Yokohama</div>
+            <div class="city-dur">1 Week</div>
+            <div class="city-course">1-Week Course</div>
+          </div>
+        </div>
+        <!-- Osaka -->
+        <div class="journey-mobile-item">
+          <div class="journey-mobile-left">
+            <div class="journey-mobile-circle">
+              <img src="/manus-storage/osaka-dotonbori-opt_7676b996.webp" alt="Osaka" loading="eager" decoding="async" />
+              <div class="journey-mobile-badge">3</div>
+            </div>
+          </div>
+          <div class="journey-mobile-text">
+            <div class="city-name">Osaka</div>
+            <div class="city-dur">Weekend</div>
+            <div class="city-course">Weekend Course</div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /journey -->
+
+    <!-- Feature cards -->
+    <div class="feature-cards">
+      <div class="feature-card fade-up">
+        <div class="feature-card-head">
+          <div class="feature-card-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="feature-card-head-text">
+            <div class="section-label">Community</div>
+            <h3>You're Never Alone</h3>
+          </div>
+        </div>
+        <p>Every session is a small-group experience with fellow travelers from around the world — the US, Europe, Australia, Southeast Asia, and beyond. <strong>Making friends is part of the curriculum.</strong></p>
+      </div>
+
+      <div class="feature-card fade-up" style="transition-delay:0.1s">
+        <div class="feature-card-head">
+          <div class="feature-card-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="feature-card-head-text">
+            <div class="section-label">Flexibility</div>
+            <h3>Start Small, Go Far</h3>
+          </div>
+        </div>
+        <p>No long-term commitment required. Unlike traditional language schools, you can start with just a weekend course and build from there.</p>
+        <div class="feature-stats">
+          <div class="feature-stat">
+            <div class="feature-stat-val">From $130</div>
+            <div class="feature-stat-label">Minimum</div>
+          </div>
+          <div class="feature-stat">
+            <div class="feature-stat-val">2 Days</div>
+            <div class="feature-stat-label">Minimum</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-center fade-up">
+      <a href="/courses" class="btn-primary">View All Courses →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. TYPICAL DAY
+============================================================ -->
+<section id="typical-day">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <span class="section-label">A Week in Chat Japanese</span>
+      <h2>What does a typical<br><em>day look like?</em></h2>
+      <p>Every day is a mix of real conversation practice and city exploration — alongside fellow travelers from around the world.</p>
+    </div>
+
+    <div class="day-cols">
+      <!-- Weekdays -->
+      <div class="day-col fade-up">
+        <div class="day-col-head">
+          <div class="section-label">Mon – Thu</div>
+          <h3>Weekdays</h3>
+          <p>Four mornings of immersive Japanese conversation in a cozy local café — then explore the city together.</p>
+        </div>
+        <div class="day-timeline">
+          <div class="day-item">
+            <div class="day-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
+            <div class="day-body">
+              <div class="day-time">9:00</div>
+              <h4>Café Japanese Class</h4>
+              <p>Conversation-first Japanese in a cozy local café. Small groups, friendly instructors, zero textbook pressure.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="day-body">
+              <div class="day-time">12:00</div>
+              <h4>City Walking Tour</h4>
+              <p>Explore the city with your instructor. Practice what you just learned — in real conversations, with real locals.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <div class="day-body">
+              <div class="day-time">13:00</div>
+              <h4>Free Time</h4>
+              <p>The rest of the day is yours — explore, hang out with classmates from around the world, or just recharge.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Weekend -->
+      <div class="day-col fade-up" style="transition-delay:0.12s">
+        <div class="day-col-head">
+          <div class="section-label">Sat &amp; Sun</div>
+          <h3>Weekend</h3>
+          <p>Two mornings of conversation practice followed by exclusive cultural experiences — only for Chat Japanese students.</p>
+        </div>
+        <div class="day-timeline">
+          <div class="day-item">
+            <div class="day-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="day-body">
+              <div class="day-time">9:00</div>
+              <h4>Conversation Practice</h4>
+              <p>Two hours of focused Japanese conversation with your group. Review the week's highlights and build confidence.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="day-body">
+              <div class="day-time">11:00</div>
+              <h4>Cultural Activity</h4>
+              <p>Dive into authentic Japanese culture — sushi-making, shodo calligraphy, matcha ceremony, and more.</p>
+            </div>
+          </div>
+          <div class="day-item">
+            <div class="day-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <div class="day-body">
+              <div class="day-time">13:00</div>
+              <h4>Free Time</h4>
+              <p>Head out with new friends from the US, Europe, Australia and beyond — your Japan adventure continues.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-center mt-10 fade-up">
+      <a href="/apply" class="btn-primary">Join the Next Cohort →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">
+          <span class="chat">Chat</span><br><span class="japanese">Japanese</span>
+        </div>
+        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences across Japan.</p>
+        <a href="/apply" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Apply Now →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="/courses/intensive">Intensive Course</a></li>
+          <li><a href="/courses/1-week">1-Week Course</a></li>
+          <li><a href="/courses/weekend">Weekend Course</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="/locations/tokyo">Tokyo</a></li>
+          <li><a href="/locations/yokohama">Yokohama</a></li>
+          <li><a href="/locations/kamakura">Kamakura</a></li>
+          <li><a href="/locations/osaka">Osaka</a></li>
+          <li><a href="/locations/kyoto">Kyoto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/company/about">About Us</a></li>
+          <li><a href="/company/team">Our Team</a></li>
+          <li><a href="/company/blog">Blog</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/tour">Tour</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Chat Japanese. All rights reserved.</p>
+      <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
