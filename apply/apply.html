@@ -620,54 +620,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     label.textContent = 'Sending…';
     error.style.display = 'none';
 
-    const payload = {
-      course: selectedCourse,
-      name,
-      email,
-      phone,
-      timestamp: new Date().toISOString()
-    };
+    // submitForm関数内の payload 以降を以下に書き換えてください
+const params = new URLSearchParams();
+params.append('course', selectedCourse);
+params.append('name', name);
+params.append('email', email);
+params.append('phone', phone);
+params.append('timestamp', new Date().toISOString());
 
-    try {
-      // Send to Google Apps Script
-      await fetch(GAS_URL, {
-        method: 'POST',
-        mode: 'no-cors', // GAS requires no-cors
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+try {
+  await fetch(GAS_URL, {
+    method: 'POST',
+    mode: 'no-cors', // そのまま
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: params.toString()
+  });
 
-      // Show thank you screen
-      showThanks();
-    } catch (err) {
-      error.style.display = 'block';
-      btn.disabled = false;
-      spinner.style.display = 'none';
-      arrow.style.display = 'block';
-      label.textContent = 'Send Application';
-    }
-  }
-
-  function showThanks() {
-    const overlay = document.getElementById('thanksOverlay');
-    overlay.style.display = 'flex';
-    // Animate in
-    overlay.style.opacity = '0';
-    overlay.style.transition = 'opacity 0.4s ease';
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => { overlay.style.opacity = '1'; });
-    });
-  }
-
-  // Pre-select course from URL param (e.g. apply.html?course=Weekend+Course)
-  const urlParams = new URLSearchParams(window.location.search);
-  const preSelected = urlParams.get('course');
-  if (preSelected) {
-    const cards = document.querySelectorAll('.course-card');
-    cards.forEach(card => {
-      if (card.dataset.course === preSelected) selectCourse(card);
-    });
-  }
+  showThanks();
+} catch (err) {
+  // ...エラー処理
+}
 </script>
 </body>
 </html>
