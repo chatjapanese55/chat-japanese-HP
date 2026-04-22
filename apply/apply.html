@@ -574,12 +574,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="main.js"></script>
 <script>
 // ── Google Apps Script Web App URL ──
-  const GAS_URL='https://script.google.com/macros/s/AKfycbzINGS5tTiEqbnm9NHz2F_KJH49tfiWG_cuQWv3osmQSIzmfhDfkTAfw12cgCo0jXfS/exec';
-　<form action="/api/save" method="post">
+  
+// ↓ここに「新しいデプロイ」で発行されたURLを貼り付けてください
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyWIZVqKlqDB7sdUJRwmaE4D201-u__9e-4dqvp9u2UDvM3iTkee141bQOeIaXnwvul/exec';
 
-<form action="https://script.google.com/macros/s/XXXXX_あなたのGASのID_XXXXX/exec" method="POST">
-  let selectedCourse = null;
-
+let selectedCourse = null; // ここから下は既存のコードのままでOK
+  
   function selectCourse(card) {
     document.querySelectorAll('.course-card').forEach(c => c.classList.remove('selected'));
     card.classList.add('selected');
