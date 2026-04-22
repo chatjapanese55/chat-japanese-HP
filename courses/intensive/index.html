@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intensive Japanese Course — Immersion Program | Chat Japanese</title>
+  <meta name="description" content="A dual-track immersion program: Linguistic Connection through conversation-first lessons + Cultural Connection through weekend activities. Absolute beginner to intermediate. $300/week." />
+  <meta name="keywords" content="intensive Japanese course, learn Japanese immersion, Japanese language school Japan, JLPT N5 course, Japanese for travelers" />
+  <meta property="og:title" content="Intensive Japanese Course | Chat Japanese" />
+  <meta property="og:description" content="Conversation-first lessons + weekend cultural immersion. The fastest path to real Japanese connection." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/intensive-hero-v2-ekEvQ4Zno2CrM83XfH9NaF.webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/intensive-hero-v2-ekEvQ4Zno2CrM83XfH9NaF.webp" as="image" fetchpriority="high" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Intensive Japanese Course",
+    "description": "A dual-track immersion program combining conversation-first lessons with weekend cultural activities. Designed for travelers seeking rapid social integration and authentic Japanese connections.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Chat Japanese",
+      "url": "https://www.chat-japanese.com"
+    },
+    "courseMode": "onsite",
+    "inLanguage": "ja",
+    "educationalLevel": "Beginner to Intermediate",
+    "offers": {
+      "@type": "Offer",
+      "price": "300",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── Intensive Course — page-specific styles only ──
+       Shared nav/footer/buttons/layout come from ../../style.css
+    */
+
+    /* ── Hero ── */
+    .course-hero {
+      position: relative;
+      height: 80vh;
+      min-height: 480px;
+      max-height: 700px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .course-hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .course-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .course-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(20,15,10,0.78) 0%, rgba(20,15,10,0.2) 50%, transparent 100%);
+    }
+    .course-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2.5rem 1.5rem 3.5rem;
+      max-width: 820px;
+    }
+    .course-badge {
+      display: inline-block;
+      background: #f99b30;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 2px;
+      margin-bottom: 1.1rem;
+    }
+    .course-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 7.5vw, 4.4rem);
+      font-weight: 300;
+      color: #fff;
+      line-height: 1.08;
+      margin: 0 0 1rem;
+    }
+    .course-hero-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+      color: rgba(255,255,255,0.82);
+      font-weight: 300;
+      max-width: 560px;
+      line-height: 1.65;
+      margin: 0 0 1.75rem;
+    }
+    .hero-tracks {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .hero-track-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.45rem 1rem;
+      border-radius: 100px;
+    }
+
+    /* ── Section base ── */
+    .course-section {
+      padding: 5rem 0;
+    }
+    .course-section + .course-section {
+      border-top: 1px solid #e8e0d4;
+    }
+    .c-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #f99b30;
+      margin-bottom: 0.65rem;
+    }
+    .c-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-weight: 300;
+      color: #2c2218;
+      line-height: 1.18;
+      margin: 0 0 1rem;
+    }
+    .c-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #5a4e40;
+      line-height: 1.8;
+      max-width: 600px;
+    }
+
+    /* ── Overview: two-column ── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .overview-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .overview-image {
+      border-radius: 6px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .overview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── Who is this for ── */
+    .for-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) { .for-cards { grid-template-columns: 1fr; } }
+    .for-card {
+      background: #fff;
+      border: 1px solid #e8e0d4;
+      border-radius: 6px;
+      padding: 1.5rem 1.25rem;
+    }
+    .for-card-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #53ccde;
+      margin-bottom: 0.5rem;
+    }
+    .for-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #2c2218;
+      margin: 0 0 0.5rem;
+    }
+    .for-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.87rem;
+      color: #5a4e40;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Adaptive Learning steps ── */
+    .adaptive-steps {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.5rem;
+      border: 1px solid #e8e0d4;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .adaptive-step {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      border-bottom: 1px solid #e8e0d4;
+      align-items: flex-start;
+    }
+    .adaptive-step:last-child { border-bottom: none; }
+    .adaptive-step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: #f99b30;
+      line-height: 1;
+      min-width: 2rem;
+    }
+    .adaptive-step-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: #2c2218;
+      margin: 0 0 0.4rem;
+    }
+    .adaptive-step-body p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.87rem;
+      color: #5a4e40;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Learning Path (dark) ── */
+    .path-section {
+      background: #2c2218;
+    }
+    .path-section .c-title { color: #f2ede6; }
+    .path-section .c-body  { color: rgba(242,237,230,0.72); }
+    .path-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 640px) { .path-grid { grid-template-columns: 1fr; } }
+    .path-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 1.75rem 1.5rem;
+    }
+    .path-card-week {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f99b30;
+      margin-bottom: 0.5rem;
+    }
+    .path-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: #f2ede6;
+      margin: 0 0 0.75rem;
+    }
+    .path-card-tag {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 2px;
+      margin-bottom: 0.85rem;
+    }
+    .tag-recommended { background: rgba(249,155,48,0.18); color: #f99b30; }
+    .tag-structured   { background: rgba(83,204,222,0.15); color: #53ccde; }
+    .path-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.87rem;
+      color: rgba(242,237,230,0.75);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .path-card.highlighted { border-color: rgba(249,155,48,0.4); }
+
+    /* ── Field Lessons ── */
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .field-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .field-image-col { order: -1; }
+    }
+    .field-image-col {
+      border-radius: 6px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .field-image-col img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .field-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .field-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .field-item-icon {
+      width: 36px;
+      height: 36px;
+      background: #f99b30;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .field-item-body h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #2c2218;
+      margin: 0 0 0.3rem;
+    }
+    .field-item-body p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: #5a4e40;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── Schedule (dark) ── */
+    .schedule-section {
+      background: #1a1410;
+    }
+    .schedule-section .c-title { color: #f2ede6; }
+    .schedule-section .c-body  { color: rgba(242,237,230,0.7); }
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 600px) { .schedule-grid { grid-template-columns: 1fr; } }
+    .schedule-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 1.5rem 1.25rem;
+    }
+    .schedule-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .schedule-day-tag {
+      background: #f99b30;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .schedule-day-tag.teal { background: #53ccde; }
+    .schedule-card-head h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #f2ede6;
+      margin: 0;
+    }
+    .schedule-row {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+      align-items: flex-start;
+    }
+    .schedule-row:last-child { margin-bottom: 0; }
+    .schedule-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #f99b30;
+      min-width: 64px;
+      padding-top: 0.1rem;
+    }
+    .schedule-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.86rem;
+      color: rgba(242,237,230,0.82);
+      line-height: 1.55;
+    }
+    .schedule-desc strong { color: #f2ede6; font-weight: 500; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, #f99b30 0%, #e8841a 100%);
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5.5vw, 3rem);
+      font-weight: 300;
+      color: #fff;
+      margin: 0 0 0.75rem;
+    }
+    .cta-section p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.88);
+      margin: 0 0 2.25rem;
+    }
+    .btn-cta-white {
+      display: inline-block;
+      background: #fff;
+      color: #f99b30;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1rem 2.75rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-cta-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+
+    @media (max-width: 768px) {
+      .course-hero-content { padding: 2rem 1rem 2.75rem; }
+      .course-section { padding: 3.5rem 0; }
+      .cta-section { padding: 3.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR (shared structure — same as index.html)
+============================================================ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="/" class="nav-logo">
+        <img src="/manus-storage/logo-chat-japanese_f42f7582.webp" alt="Chat Japanese logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
+        <div>
+          <div class="nav-logo-name">
+            <span class="chat">Chat</span><span class="japanese">Japanese</span>
+          </div>
+          <div class="nav-logo-sub">Japanese School</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li class="has-dropdown" id="nav-courses">
+          <button onclick="toggleNav('nav-courses')">
+            Courses
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/courses/intensive">Intensive Course</a>
+            <a href="/courses/1-week">1-Week Course</a>
+            <a href="/courses/weekend">Weekend Course</a>
+          </div>
+        </li>
+        <li class="has-dropdown" id="nav-locations">
+          <button onclick="toggleNav('nav-locations')">
+            Locations
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/locations/tokyo">Tokyo</a>
+            <a href="/locations/yokohama">Yokohama</a>
+            <a href="/locations/kamakura">Kamakura</a>
+            <a href="/locations/osaka">Osaka</a>
+            <a href="/locations/kyoto">Kyoto</a>
+          </div>
+        </li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/tour">Tour</a></li>
+        <li class="has-dropdown" id="nav-company">
+          <button onclick="toggleNav('nav-company')">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/company/about">About Us</a>
+            <a href="/company/team">Our Team</a>
+            <a href="/company/blog">Blog</a>
+          </div>
+        </li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="/apply" class="nav-apply">Apply Now</a>
+        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu (shared structure) -->
+<div id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Courses
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/courses/intensive">Intensive Course</a>
+      <a href="/courses/1-week">1-Week Course</a>
+      <a href="/courses/weekend">Weekend Course</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Locations
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/locations/tokyo">Tokyo</a>
+      <a href="/locations/yokohama">Yokohama</a>
+      <a href="/locations/kamakura">Kamakura</a>
+      <a href="/locations/osaka">Osaka</a>
+      <a href="/locations/kyoto">Kyoto</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing">Pricing</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/tour">Tour</a></div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Company
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/company/about">About Us</a>
+      <a href="/company/team">Our Team</a>
+      <a href="/company/blog">Blog</a>
+    </div>
+  </div>
+  <div style="margin-top:2rem;">
+    <a href="/apply" class="btn-primary">Apply Now →</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="course-hero">
+  <div class="course-hero-bg">
+    <img
+      src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/intensive-hero-v2-ekEvQ4Zno2CrM83XfH9NaF.webp"
+      alt="Japanese teacher and students in a Tokyo cafe lesson"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="course-hero-content container">
+    <span class="course-badge">Most Recommended</span>
+    <h1 class="course-hero-title">Intensive Course</h1>
+    <p class="course-hero-sub">A dual-track immersion program — Linguistic Connection through conversation-first lessons, and Cultural Connection through curated weekend activities.</p>
+    <div class="hero-tracks">
+      <div class="hero-track-pill"><span>🗣️</span> Linguistic Connection</div>
+      <div class="hero-track-pill"><span>🏯</span> Cultural Connection</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     OVERVIEW
+============================================================ -->
+<section class="course-section">
+  <div class="container">
+    <div class="overview-grid">
+      <div>
+        <p class="c-label">Course Overview</p>
+        <h2 class="c-title">Bridge the gap between classroom and real life</h2>
+        <p class="c-body">This is a comprehensive immersion program for those who want to understand the heart of Japan — not just pass a test. Two tracks run in parallel throughout the week: <strong>Linguistic Connection</strong> builds your speaking confidence through daily conversation-first lessons, while <strong>Cultural Connection</strong> takes you into the city on weekends to use what you've learned where it matters most.</p>
+        <p class="c-body" style="margin-top:1rem;">Designed for absolute beginners through intermediate learners — travelers, explorers, and anyone seeking genuine Japanese connections.</p>
+      </div>
+      <div class="overview-image">
+        <img
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/intensive-hero-v2-ekEvQ4Zno2CrM83XfH9NaF.webp"
+          alt="Students and teacher in a cozy Tokyo cafe lesson"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHO IS THIS FOR
+============================================================ -->
+<section class="course-section" style="background:#fff;">
+  <div class="container">
+    <p class="c-label">Who Is This For?</p>
+    <h2 class="c-title">Built for travelers who want more</h2>
+    <div class="for-cards">
+      <div class="for-card">
+        <div class="for-card-label">Proficiency Level</div>
+        <h3>Absolute Beginner to Intermediate</h3>
+        <p>No prior Japanese knowledge required. We assess your level on Day 1 and adapt the curriculum to your group — so you're never bored or overwhelmed.</p>
+      </div>
+      <div class="for-card">
+        <div class="for-card-label">Ideal Candidate</div>
+        <h3>Travelers seeking real connection</h3>
+        <p>You're not here to collect vocabulary lists. You want to walk into a bar, a market, or a festival and actually connect with the people around you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ADAPTIVE LEARNING
+============================================================ -->
+<section class="course-section">
+  <div class="container">
+    <p class="c-label">Academic Features</p>
+    <h2 class="c-title">Adaptive Learning — no two courses are the same</h2>
+    <p class="c-body">Your journey begins with a deep-dive orientation on Day 1. From there, every lesson is shaped around your group's goals.</p>
+    <div class="adaptive-steps">
+      <div class="adaptive-step">
+        <div class="adaptive-step-num">1</div>
+        <div class="adaptive-step-body">
+          <h3>Initial Assessment</h3>
+          <p>We assess not just your grammar level, but your personal interests and social goals — what kind of conversations do you want to have in Japan?</p>
+        </div>
+      </div>
+      <div class="adaptive-step">
+        <div class="adaptive-step-num">2</div>
+        <div class="adaptive-step-body">
+          <h3>Day 1: Self-Introduction</h3>
+          <p>Every course opens the same way — learning to introduce yourself, your story, and your reason for being in Japan. The most important conversation you'll have.</p>
+        </div>
+      </div>
+      <div class="adaptive-step">
+        <div class="adaptive-step-num">3</div>
+        <div class="adaptive-step-body">
+          <h3>Customized Syllabus</h3>
+          <p>After Day 1, tutors adapt all learning materials to match your group's specific level and social needs. The curriculum is rebuilt around you — every time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEARNING PATH (dark)
+============================================================ -->
+<section class="course-section path-section">
+  <div class="container">
+    <p class="c-label" style="color:#53ccde;">Weekly Milestones</p>
+    <h2 class="c-title">Your learning path</h2>
+    <p class="c-body">Two milestone tracks to choose from — or combine both for a full month of immersion.</p>
+    <div class="path-grid">
+      <div class="path-card highlighted">
+        <div class="path-card-week">Week 1–2</div>
+        <h3>Social Survival &amp; Connection</h3>
+        <span class="path-card-tag tag-recommended">Recommended</span>
+        <p>Break the ice. Master daily interactions to make local friends at cafes, bars, and community hubs. Practical phrases, real conversations, genuine connections — from day one.</p>
+      </div>
+      <div class="path-card">
+        <div class="path-card-week">Week 3–4</div>
+        <h3>Academic Mastery — JLPT N5 Path</h3>
+        <span class="path-card-tag tag-structured">Structured</span>
+        <p>Achieve N5 proficiency. Structured grammar and literacy — Hiragana, Katakana, and foundational Kanji — to meet visa requirements and long-term study goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FIELD LESSONS
+============================================================ -->
+<section class="course-section">
+  <div class="container">
+    <div class="field-grid">
+      <div>
+        <p class="c-label">Beyond the Classroom</p>
+        <h2 class="c-title">Your classroom is the city</h2>
+        <p class="c-body">Lessons begin in a relaxed cafe environment. Then we go outside. You don't just learn "how to order" — you go to a local market and do it.</p>
+        <div class="field-items">
+          <div class="field-item">
+            <div class="field-item-icon">☕</div>
+            <div class="field-item-body">
+              <h4>Daily Field Implementation</h4>
+              <p>Every morning lesson is immediately applied in the city — markets, shops, train stations. The living street of Japan is your real classroom.</p>
+            </div>
+          </div>
+          <div class="field-item">
+            <div class="field-item-icon">🏮</div>
+            <div class="field-item-body">
+              <h4>Weekend Cultural Immersion</h4>
+              <p>Exclusive weekend activities — traditional craft workshops, hidden local festivals, neighbourhood walks — provide the cultural context for the language you've spent the week learning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field-image-col">
+        <img
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663470492773/awzq2V9y4Mn2DM5n9XMTZA/intensive-field-lesson-Cj5HhqfyvtLGcjxeQgWD7q.webp"
+          alt="Language students practicing Japanese at a local market"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SCHEDULE (dark)
+============================================================ -->
+<section class="course-section schedule-section">
+  <div class="container">
+    <p class="c-label" style="color:#f99b30;">Weekly Schedule</p>
+    <h2 class="c-title">What your week looks like</h2>
+    <p class="c-body">Mornings in the classroom, afternoons in the city, weekends in the culture.</p>
+    <div class="schedule-grid">
+      <div class="schedule-card">
+        <div class="schedule-card-head">
+          <span class="schedule-day-tag">Mon – Thu</span>
+          <h3>Weekdays</h3>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">9:00 AM</span>
+          <span class="schedule-desc"><strong>Lesson</strong> — 3-hour small-group session. Conversation, grammar, real-life scenarios with a local professional teacher.</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">12:00 PM</span>
+          <span class="schedule-desc"><strong>Field time</strong> — afternoon is yours to explore, practice, and live in Japan.</span>
+        </div>
+      </div>
+      <div class="schedule-card">
+        <div class="schedule-card-head">
+          <span class="schedule-day-tag teal">Friday</span>
+          <h3>Rest Day</h3>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">All day</span>
+          <span class="schedule-desc"><strong>Free day</strong> — recharge, explore on your own, or meet up with classmates.</span>
+        </div>
+      </div>
+      <div class="schedule-card" style="grid-column: 1 / -1;">
+        <div class="schedule-card-head">
+          <span class="schedule-day-tag teal">Sat &amp; Sun</span>
+          <h3>Weekend — Language + Culture</h3>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">9:00 AM</span>
+          <span class="schedule-desc"><strong>1-hour lesson</strong> — focused session to reinforce the week's learning and prepare for the activity ahead.</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">10:00 AM</span>
+          <span class="schedule-desc"><strong>2-hour cultural activity</strong> — city walks, market visits, temple experiences, craft workshops. Use your Japanese in the real world.</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-time">12:00 PM</span>
+          <span class="schedule-desc"><strong>Wrap up</strong> — free afternoon to continue exploring at your own pace.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+============================================================ -->
+<section class="cta-section">
+  <h2>Ready to go all in?</h2>
+  <p>The Intensive Course fills up fast. Reserve your spot today — $300 per week, all inclusive.</p>
+  <a href="/apply?course=Intensive+Course" class="btn-cta-white">Apply for Intensive Course →</a>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">
+          <span class="chat">Chat</span><br><span class="japanese">Japanese</span>
+        </div>
+        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences across Japan.</p>
+        <a href="/apply" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Apply Now →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="/courses/intensive">Intensive Course</a></li>
+          <li><a href="/courses/1-week">1-Week Course</a></li>
+          <li><a href="/courses/weekend">Weekend Course</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="/locations/tokyo">Tokyo</a></li>
+          <li><a href="/locations/yokohama">Yokohama</a></li>
+          <li><a href="/locations/kamakura">Kamakura</a></li>
+          <li><a href="/locations/osaka">Osaka</a></li>
+          <li><a href="/locations/kyoto">Kyoto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/company/about">About Us</a></li>
+          <li><a href="/company/team">Our Team</a></li>
+          <li><a href="/company/blog">Blog</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/tour">Tour</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Chat Japanese. All rights reserved.</p>
+      <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../main.js"></script>
+</body>
+</html>
