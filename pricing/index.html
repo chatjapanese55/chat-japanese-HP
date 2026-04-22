@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   
-   <!-- Google Tag Manager -->
+     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MC9WRKLD');</script>
 <!-- End Google Tag Manager -->
-  
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,8 +19,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- OGP -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pricing — Chat Japanese | Learn Japanese in Tokyo" />
-  <meta property="og:description" content="from $130. No hidden fees. Full refund guarantee." />
+  <meta property="og:title" content="Pricing — Chat Japanese | Learn Japanese in Japan" />
+  <meta property="og:description" content="Weekend Course from $130. No hidden fees. Full refund guarantee." />
   <meta property="og:url" content="https://www.chat-japanese.com/pricing/" />
   <meta property="og:site_name" content="Chat Japanese" />
 
@@ -35,7 +34,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- Page-specific styles -->
   <style>
-
+    /* ── Pricing page hero ── */
+    .pricing-hero {
+      background: #fff;
+      border-bottom: 1px solid #e8e0d4;
+      padding: 7rem 0 3.5rem;
+      text-align: center;
+    }
+    .pricing-hero-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f99b30;
+      margin-bottom: 1rem;
+    }
+    .pricing-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 500;
+      color: #1a1410;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .pricing-hero h1 em {
+      color: #f99b30;
+      font-style: italic;
+    }
+    .pricing-hero-sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #6b5e4e;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
 
     /* ── Campaign banner ── */
     .campaign-banner {
@@ -518,19 +552,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 </head>
 <body>
-  
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC9WRKLD"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- ════════════════════════════════════════
-     CAMPAIGN BANNER
-════════════════════════════════════════ -->
-<div class="campaign-banner">
-  🎉 Registration Fee Waived Until June 30
-  <span>Limited time</span>
-</div>
+
 
 <!-- ════════════════════════════════════════
      NAVIGATION (shared)
@@ -539,13 +562,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav-inner container">
     <a href="/" class="nav-brand">
       <img
-        src="../logo-chat-japanese.webp"
+        src="logo-chat-japanese.webp"
         alt="Chat Japanese logo"
         width="44"
         height="44"
         loading="eager"
       />
-      <div class="nav-brand-text">
       <div class="nav-brand-text">
         <div class="nav-logo-name">
           <span class="chat">Chat</span><span class="japanese">Japanese</span>
@@ -586,8 +608,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
         </button>
         <div class="nav-dropdown">
-          <a href="../index.html">Home page</a>
-          <a href="https://www.symarch-llc.com/">About Us</a>
+          <a href="../index.html">Home Page</a>
+          <a href="https://www.symarch-llc.com">About Us</a>
           <a href="/company/blog">Blog</a>
         </div>
       </li>
@@ -628,7 +650,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/locations/kyoto">Kyoto</a>
     </div>
   </div>
-  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing" style="color:#f99b30;">Pricing</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="#" style="color:#f99b30;">Pricing</a></div>
   <div class="mobile-nav-item"><a class="mobile-nav-link" href="/tour">Tour</a></div>
   <div class="mobile-nav-item">
     <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
@@ -636,7 +658,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
     </button>
     <div class="mobile-sub">
-      <a href="../index.html">Home page</a>
+      <a href="../index.html">Home Page</a>
       <a href="https://www.symarch-llc.com/">About Us</a>
       <a href="/company/blog">Blog</a>
     </div>
@@ -645,6 +667,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/apply" class="btn-primary">Apply Now →</a>
   </div>
 </div>
+
+<!-- CAMPAIGN BANNER -->
+<div class="campaign-banner">
+  🎉 Registration Fee Waived Until June 30
+  <span>Limited time</span>
+</div>
+
 
 <!-- ════════════════════════════════════════
      PRICING SECTION
@@ -691,7 +720,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <tr>
             <td>
               <div class="course-name">Weekend Course</div>
-              <div class="course-desc">2 days · Fri–Sat · Immersive weekend</div>
+              <div class="course-desc">Sat–Sun · Weekend Cultural Activity with lessons</div>
             </td>
             <td class="course-price-cell">
               <div class="course-price">$130</div>
@@ -701,7 +730,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <tr>
             <td>
               <div class="course-name">1-Week Course</div>
-              <div class="course-desc">5 days · Mon–Fri · Full immersion</div>
+              <div class="course-desc">4 days · Mon–Thu · Cafe Lessons × City Tour</div>
             </td>
             <td class="course-price-cell">
               <div class="course-price">$200</div>
@@ -714,7 +743,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 Intensive Course
                 <span class="course-badge">Best Value</span>
               </div>
-              <div class="course-desc">2 weeks · Mon–Fri · Deep immersion</div>
+              <div class="course-desc">Mon–Sun · Full Immersion with Weekend Activity</div>
             </td>
             <td class="course-price-cell">
               <div class="course-price">$300</div>
@@ -837,8 +866,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/courses/intensive">Intensive Course</a></li>
           <li><a href="/courses/1-week">1-Week Course</a></li>
           <li><a href="/courses/weekend">Weekend Course</a></li>
-          <li><a href="#">Pricing</a></li>
           <li><a href="/tour">Tour</a></li>
+          <li><a href="#">Pricing</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -861,7 +890,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Chat Japanese. All rights reserved.</p>
+      <p>© 2026 Chat Japanese. All rights reserved.</p>
       <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
     </div>
   </div>
