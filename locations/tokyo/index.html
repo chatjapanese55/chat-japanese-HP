@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }
 　</script>
-  <style>
+      <style>
 
     /* ── Hero ── */
     .course-hero {
@@ -101,8 +101,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       letter-spacing: 0.01em;
       margin: 0 0 1rem;
     }
-    .course-hero-title .word-dive { color: #f99b30; }
-    .course-hero-title .word-into  { color: #53ccde; }
+    .course-hero-title .word-weekend { color: #f99b30; }
+    .course-hero-title .word-course  { color: #53ccde; }
     .course-hero-sub {
       font-family: 'DM Sans', sans-serif;
       font-size: clamp(0.88rem, 2.2vw, 1rem);
@@ -112,8 +112,229 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.65;
       margin: 0 0 1.5rem;
     }
+    .hero-pills {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .hero-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 500;
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+    }
 
- /* ── Activities ── */
+    /* ── Section base ── */
+    .course-section {
+      padding: 4.5rem 0;
+    }
+    .course-section + .course-section {
+      border-top: 1px solid #e8e0d4;
+    }
+    .c-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #f99b30;
+      margin-bottom: 0.6rem;
+    }
+    .c-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      font-weight: 300;
+      color: #2c2218;
+      line-height: 1.18;
+      margin: 0 0 1rem;
+    }
+    .c-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem;
+      color: #5a4e40;
+      line-height: 1.8;
+      max-width: 620px;
+    }
+
+    /* ── Overview: two-col ── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .overview-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .overview-image {
+      border-radius: 6px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .overview-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .overview-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .overview-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .oh-icon {
+      width: 28px;
+      height: 28px;
+      background: #f99b30;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .oh-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #5a4e40;
+      line-height: 1.6;
+    }
+    .oh-text strong { color: #2c2218; font-weight: 500; }
+
+    /* ── Schedule (dark) ── */
+    .schedule-section {
+      background: #2c2218;
+    }
+    .schedule-section .c-title { color: #f2ede6; }
+    .schedule-section .c-body  { color: rgba(242,237,230,0.72); }
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 2.25rem;
+    }
+    @media (max-width: 600px) { .schedule-grid { grid-template-columns: 1fr; } }
+    .schedule-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 1.5rem 1.25rem;
+    }
+    .schedule-card-head {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .schedule-day-tag {
+      background: #f99b30;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.22rem 0.6rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .schedule-day-tag.teal { background: #53ccde; }
+    .schedule-card-head h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #f2ede6;
+      margin: 0;
+    }
+    .schedule-row {
+      display: flex;
+      gap: 0.7rem;
+      margin-bottom: 0.8rem;
+      align-items: flex-start;
+    }
+    .schedule-row:last-child { margin-bottom: 0; }
+    .schedule-time {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #f99b30;
+      min-width: 58px;
+      padding-top: 0.1rem;
+    }
+    .schedule-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(242,237,230,0.82);
+      line-height: 1.55;
+    }
+    .schedule-desc strong { color: #f2ede6; font-weight: 500; }
+    .schedule-note {
+      margin-top: 1.5rem;
+      background: rgba(249,155,48,0.1);
+      border-left: 3px solid #f99b30;
+      padding: 0.85rem 1rem;
+      border-radius: 0 4px 4px 0;
+    }
+    .schedule-note p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.84rem;
+      color: rgba(242,237,230,0.85);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .schedule-note strong { color: #f99b30; }
+
+    /* ── Who is this for ── */
+    .for-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) { .for-cards { grid-template-columns: 1fr; } }
+    .for-card {
+      background: #fff;
+      border: 1px solid #e8e0d4;
+      border-radius: 6px;
+      padding: 1.4rem 1.2rem;
+    }
+    .for-card-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.65rem;
+    }
+    .for-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: #2c2218;
+      margin: 0 0 0.45rem;
+    }
+    .for-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.86rem;
+      color: #5a4e40;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* ── Activities ── */
     .activities-section {
       background: #f5f0e8;
     }
@@ -207,8 +428,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin: 0;
     }
     .activities-notice strong { color: #2c2218; font-weight: 500; }
-    </style>
-    <body>
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(135deg, #53ccde 0%, #2a9aad 100%);
+      text-align: center;
+      padding: 4.5rem 1.5rem;
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 5.5vw, 2.8rem);
+      font-weight: 300;
+      color: #fff;
+      margin: 0 0 0.65rem;
+    }
+    .cta-section p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem;
+      color: rgba(255,255,255,0.88);
+      margin: 0 0 2rem;
+    }
+    .btn-cta-white {
+      display: inline-block;
+      background: #fff;
+      color: #2a9aad;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1rem 2.75rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-cta-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    /* ── Responsive tweaks ── */
+    @media (max-width: 768px) {
+      .course-hero-content { padding: 1.5rem 1rem 2.5rem; }
+      .course-section { padding: 3rem 0; }
+      .cta-section { padding: 3rem 1rem; }
+    }
+ <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC9WRKLD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
