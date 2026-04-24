@@ -573,13 +573,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="main.js"></script>
 <script>
-// ── Google Apps Script Web App URL ──
-  
-// ↓ここに「新しいデプロイ」で発行されたURLを貼り付けてください
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbyziBX6oZdGS_6onFnNOJgvqSLWl6uTc17S6uXL73flq6CBQSuPqqckUVTz887tpO8G/exec';
+  // ── Google Apps Script Web App URL ──
+  // Replace with your deployed Apps Script URL after setup
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbyn-dJJA4ZpRf5c8Ev7xKjX05BmxlQB-MzK2c3KAi2xU-5ieZrPrY2hsxasM9581Lut/exec';
 
-let selectedCourse = null; // ここから下は既存のコードのままでOK
-  
+  let selectedCourse = null;
+
   function selectCourse(card) {
     document.querySelectorAll('.course-card').forEach(c => c.classList.remove('selected'));
     card.classList.add('selected');
@@ -621,29 +620,26 @@ let selectedCourse = null; // ここから下は既存のコードのままでOK
     label.textContent = 'Sending…';
     error.style.display = 'none';
 
-    // ★修正ポイント：JSONではなくURLSearchParams（フォーム形式）を使用
-    const params = new URLSearchParams();
-    params.append('course', selectedCourse);
-    params.append('name', name);
-    params.append('email', email);
-    params.append('phone', phone);
-    params.append('timestamp', new Date().toISOString());
+    const payload = {
+      course: selectedCourse,
+      name,
+      email,
+      phone,
+      timestamp: new Date().toISOString()
+    };
 
     try {
       // Send to Google Apps Script
       await fetch(GAS_URL, {
         method: 'POST',
-        mode: 'no-cors', // GAS送信時の必須設定
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: params.toString()
+        mode: 'no-cors', // GAS requires no-cors
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       });
 
-      // no-corsモードではレスポンスが取得できないため、成功したとみなして次へ
+      // Show thank you screen
       showThanks();
     } catch (err) {
-      console.error('Submission error:', err);
       error.style.display = 'block';
       btn.disabled = false;
       spinner.style.display = 'none';
@@ -655,6 +651,7 @@ let selectedCourse = null; // ここから下は既存のコードのままでOK
   function showThanks() {
     const overlay = document.getElementById('thanksOverlay');
     overlay.style.display = 'flex';
+    // Animate in
     overlay.style.opacity = '0';
     overlay.style.transition = 'opacity 0.4s ease';
     requestAnimationFrame(() => {
@@ -662,6 +659,7 @@ let selectedCourse = null; // ここから下は既存のコードのままでOK
     });
   }
 
+  // Pre-select course from URL param (e.g. apply.html?course=Weekend+Course)
   const urlParams = new URLSearchParams(window.location.search);
   const preSelected = urlParams.get('course');
   if (preSelected) {
