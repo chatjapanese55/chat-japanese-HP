@@ -113,7 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin: 0 0 1.5rem;
     }
 
-    /* ── Section base ── */
+     /* ── Section base ── */
     .course-section {
       padding: 4.5rem 0;
     }
@@ -147,43 +147,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-    /* ── Places ── */
-    .locations-section {
+ /* ── Activities ── */
+    .activities-section {
       background: #f5f0e8;
     }
-    .locations-grid {
+    .activities-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
       margin-top: 2.25rem;
     }
     @media (max-width: 768px) {
-      .locations-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .activities-grid { grid-template-columns: 1fr; gap: 1rem; }
     }
-    .locations-card {
+    .activity-card {
       background: #fff;
       border-radius: 8px;
       overflow: hidden;
       border: 1px solid #e8e0d4;
     }
-    .locations-card-img {
+    .activity-card-img {
       aspect-ratio: 4/3;
       overflow: hidden;
     }
-    .locations-card-img img {
+    .activity-card-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
       transition: transform 0.4s ease;
     }
-    .locations-card:hover .activity-card-img img {
+    .activity-card:hover .activity-card-img img {
       transform: scale(1.04);
     }
-    .locations-card-body {
+    .activity-card-body {
       padding: 1.25rem;
     }
-    .locations-card-num {
+    .activity-card-num {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.75rem;
       font-weight: 400;
@@ -192,21 +192,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       text-transform: uppercase;
       margin-bottom: 0.4rem;
     }
-    .locations-card h3 {
+    .activity-card h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.2rem;
       font-weight: 400;
       color: #2c2218;
       margin: 0 0 0.6rem;
     }
-    .locations-card p {
+    .activity-card p {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.84rem;
       color: #5a4e40;
       line-height: 1.65;
       margin: 0;
     }
-    .locations-notice {
+    .activities-notice {
       margin-top: 2rem;
       display: flex;
       align-items: flex-start;
@@ -216,18 +216,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border-radius: 6px;
       padding: 1.25rem 1.5rem;
     }
-    .locations-notice-icon {
+    .activities-notice-icon {
       font-size: 1.4rem;
       flex-shrink: 0;
     }
-    .locations-notice p {
+    .activities-notice p {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.88rem;
       color: #5a4e40;
       line-height: 1.65;
       margin: 0;
     }
-    .locations-notice strong { color: #2c2218; font-weight: 500; }
+    .activities-notice strong { color: #2c2218; font-weight: 500; }
+
 
     /* ── CTA ── */
     .cta-section {
@@ -413,67 +414,67 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 <!-- ============================================================
-   locations
+<!-- ============================================================
+     ACTIVITIES
 ============================================================ -->
-<section class="course-section course-section">
+<section class="course-section activities-section">
   <div class="container">
-    <p class="c-label">Where to study</p>
-    <h2 class="c-title">Classes in Hedden Gems where locals love</h2>
-    <p class="c-body>Study in quiet, local spots full of history and nature. See the real Tokyo, far away from the busy tourist crowds.</p>
-   
-    <div class="locations-grid">
+    <p class="c-label">Activity Highlights</p>
+    <h2 class="c-title">Three of our most popular experiences</h2>
+    <p class="c-body">Each weekend features two workshops — one per day. Rotate through them across multiple weekends. Apart form those activities, Ramen Cooking Class, Manga Writing Experience, and more.</p>
+    <div class="activities-grid">
 
       <!-- Sancha -->
-      <div class="locations-card fade-up">
-        <div class="locations-card-img">
+      <div class="activity-card fade-up">
+        <div class="activity-card-img">
           <img
             src="tokyo/sangenjaya.jpg"
-            alt="Sangenjaya Scenary"
+            alt="Scenery in Sangenjaya"
             loading="lazy"
           />
         </div>
-        <div class="locations-card-body">
-          <div class="locations-card-num">Neighbourhood 01</div>
-          <h3>🏢 Sangenjaya 三軒茶屋</h3>
-          <p>Sangenjaya is a local favorite known for its friendly vibe and beautiful spots like Setagaya Park. It’s the perfect place to chat while walking through the greenery or enjoying a famous Imagawayaki sweet from a local shop.</p>
+        <div class="activity-card-body">
+          <div class="activity-card-num">Neighbourhood 01</div>
+          <h3>🏢 Sangenjaya　三軒茶屋</h3>
+          <p>Learn the history of sushi — where it comes from, how it evolved, and what makes each type of neta (topping) unique. Then make your own rolls from scratch with a professional sushi chef.</p>
         </div>
       </div>
 
-      <!-- monnaka -->
-      <div class="locations-card fade-up" style="transition-delay:0.1s">
-        <div class="locations-card-img">
+      <!-- Monnaka -->
+      <div class="activity-card fade-up" style="transition-delay:0.1s">
+        <div class="activity-card-img">
           <img
             src="tokyo/monnaka.jpg"
-            alt="Scenary in Monzen-Nakacho"
+            alt="Scenery in Monzen-nakacho"
             loading="lazy"
           />
         </div>
-        <div class="locations-card-body">
-          <div class="locations-card-num">neighbourhood 02</div>
-          <h3>⛩ Monnzen-Nakacho　門前仲町</h3>
-          <p>Monzen-Nakacho is a historic district home to famous shrines and a warm, traditional atmosphere. Its calm streets and local charm make it the perfect, stress-free place to practice Japanese.</p>
+        <div class="activity-card-body">
+          <div class="activity-card-num">Neighbourhood 02</div>
+          <h3>⛩ Monzenn-Nakacho　門前仲町</h3>
+          <p>Start from zero — brush technique, ink, posture, the meaning behind each stroke. Tell the instructor what kanji you want to write (a feeling, a word, your name's meaning) and they'll teach you exactly that. The paper you write on makes a perfect souvenir.</p>
         </div>
       </div>
 
-      <!-- Kiyosumishirakawa -->
-      <div class="locations-card fade-up" style="transition-delay:0.2s">
-        <div class="locations-card-img">
+      <!-- Kiyosumi -->
+      <div class="activity-card fade-up" style="transition-delay:0.2s">
+        <div class="activity-card-img">
           <img
-            src="tokyo/kiyosumi.jpg"
-            alt="Scinery in Kiyosumishirakawa"
+            src="tokyo/kiyosumishirakawa.jpg"
+            alt="Scenery in Kiyosumishirakawa"
             loading="lazy"
           />
         </div>
-        <div class="locations-card-body">
-          <div class="locations-card-num">nighbourhood 03</div>
-          <h3>🍵 Kiyosumishirakawa　清澄白河</h3>
-          <p>Kiyosumi-Shirakawa is a peaceful area where old history meets modern coffee culture. You can walk through the beautiful Kiyosumi Garden and then enjoy a great cup of coffee at a local cafe.</p>
+        <div class="activity-card-body">
+          <div class="activity-card-num">Neighbourhood 03</div>
+          <h3>🍵 Kiyosumi-Shirakawa　清澄白河</h3>
+          <p>Discover the deep history and rituals of Japanese tea culture — why matcha is prepared the way it is, what each gesture means, and how to drink it properly. A slow, mindful experience that reveals a side of Japan most tourists never see.</p>
         </div>
       </div>
 
     </div>
-    <div class="locations-notice">
-      <div class="locations-notice-icon">🎌</div>
+    <div class="activities-notice">
+      <div class="activities-notice-icon">🎌</div>
       <p><strong>Two experiences per weekend, zero extra cost.</strong> Saturday and Sunday each feature a different cultural workshop — so every weekend you attend, you get two new experiences. All included in the course fee, with no hidden charges.</p>
     </div>
   </div>
