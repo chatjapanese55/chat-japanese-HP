@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osaka — Coming Soon | Chat Japanese</title>
+  <meta name="description" content="Chat Japanese is coming to Osaka. Stay tuned for updates on our new location." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../style.css" />
+
+  <style>
+    .coming-soon-wrap {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f0e8;
+      padding: 7rem 1.5rem 5rem;
+    }
+    .coming-soon-inner {
+      text-align: center;
+      max-width: 540px;
+    }
+    .coming-soon-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f99b30;
+      margin-bottom: 1.25rem;
+    }
+    .coming-soon-city {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(3.5rem, 14vw, 7rem);
+      font-weight: 400;
+      line-height: 1.0;
+      letter-spacing: 0.01em;
+      color: #2c2218;
+      margin: 0 0 0.25rem;
+    }
+    .coming-soon-city span { color: #53ccde; }
+    .coming-soon-divider {
+      width: 48px;
+      height: 3px;
+      background: #f99b30;
+      margin: 1.5rem auto;
+      border-radius: 2px;
+    }
+    .coming-soon-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 300;
+      color: #2c2218;
+      margin: 0 0 1rem;
+      line-height: 1.3;
+    }
+    .coming-soon-body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.93rem;
+      color: #5a4e40;
+      line-height: 1.8;
+      margin: 0 0 2.5rem;
+    }
+    .coming-soon-actions {
+      display: flex;
+      gap: 0.85rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-outline-dark {
+      display: inline-block;
+      border: 1.5px solid #2c2218;
+      color: #2c2218;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-outline-dark:hover {
+      background: #2c2218;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="../../logo-chat-japanese.webp" alt="Chat Japanese logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
+        <div>
+          <div class="nav-logo-name">
+            <span class="chat">Chat</span><span class="japanese">Japanese</span>
+          </div>
+          <div class="nav-logo-sub">Japanese School</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li class="has-dropdown" id="nav-courses">
+          <button onclick="toggleNav('nav-courses')">
+            Courses
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/courses/intensive">Intensive Course</a>
+            <a href="/courses/1-week">1-Week Course</a>
+            <a href="/courses/weekend">Weekend Course</a>
+          </div>
+        </li>
+        <li class="has-dropdown" id="nav-locations">
+          <button onclick="toggleNav('nav-locations')">
+            Locations
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/locations/tokyo">Tokyo</a>
+            <a href="/locations/yokohama">Yokohama</a>
+            <a href="/locations/kamakura">Kamakura</a>
+            <a href="/locations/osaka">Osaka</a>
+            <a href="/locations/kyoto">Kyoto</a>
+          </div>
+        </li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/tour">Tour</a></li>
+        <li class="has-dropdown" id="nav-company">
+          <button onclick="toggleNav('nav-company')">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="../../index.html">Home Page</a>
+            <a href="https://www.symarch-llc.com/">About Us</a>
+            <a href="/company/blog">Blog</a>
+          </div>
+        </li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="/apply/apply.html" class="nav-apply">Apply Now</a>
+        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Courses
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/courses/intensive">Intensive Course</a>
+      <a href="/courses/1-week">1-Week Course</a>
+      <a href="/courses/weekend">Weekend Course</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Locations
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/locations/tokyo">Tokyo</a>
+      <a href="/locations/yokohama">Yokohama</a>
+      <a href="/locations/kamakura">Kamakura</a>
+      <a href="/locations/osaka">Osaka</a>
+      <a href="/locations/kyoto">Kyoto</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing">Pricing</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/tour">Tour</a></div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Company
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="../../index.html">Home Page</a>
+      <a href="https://www.symarch-llc.com/">Abut Us</a>
+      <a href="/company/blog">Blog</a>
+    </div>
+  </div>
+  <div style="margin-top:2rem;">
+    <a href="/apply/apply.html" class="btn-primary">Apply Now →</a>
+  </div>
+</div>
+
+<!-- COMING SOON -->
+<main class="coming-soon-wrap">
+  <div class="coming-soon-inner">
+    <p class="coming-soon-label">Location</p>
+    <h1 class="coming-soon-city"><span>京都</span><br>Kyoto</h1>
+    <div class="coming-soon-divider"></div>
+    <h2 class="coming-soon-heading">We're on our way to Kyoto.</h2>
+    <p class="coming-soon-body">
+      This location is not yet open, but we're working on it.<br>
+      Please check back soon — we can't wait to bring Chat Japanese to Kyoto.
+    </p>
+    <div class="coming-soon-actions">
+      <a href="/" class="btn-primary">Back to Home →</a>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">
+          <span class="chat">Chat</span><br><span class="japanese">Japanese</span>
+        </div>
+        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences across Japan.</p>
+        <a href="/apply" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Apply Now →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="/courses/intensive">Intensive Course</a></li>
+          <li><a href="/courses/1-week">1-Week Course</a></li>
+          <li><a href="/courses/weekend">Weekend Course</a></li>
+          <li><a href="/tour">Tour</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="/locations/tokyo">Tokyo</a></li>
+          <li><a href="/locations/yokohama">Yokohama</a></li>
+          <li><a href="/locations/kamakura">Kamakura</a></li>
+          <li><a href="/locations/osaka">Osaka</a></li>
+          <li><a href="/locations/kyoto">Kyoto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../../index.html">Home Page</a></li>
+          <li><a href="https://www.symarch-llc.com/">About Us</a></li>
+          <li><a href="/company/team">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Chat Japanese. All rights reserved.</p>
+      <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../../main.js"></script>
+</body>
+</html>
