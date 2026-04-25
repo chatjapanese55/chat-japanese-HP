@@ -19,7 +19,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────────────────────────────────────
-const GAS_URL = ""; // e.g. "https://script.google.com/macros/s/AKfycb.../exec"
+const GAS_URL = "https://script.google.com/macros/s/AKfycbyd3FkPSqQF_869ziUFp1eFmJntniXD2bc82FQBZE3NkY8_HyXiyblukXlxGtupM_Rb0A/exec"; // e.g. "https://script.google.com/macros/s/AKfycb.../exec"
 
 // ─────────────────────────────────────────────────────────────────────────────
 // COURSE RULES
