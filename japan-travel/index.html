@@ -1,0 +1,1688 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Japan Travel Essentials | found-local.JP by Symarch LLC</title>
+  <meta name="description" content="Everything foreign tourists need to know before visiting Japan — visa requirements, earthquake safety, climate guide, etiquette, transportation, and must-have apps. Powered by found-local.JP and Symarch LLC." />
+  <meta name="keywords" content="Japan travel guide, Japan visa, Japan etiquette, Japan earthquake safety, Japan transportation, Japan apps, found-local, Symarch, Japan tourism, visit Japan" />
+  <meta name="author" content="Symarch LLC" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.symarch-llc.com/japan-travel" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.symarch-llc.com/japan-travel" />
+  <meta property="og:title" content="Japan Travel Essentials | found-local.JP by Symarch LLC" />
+  <meta property="og:description" content="Everything foreign tourists need to know before visiting Japan — visa, safety, climate, etiquette, transportation, and apps." />
+  <meta property="og:image" content="https://www.symarch-llc.com/og-image-japan-travel.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Japan Travel Essentials | found-local.JP" />
+  <meta name="twitter:description" content="Visa, safety, climate, etiquette, transportation, and apps — all you need for your Japan trip." />
+  <meta name="twitter:image" content="https://www.symarch-llc.com/og-image-japan-travel.webp" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#1B3A6B" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.symarch-llc.com/#organization","name":"Symarch LLC","url":"https://www.symarch-llc.com","sameAs":["https://found-local.jp"]},{"@type":"WebPage","@id":"https://www.symarch-llc.com/japan-travel#webpage","url":"https://www.symarch-llc.com/japan-travel","name":"Japan Travel Essentials","isPartOf":{"@id":"https://www.symarch-llc.com/#website"}}]}
+  </script>
+  <!-- ============================================================
+       Image Assets — すべて同ディレクトリ内の WebP ファイルを参照
+       ------------
+       tokyo.webp          — Climate: Tokyo city photo
+       osaka.webp          — Climate: Osaka city photo
+       sapporo.webp        — Climate: Sapporo city photo
+       fukuoka.webp        — Climate: Hakata/Fukuoka city photo
+       okinawa.webp        — Climate: Okinawa city photo
+       niigata.webp        — Climate: Niigata city photo
+       onsen.webp          — Etiquette: Onsen & Sentō section
+       shinkansen.webp     — Etiquette: Train Manners / Transportation section
+       shrine-temple.webp  — Etiquette: Shrines & Temples section
+       iccard.webp         — Transportation: IC Card section
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ── Variables ── */
+    :root {
+      --indigo: #1B3A6B;
+      --orange: #f89a26;
+      --red:    #C85A3A;
+      --teal:   #2D7D9A;
+      --brown:  #7A5C2D;
+      --purple: #7A3D6B;
+      --green:  #4CAF50;
+      --radius: 16px;
+    }
+
+    /* ── Disaster Alert Bar ── */
+    #disaster-bar {
+      position: sticky; top: 0; z-index: 60;
+      background: #1a1a1a; color: #fff;
+      padding: 8px 16px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      font-size: 12px; min-height: 36px;
+      transition: background 0.3s;
+    }
+    #disaster-bar.severity-high   { background: #7f1d1d; }
+    #disaster-bar.severity-medium { background: #78350f; }
+    #disaster-bar.severity-low    { background: #1e3a5f; }
+    #disaster-bar.severity-clear  { background: #14532d; }
+    #disaster-bar .alert-icon { font-size: 16px; flex-shrink: 0; }
+    #disaster-bar .alert-text { flex: 1; }
+    #disaster-bar .alert-title { font-weight: 700; }
+    #disaster-bar .alert-detail { opacity: .8; margin-left: 6px; }
+    #disaster-bar .refresh-btn {
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+      color: #fff; border-radius: 6px; padding: 3px 10px; font-size: 11px; cursor: pointer;
+      flex-shrink: 0;
+    }
+    #disaster-bar .refresh-btn:hover { background: rgba(255,255,255,.25); }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 36px; z-index: 50;
+      background: var(--indigo); box-shadow: 0 2px 12px rgba(0,0,0,.25);
+    }
+    .header-inner {
+      max-width: 1200px; margin: 0 auto; padding: 10px 16px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .logo-block { display: flex; align-items: center; gap: 10px; }
+    .logo-badge {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--orange); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 11px; flex-shrink: 0;
+    }
+    .logo-title { color: #fff; font-weight: 900; font-size: 14px; line-height: 1.2; }
+    .logo-sub { color: #93c5fd; font-size: 11px; }
+    .header-links { display: flex; align-items: center; gap: 12px; }
+    .header-links a { color: #93c5fd; font-size: 12px; font-weight: 600; }
+    .header-links a:hover { color: #fff; }
+
+    /* ── Translate Widget ── */
+    .translate-btn {
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+      color: #fff; border-radius: 8px; padding: 5px 12px; font-size: 12px; font-weight: 600;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .translate-btn:hover { background: rgba(255,255,255,.25); }
+    .translate-panel {
+      position: absolute; right: 16px; top: calc(100% + 6px);
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+      padding: 16px; width: 320px; box-shadow: 0 8px 32px rgba(0,0,0,.15);
+      display: none; z-index: 100;
+    }
+    .translate-panel.open { display: block; }
+    .translate-panel h4 { font-size: 13px; font-weight: 700; color: var(--indigo); margin-bottom: 10px; }
+    .translate-panel select, .translate-panel textarea {
+      width: 100%; border: 1px solid #d1d5db; border-radius: 8px;
+      padding: 8px 10px; font-size: 12px; font-family: inherit;
+      outline: none; transition: border-color .2s;
+    }
+    .translate-panel select:focus, .translate-panel textarea:focus { border-color: var(--indigo); }
+    .translate-panel textarea { resize: vertical; min-height: 70px; margin-top: 8px; }
+    .translate-panel .lang-row { display: flex; gap: 6px; align-items: center; }
+    .translate-panel .lang-row select { flex: 1; }
+    .translate-panel .lang-arrow { color: #9ca3af; font-size: 14px; }
+    .translate-actions { display: flex; gap: 6px; margin-top: 8px; }
+    .btn-translate {
+      flex: 1; background: var(--indigo); color: #fff; border-radius: 8px;
+      padding: 7px; font-size: 12px; font-weight: 700; cursor: pointer;
+    }
+    .btn-translate:hover { background: #14305a; }
+    .btn-speak {
+      background: #f3f4f6; color: #374151; border-radius: 8px;
+      padding: 7px 10px; font-size: 12px; font-weight: 600; cursor: pointer;
+    }
+    .btn-speak:hover { background: #e5e7eb; }
+    .translate-result {
+      margin-top: 8px; padding: 8px 10px; background: #f0f7ff;
+      border: 1px solid #bfdbfe; border-radius: 8px;
+      font-size: 12px; color: #1e3a5f; display: none;
+    }
+    .translate-result.show { display: block; }
+
+    /* ── Tab Nav ── */
+    .tab-nav {
+      border-top: 1px solid rgba(255,255,255,.1);
+      overflow-x: auto; scrollbar-width: none;
+    }
+    .tab-nav::-webkit-scrollbar { display: none; }
+    .tab-nav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 16px;
+      display: flex; min-width: max-content;
+    }
+    .tab-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 10px 14px; font-size: 13px; font-weight: 600;
+      color: #93c5fd; white-space: nowrap;
+      border-bottom: 2px solid transparent; transition: all .2s;
+    }
+    .tab-btn:hover { color: #fff; border-bottom-color: rgba(255,255,255,.3); }
+    .tab-btn.active { color: #fff; border-bottom-color: var(--orange); }
+    .tab-btn svg { width: 14px; height: 14px; }
+
+    /* ── Main Content ── */
+    main { max-width: 1200px; margin: 0 auto; padding: 32px 16px 64px; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── Tab Header ── */
+    .tab-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+    .tab-header-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .tab-header h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 26px; font-weight: 900; color: #111;
+    }
+    .tab-header-line { width: 48px; height: 3px; background: var(--orange); margin-top: 4px; }
+
+    /* ── Cards ── */
+    .card {
+      background: #fff; border: 1px solid #f0f0f0;
+      border-radius: var(--radius); box-shadow: 0 1px 6px rgba(0,0,0,.06);
+      overflow: hidden; margin-bottom: 16px;
+    }
+    .card-header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 20px; border-bottom: 1px solid #f0f0f0;
+      border-left: 4px solid var(--indigo);
+    }
+    .card-header-icon {
+      width: 30px; height: 30px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .card-header h3 { font-size: 13px; font-weight: 700; color: #1a1a1a; }
+    .card-body { padding: 20px; }
+
+    /* ── Hero Banner ── */
+    .hero-banner {
+      position: relative; border-radius: var(--radius);
+      overflow: hidden; height: 160px; margin-bottom: 16px;
+    }
+    .hero-banner img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-banner-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(27,58,107,.8), transparent);
+      display: flex; align-items: flex-end; padding: 20px 24px;
+    }
+    .hero-banner-overlay h2 { color: #fff; font-size: 22px; font-weight: 900; font-family: 'Lora', serif; }
+    .hero-banner-overlay p { color: #bfdbfe; font-size: 13px; margin-top: 2px; }
+
+    /* ── Do/Don't Badges ── */
+    .badge-row { display: flex; flex-direction: column; gap: 6px; }
+    .badge {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 8px 12px; border-radius: 10px; border: 1px solid;
+      font-size: 12px; line-height: 1.5;
+    }
+    .badge.do   { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
+    .badge.dont { background: #fef2f2; border-color: #fecaca; color: #991b1b; }
+    .badge.info { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+    .badge-icon { flex-shrink: 0; margin-top: 1px; font-size: 13px; }
+
+    /* ── Grid Helpers ── */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    @media (max-width: 640px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    }
+    .space-y > * + * { margin-top: 12px; }
+
+    /* ── Accordion ── */
+    .accordion-item {
+      background: #fff; border: 1px solid #f0f0f0;
+      border-radius: 12px; overflow: hidden; margin-bottom: 8px;
+    }
+    .accordion-trigger {
+      width: 100%; display: flex; align-items: center; gap: 12px;
+      padding: 14px 16px; text-align: left; cursor: pointer;
+      background: none; border: none; font-family: inherit;
+      transition: background .15s;
+    }
+    .accordion-trigger:hover { background: #f9fafb; }
+    .accordion-icon {
+      width: 36px; height: 36px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .accordion-title { font-size: 14px; font-weight: 700; color: #1a1a1a; flex: 1; }
+    .accordion-summary { font-size: 12px; color: #6b7280; }
+    .accordion-chevron {
+      width: 16px; height: 16px; color: #9ca3af; flex-shrink: 0;
+      transition: transform .25s;
+    }
+    .accordion-item.open .accordion-chevron { transform: rotate(180deg); }
+    .accordion-body {
+      max-height: 0; overflow: hidden;
+      transition: max-height .3s ease, opacity .3s ease;
+      opacity: 0;
+    }
+    .accordion-item.open .accordion-body { max-height: 2000px; opacity: 1; }
+    .accordion-body-inner { padding: 0 16px 16px; border-top: 1px solid #f0f0f0; padding-top: 14px; }
+
+    /* ── Severity Badge ── */
+    .severity {
+      font-size: 11px; font-weight: 700; padding: 2px 8px;
+      border-radius: 999px; border: 1px solid; text-transform: capitalize;
+    }
+    .severity.critical { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+    .severity.high     { background: #ffedd5; color: #9a3412; border-color: #fdba74; }
+    .severity.medium   { background: #fef9c3; color: #854d0e; border-color: #fde047; }
+    .severity.low      { background: #dcfce7; color: #166534; border-color: #86efac; }
+
+    /* ── Emergency Numbers ── */
+    .emergency-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+    @media (max-width: 480px) { .emergency-grid { grid-template-columns: 1fr; } }
+    .emergency-card {
+      background: #fff; border: 2px solid #fecaca; border-radius: 14px;
+      padding: 16px; text-align: center;
+    }
+    .emergency-emoji { font-size: 24px; margin-bottom: 4px; }
+    .emergency-number { font-size: 26px; font-weight: 900; color: #dc2626; }
+    .emergency-label { font-size: 12px; font-weight: 700; color: #1a1a1a; margin-top: 2px; }
+    .emergency-detail { font-size: 11px; color: #6b7280; margin-top: 2px; }
+
+    /* ── Visa Selector ── */
+    .visa-select {
+      width: 100%; border: 1px solid #d1d5db; border-radius: 12px;
+      padding: 12px 16px; font-size: 14px; font-family: inherit;
+      background: #f9fafb; outline: none; cursor: pointer;
+      transition: border-color .2s;
+    }
+    .visa-select:focus { border-color: var(--indigo); box-shadow: 0 0 0 3px rgba(27,58,107,.1); }
+    .visa-result { margin-top: 16px; display: none; }
+    .visa-result.show { display: block; }
+    .visa-result-box {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 20px; border-radius: 12px; border: 1px solid;
+    }
+    .visa-result-box.ok   { background: #f0fdf4; border-color: #86efac; }
+    .visa-result-box.req  { background: #fef2f2; border-color: #fca5a5; }
+    .visa-days-circle {
+      width: 64px; height: 64px; border-radius: 50%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      flex-shrink: 0; background: #dcfce7;
+    }
+    .visa-days-circle .days-num { font-size: 24px; font-weight: 900; color: #15803d; line-height: 1; }
+    .visa-days-circle .days-label { font-size: 11px; font-weight: 700; color: #16a34a; }
+    .visa-req-circle {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: #fee2e2; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .visa-country { font-size: 18px; font-weight: 900; color: #166534; }
+    .visa-country.req { color: #991b1b; }
+    .visa-desc { font-size: 13px; margin-top: 4px; color: #166534; }
+    .visa-desc.req { color: #b91c1c; }
+    .visa-links { display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+    .visa-link { font-size: 12px; font-weight: 700; color: var(--indigo); text-decoration: underline; }
+
+    /* ── Climate ── */
+    .city-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 14px; }
+    @media (max-width: 640px) { .city-grid { grid-template-columns: repeat(3, 1fr); } }
+    .city-btn {
+      position: relative; border-radius: 10px; overflow: hidden;
+      height: 72px; border: 2px solid transparent; cursor: pointer;
+      transition: all .2s; opacity: .8;
+    }
+    .city-btn:hover { opacity: 1; }
+    .city-btn.active { border-color: var(--indigo); box-shadow: 0 4px 12px rgba(27,58,107,.3); opacity: 1; transform: scale(1.04); }
+    .city-btn img { width: 100%; height: 100%; object-fit: cover; }
+    .city-btn-label {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,.35); display: flex; align-items: flex-end;
+      justify-content: center; padding-bottom: 5px;
+      font-size: 11px; font-weight: 900; color: #fff;
+    }
+    .city-btn.active .city-btn-label { background: rgba(27,58,107,.5); }
+    .city-desc-bar {
+      background: var(--indigo); color: #fff; border-radius: 10px;
+      padding: 10px 16px; display: flex; align-items: center; gap: 10px;
+      font-size: 13px; margin-bottom: 14px;
+    }
+    .city-desc-bar .icon { color: var(--orange); font-size: 16px; }
+    .chart-container {
+      background: #fff; border: 1px solid #f0f0f0; border-radius: 14px;
+      padding: 20px; margin-bottom: 16px;
+    }
+    .chart-container h3 { font-size: 13px; font-weight: 700; color: #1a1a1a; margin-bottom: 16px; }
+    .month-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .month-btn {
+      padding: 8px; border-radius: 8px; font-size: 12px; font-weight: 700;
+      border: 1px solid #e5e7eb; background: #f9fafb; color: #4b5563;
+      cursor: pointer; transition: all .15s;
+    }
+    .month-btn:hover { border-color: var(--teal); }
+    .month-btn.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+    .packing-card {
+      background: #fff; border: 1px solid #f0f0f0; border-radius: 14px;
+      overflow: hidden;
+    }
+    .packing-header {
+      display: flex; align-items: center; gap: 10px;
+      padding: 14px 20px; border-bottom: 1px solid #f0f0f0;
+      border-left: 4px solid var(--teal);
+    }
+    .packing-body { padding: 16px 20px; }
+    .packing-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #374151; margin-bottom: 6px; }
+    .packing-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+    .season-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    @media (max-width: 640px) { .season-grid { grid-template-columns: repeat(2, 1fr); } }
+    .season-card { padding: 14px; background: #f9fafb; border: 1px solid #f0f0f0; border-radius: 12px; }
+    .season-emoji { font-size: 22px; margin-bottom: 6px; }
+    .season-name { font-size: 12px; font-weight: 700; color: #1a1a1a; }
+    .season-months { font-size: 11px; color: #6b7280; margin-bottom: 6px; }
+    .season-highlight { font-size: 11px; color: #374151; line-height: 1.5; margin-bottom: 6px; }
+    .season-tip { font-size: 11px; font-weight: 700; color: var(--teal); }
+
+    /* ── Apps ── */
+    .featured-card {
+      position: relative; border-radius: 16px; overflow: hidden;
+      border: 2px solid var(--indigo); box-shadow: 0 4px 20px rgba(27,58,107,.2);
+      margin-bottom: 20px;
+    }
+    .featured-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #1B3A6B, #1e4d7b, #0f2444);
+    }
+    .featured-deco1 {
+      position: absolute; top: -40px; right: -40px;
+      width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,.05);
+    }
+    .featured-deco2 {
+      position: absolute; bottom: -30px; left: -30px;
+      width: 140px; height: 140px; border-radius: 50%; background: rgba(248,154,38,.08);
+    }
+    .featured-inner { position: relative; z-index: 2; padding: 24px; }
+    .featured-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--orange); color: #fff; font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 16px;
+    }
+    .featured-logo {
+      width: 60px; height: 60px; border-radius: 14px;
+      background: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 28px; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    }
+    .featured-title { color: #fff; font-size: 22px; font-weight: 900; }
+    .featured-free { background: rgba(255,255,255,.2); color: #fff; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; }
+    .featured-desc { color: #bfdbfe; font-size: 13px; line-height: 1.6; margin: 8px 0 14px; }
+    .feature-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .feature-pill {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: rgba(255,255,255,.15); color: #fff;
+      font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px;
+    }
+    .why-box {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      border-radius: 12px; padding: 14px; margin-bottom: 16px;
+    }
+    .why-box-title { font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
+    .why-item { display: flex; align-items: flex-start; gap: 6px; font-size: 12px; color: #bfdbfe; line-height: 1.5; margin-bottom: 5px; }
+    .why-check { color: var(--orange); flex-shrink: 0; margin-top: 1px; }
+    .dl-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 10px; font-size: 13px; font-weight: 700;
+      cursor: pointer; transition: all .15s;
+    }
+    .dl-btn.white { background: #fff; color: var(--indigo); }
+    .dl-btn.white:hover { background: #eff6ff; }
+    .dl-btn.dark  { background: #111; color: #fff; }
+    .dl-btn.dark:hover { background: #000; }
+    .dl-btn.orange { background: var(--orange); color: #fff; }
+    .dl-btn.orange:hover { background: #e08820; }
+    .divider-text {
+      display: flex; align-items: center; gap: 12px; margin: 20px 0;
+    }
+    .divider-text::before, .divider-text::after {
+      content: ''; flex: 1; height: 1px; background: #e5e7eb;
+    }
+    .divider-text span { font-size: 11px; color: #9ca3af; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; white-space: nowrap; }
+    .app-card {
+      padding: 14px; background: #f9fafb; border: 1px solid #f0f0f0;
+      border-radius: 12px; transition: border-color .15s;
+    }
+    .app-card:hover { border-color: #d1d5db; }
+    .app-header { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .app-emoji { font-size: 22px; }
+    .app-name { font-size: 13px; font-weight: 700; color: #1a1a1a; }
+    .app-stars { color: var(--orange); font-size: 11px; }
+    .app-desc { font-size: 12px; color: #4b5563; line-height: 1.5; margin-bottom: 6px; }
+    .app-tip {
+      background: #fff; border: 1px solid #e5e7eb; border-radius: 8px;
+      padding: 6px 10px; font-size: 11px; color: var(--indigo); font-weight: 600; margin-bottom: 8px;
+    }
+    .app-store-btns { display: flex; gap: 6px; }
+    .app-store-btn {
+      font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 6px; cursor: pointer;
+    }
+    .app-store-btn.ios { background: #1a1a1a; color: #fff; }
+    .app-store-btn.ios:hover { background: #000; }
+    .app-store-btn.android { background: var(--indigo); color: #fff; }
+    .app-store-btn.android:hover { background: #14305a; }
+
+    /* ── Transportation ── */
+    .route-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 12px; background: #f9fafb; border: 1px solid #f0f0f0; border-radius: 10px;
+    }
+    .route-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(27,58,107,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .route-name { font-size: 12px; font-weight: 700; color: #1a1a1a; }
+    .route-line { font-size: 11px; color: #6b7280; }
+    .route-time { font-size: 12px; font-weight: 700; color: var(--indigo); }
+    .route-price { font-size: 11px; color: #6b7280; }
+    .ic-card {
+      padding: 12px; background: #f9fafb; border: 1px solid #f0f0f0; border-radius: 10px;
+    }
+    .ic-dot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Chat Japanese Card ── */
+    .chatjp-card {
+      background: linear-gradient(135deg, #4a1d96, #6d28d9, #7c3aed);
+      border-radius: 16px; padding: 24px; color: #fff; margin-top: 20px;
+    }
+    .chatjp-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--orange); color: #fff; font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;
+    }
+    .chatjp-title { font-size: 20px; font-weight: 900; margin-bottom: 6px; }
+    .chatjp-desc { font-size: 13px; color: #ddd6fe; line-height: 1.6; margin-bottom: 14px; }
+    .chatjp-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .chatjp-pill {
+      background: rgba(255,255,255,.15); color: #fff;
+      font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 999px;
+    }
+    .chatjp-why { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; padding: 12px; margin-bottom: 14px; }
+    .chatjp-why-title { font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 6px; }
+    .chatjp-why-item { display: flex; align-items: flex-start; gap: 6px; font-size: 12px; color: #ddd6fe; line-height: 1.5; margin-bottom: 4px; }
+    .chatjp-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 18px; border-radius: 10px; font-size: 13px; font-weight: 700;
+      background: #fff; color: #4a1d96; cursor: pointer; transition: background .15s;
+    }
+    .chatjp-btn:hover { background: #ede9fe; }
+
+    /* ── Info boxes ── */
+    .info-box {
+      padding: 12px 16px; border-radius: 10px; border: 1px solid;
+      font-size: 13px; line-height: 1.6; margin-bottom: 12px;
+    }
+    .info-box.amber { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+    .info-box.blue  { background: #eff6ff; border-color: #bfdbfe; color: #1e3a5f; }
+    .info-box.green { background: #f0fdf4; border-color: #bbf7d0; color: #14532d; }
+    .info-box.indigo { background: var(--indigo); border-color: var(--indigo); color: #fff; border-radius: 14px; padding: 20px; }
+    .info-box.indigo a { color: var(--orange); font-weight: 700; }
+
+    /* ── EEW Banner ── */
+    .eew-banner {
+      background: var(--indigo); border-radius: 14px; padding: 20px;
+      display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px;
+    }
+    .eew-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: var(--orange); display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+    .eew-title { color: #fff; font-size: 15px; font-weight: 900; margin-bottom: 4px; }
+    .eew-desc { color: #bfdbfe; font-size: 13px; line-height: 1.6; }
+    .eew-links { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+    .eew-link { font-size: 12px; font-weight: 700; text-decoration: underline; }
+    .eew-link.orange { color: var(--orange); }
+    .eew-link.blue   { color: #93c5fd; }
+
+    /* ── Official Resources ── */
+    .resource-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+    .resource-link { font-size: 12px; font-weight: 700; color: var(--indigo); text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #f0f0f0; background: #f9fafb;
+      padding: 32px 16px; text-align: center;
+    }
+    footer p { font-size: 12px; color: #6b7280; margin-bottom: 6px; }
+    footer a { color: var(--indigo); font-weight: 700; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 16px; margin-top: 10px; flex-wrap: wrap; }
+    .footer-links a { font-size: 12px; font-weight: 700; color: var(--indigo); text-decoration: underline; }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .header-links .hide-sm { display: none; }
+      .logo-sub { display: none; }
+      .tab-btn { padding: 8px 10px; font-size: 12px; }
+      main { padding: 20px 12px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     DISASTER ALERT BAR
+     ============================================================ -->
+<div id="disaster-bar" class="severity-clear">
+  <span class="alert-icon">✅</span>
+  <span class="alert-text">
+    <span class="alert-title">No Active Alerts</span>
+    <span class="alert-detail">Japan is currently calm. Data from P2PQuake API.</span>
+  </span>
+  <button class="refresh-btn" onclick="loadEarthquakeAlerts()">↻ Refresh</button>
+</div>
+
+<!-- ============================================================
+     HEADER + TAB NAV
+     ============================================================ -->
+<header>
+  <div class="header-inner">
+    <div class="logo-block">
+      <div class="logo-badge">JP</div>
+      <div>
+        <div class="logo-title">Japan Travel Essentials</div>
+        <div class="logo-sub">by found-local.JP</div>
+      </div>
+    </div>
+    <div class="header-links" style="position:relative;">
+      <a href="https://found-local.jp" target="_blank" class="hide-sm">🗾 found-local.jp</a>
+      <button class="translate-btn" onclick="toggleTranslate()">🌐 Translate</button>
+      <div class="translate-panel" id="translate-panel">
+        <h4>Quick Translate</h4>
+        <div class="lang-row">
+          <select id="src-lang">
+            <option value="en">English</option>
+            <option value="zh">Chinese</option>
+            <option value="ko">Korean</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+            <option value="th">Thai</option>
+            <option value="vi">Vietnamese</option>
+            <option value="ar">Arabic</option>
+            <option value="pt">Portuguese</option>
+          </select>
+          <span class="lang-arrow">→</span>
+          <select id="dst-lang">
+            <option value="ja">Japanese</option>
+            <option value="en">English</option>
+            <option value="zh">Chinese</option>
+            <option value="ko">Korean</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+          </select>
+        </div>
+        <textarea id="translate-input" placeholder="Type text to translate… (Ctrl+Enter to translate)"></textarea>
+        <div class="translate-actions">
+          <button class="btn-translate" onclick="doTranslate()">Translate</button>
+          <button class="btn-speak" onclick="doSpeak()">🔊 Listen</button>
+        </div>
+        <div class="translate-result" id="translate-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="tab-nav">
+    <div class="tab-nav-inner">
+      <button class="tab-btn active" data-tab="visa"           onclick="switchTab('visa')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Visa &amp; Entry
+      </button>
+      <button class="tab-btn" data-tab="safety"         onclick="switchTab('safety')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Safety
+      </button>
+      <button class="tab-btn" data-tab="climate"        onclick="switchTab('climate')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        Climate
+      </button>
+      <button class="tab-btn" data-tab="laws"           onclick="switchTab('laws')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        Laws
+      </button>
+      <button class="tab-btn" data-tab="etiquette"      onclick="switchTab('etiquette')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Etiquette
+      </button>
+      <button class="tab-btn" data-tab="apps"           onclick="switchTab('apps')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        Apps
+      </button>
+      <button class="tab-btn" data-tab="transportation" onclick="switchTab('transportation')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16"/><path d="M12 4v16"/></svg>
+        Transportation
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main>
+
+  <!-- ── VISA & ENTRY ── -->
+  <div class="tab-content active" id="tab-visa">
+    <div class="tab-header">
+      <div class="tab-header-icon" style="background:rgba(27,58,107,.1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A6B" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      </div>
+      <div><h2>Visa &amp; Entry</h2><div class="tab-header-line"></div></div>
+    </div>
+
+    <div class="hero-banner">
+      <img src="tokyo.webp" alt="Tokyo" />
+      <div class="hero-banner-overlay">
+        <div><h2>Visa &amp; Entry</h2><p>Check your visa requirements before travelling to Japan</p></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" style="border-left-color:#1B3A6B;">
+        <div class="card-header-icon" style="background:rgba(27,58,107,.1);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3A6B" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Select Your Country</h3>
+      </div>
+      <div class="card-body">
+        <p style="font-size:12px;color:#6b7280;margin-bottom:12px;">Find out how many days you can stay in Japan visa-free</p>
+        <select class="visa-select" id="visa-country" onchange="showVisaResult()">
+          <option value="">— Choose your country —</option>
+          <option>United States</option><option>United Kingdom</option><option>Canada</option>
+          <option>Australia</option><option>New Zealand</option><option>France</option>
+          <option>Germany</option><option>Italy</option><option>Spain</option>
+          <option>Netherlands</option><option>Sweden</option><option>Switzerland</option>
+          <option>Norway</option><option>Denmark</option><option>Finland</option>
+          <option>Austria</option><option>Belgium</option><option>Portugal</option>
+          <option>Ireland</option><option>Greece</option><option>Poland</option>
+          <option>Czech Republic</option><option>Singapore</option><option>South Korea</option>
+          <option>Hong Kong</option><option>Taiwan</option><option>Malaysia</option>
+          <option>Thailand</option><option>Brazil</option><option>Mexico</option>
+          <option>UAE</option><option>Israel</option><option>Argentina</option>
+          <option>Chile</option><option>Peru</option><option>Colombia</option>
+          <option>South Africa</option><option>China</option><option>India</option>
+          <option>Indonesia</option><option>Philippines</option><option>Vietnam</option>
+          <option>Bangladesh</option><option>Pakistan</option><option>Nigeria</option>
+          <option>Egypt</option><option>Russia</option><option>Turkey</option><option>Iran</option>
+        </select>
+        <div class="visa-result" id="visa-result"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" style="border-left-color:#1B3A6B;">
+        <div class="card-header-icon" style="background:rgba(27,58,107,.1);">✅</div>
+        <h3>Entry Checklist</h3>
+      </div>
+      <div class="card-body">
+        <div class="grid-2">
+          <div class="badge-row">
+            <div class="badge do"><span class="badge-icon">✅</span>Valid passport (6+ months validity)</div>
+            <div class="badge do"><span class="badge-icon">✅</span>Return or onward ticket</div>
+            <div class="badge do"><span class="badge-icon">✅</span>Sufficient funds (¥100,000+ recommended)</div>
+            <div class="badge info"><span class="badge-icon">ℹ️</span>Visit Japan Web registration (recommended)</div>
+          </div>
+          <div class="badge-row">
+            <div class="badge info"><span class="badge-icon">ℹ️</span>Customs declaration form (on flight)</div>
+            <div class="badge dont"><span class="badge-icon">🚫</span>No prohibited items (drugs, certain medications)</div>
+            <div class="badge dont"><span class="badge-icon">🚫</span>Agricultural items must be declared</div>
+            <div class="badge dont"><span class="badge-icon">🚫</span>Firearms and weapons strictly prohibited</div>
+          </div>
+        </div>
+        <div class="resource-links">
+          <a href="https://vjw-lp.digital.go.jp/en/" target="_blank" class="resource-link">Visit Japan Web</a>
+          <a href="https://www.mofa.go.jp/j_info/visit/visa/index.html" target="_blank" class="resource-link">MOFA Visa Info</a>
+          <a href="https://www.customs.go.jp/english/index.htm" target="_blank" class="resource-link">Japan Customs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SAFETY ── -->
+  <div class="tab-content" id="tab-safety">
+    <div class="tab-header">
+      <div class="tab-header-icon" style="background:rgba(200,90,58,.1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C85A3A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div><h2>Safety</h2><div class="tab-header-line"></div></div>
+    </div>
+
+    <div class="eew-banner">
+      <div class="eew-icon">📱</div>
+      <div>
+        <div class="eew-title">緊急地震速報 (Emergency Earthquake Alerts)</div>
+        <div class="eew-desc">This dashboard displays real-time earthquake alerts at the top of the page via the P2PQuake API.
+          For on-the-go alerts, download the <strong style="color:var(--orange)">Safety tips</strong> app (Japan Tourism Agency) — it sends push notifications in multiple languages.
+          <strong style="color:var(--orange)">found-local.JP</strong> also includes built-in earthquake alerts.</div>
+        <div class="eew-links">
+          <a href="https://www.jnto.go.jp/safety-tips/eng/app.html" target="_blank" class="eew-link orange">Safety tips App ↗</a>
+          <a href="https://api.p2pquake.net/" target="_blank" class="eew-link blue">P2PQuake API ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="emergency-grid">
+      <div class="emergency-card">
+        <div class="emergency-emoji">🚔</div>
+        <div class="emergency-number">110</div>
+        <div class="emergency-label">Police</div>
+        <div class="emergency-detail">Crime, accidents, emergencies</div>
+      </div>
+      <div class="emergency-card">
+        <div class="emergency-emoji">🚑</div>
+        <div class="emergency-number">119</div>
+        <div class="emergency-label">Fire &amp; Ambulance</div>
+        <div class="emergency-detail">Medical emergencies, fire</div>
+      </div>
+      <div class="emergency-card">
+        <div class="emergency-emoji">⛵</div>
+        <div class="emergency-number">118</div>
+        <div class="emergency-label">Coast Guard</div>
+        <div class="emergency-detail">Maritime emergencies</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" style="border-left-color:#C85A3A;">
+        <div class="card-header-icon" style="background:rgba(200,90,58,.1);">⚠️</div>
+        <h3>What to Do During an Earthquake</h3>
+      </div>
+      <div class="card-body" id="earthquake-steps"></div>
+    </div>
+  </div>
+
+  <!-- ── CLIMATE ── -->
+  <div class="tab-content" id="tab-climate">
+    <div class="tab-header">
+      <div class="tab-header-icon" style="background:rgba(45,125,154,.1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D7D9A" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </div>
+      <div><h2>Climate</h2><div class="tab-header-line"></div></div>
+    </div>
+
+    <div class="city-grid" id="city-grid"></div>
+    <div class="city-desc-bar"><span class="icon">☀️</span><span id="city-desc-text"></span></div>
+
+    <div class="chart-container">
+      <h3 id="chart-title">Monthly Temperature &amp; Precipitation</h3>
+      <canvas id="climate-chart" height="220"></canvas>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:16px;">
+      <div class="card" style="margin-bottom:0;">
+        <div class="card-header" style="border-left-color:#2D7D9A;">
+          <div class="card-header-icon" style="background:rgba(45,125,154,.1);">👕</div>
+          <h3>Select Month for Packing Tips</h3>
+        </div>
+        <div class="card-body">
+          <div class="month-grid" id="month-grid"></div>
+        </div>
+      </div>
+      <div class="packing-card" id="packing-card">
+        <div class="packing-header">
+          <div class="card-header-icon" style="background:rgba(45,125,154,.1);">🎒</div>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:#1a1a1a;" id="packing-title">January — Winter</div>
+            <div style="font-size:11px;color:#6b7280;">What to pack</div>
+          </div>
+        </div>
+        <div class="packing-body" id="packing-items"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" style="border-left-color:#2D7D9A;">
+        <div class="card-header-icon" style="background:rgba(45,125,154,.1);">🌸</div>
+        <h3>Seasonal Highlights</h3>
+      </div>
+      <div class="card-body">
+        <div class="season-grid">
+          <div class="season-card"><div class="season-emoji">🌸</div><div class="season-name">Spring</div><div class="season-months">Mar–May</div><div class="season-highlight">Cherry blossoms (sakura). Mild 10–20°C. Crowds at parks.</div><div class="season-tip">💡 Book 3+ months ahead.</div></div>
+          <div class="season-card"><div class="season-emoji">☀️</div><div class="season-name">Summer</div><div class="season-months">Jun–Aug</div><div class="season-highlight">Hot &amp; humid 28–35°C. Rainy season Jun–Jul. Festivals.</div><div class="season-tip">💡 Stay hydrated, carry fan.</div></div>
+          <div class="season-card"><div class="season-emoji">🍁</div><div class="season-name">Autumn</div><div class="season-months">Sep–Nov</div><div class="season-highlight">Comfortable 15–25°C. Fall foliage. Typhoon risk Sep.</div><div class="season-tip">💡 Best overall season.</div></div>
+          <div class="season-card"><div class="season-emoji">❄️</div><div class="season-name">Winter</div><div class="season-months">Dec–Feb</div><div class="season-highlight">Cold 0–10°C. Snow in Hokkaido. Fewer crowds.</div><div class="season-tip">💡 Great for skiing &amp; onsen.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LAWS ── -->
+  <div class="tab-content" id="tab-laws">
+    <div class="tab-header">
+      <div class="tab-header-icon" style="background:rgba(122,92,45,.1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A5C2D" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+      </div>
+      <div><h2>Laws &amp; Regulations</h2><div class="tab-header-line"></div></div>
+    </div>
+    <div class="info-box amber">⚠️ <strong>Important:</strong> Japanese law applies to all visitors regardless of nationality. Ignorance of the law is not a valid defence.</div>
+    <div id="laws-list"></div>
+  </div>
+
+  <!-- ── ETIQUETTE ── -->
+  <div class="tab-content" id="tab-etiquette">
+    <div class="tab-header">
+      <div class="tab-header-icon" style="background:rgba(122,61,107,.1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7A3D6B" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <div><h2>Etiquette &amp; Manners</h2><div class="tab-header-line"></div></div>
+    </div>
+    <div id="etiquette-list"></div>
+
+    <!-- Chat Japanese Card (bottom) -->
+    <div class="chatjp-card">
+      <div class="chatjp-badge">⭐ RECOMMENDED JAPANESE SCHOOL</div>
+      <div class="chatjp-title">Chat Japanese</div>
+      <div class="chatjp-desc">More than just a language school — Chat Japanese teaches Japanese culture, customs, and etiquette alongside conversational Japanese. Based in Tokyo &amp; Yokohama, it's the perfect way to truly understand Japan before and during your trip.</div>
+      <div class="chatjp-features">
+        <span class="chatjp-pill">🗣️ Conversational Japanese</span>
+        <span class="chatjp-pill">🏯 Culture &amp; Customs</span>
+        <span class="chatjp-pill">🙏 Manners &amp; Etiquette</span>
+        <span class="chatjp-pill">🍜 Daily Life Skills</span>
+        <span class="chatjp-pill">⛩️ Traditional Practices</span>
+      </div>
+      <div class="chatjp-why">
+        <div class="chatjp-why-title">Why Chat Japanese is different</div>
+        <div class="chatjp-why-item"><span class="why-check">✅</span>Covers cultural context beyond language — onsen manners, shrine etiquette, dining customs &amp; more</div>
+        <div class="chatjp-why-item"><span class="why-check">✅</span>Small group classes for personalised learning in Tokyo &amp; Yokohama</div>
+        <div class="chatjp-why-item"><span class="why-check">✅</span>Flexible courses: 1-Week, Intensive, Weekend, and the unique Friday Tour in Shinjuku</div>
+        <div class="chatjp-why-item"><span class="why-check">✅</span>No payment needed to reserve your spot — apply online in minutes</div>
+      </div>
+      <a href="https://www.chat-japanese.com" target="_blank" class="chatjp-btn">🌐 Visit chat-japanese.com</a>
+    </div>
+  </div>
+
+  <!-- ── APPS ── -->
+  <div class="tab-content" id="tab-apps">
+    <div class="tab-header">
+      <div class="tab-header-icon" style="background:rgba(27,58,107,.1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B3A6B" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+      </div>
+      <div><h2>Essential Apps</h2><div class="tab-header-line"></div></div>
+    </div>
+
+    <div class="hero-banner">
+      <img src="tokyo.webp" alt="Japan apps" />
+      <div class="hero-banner-overlay">
+        <div><h2>Essential Apps for Japan</h2><p>Download these before you board your flight</p></div>
+      </div>
+    </div>
+
+    <!-- found-local.JP Featured -->
+    <div class="featured-card">
+      <div class="featured-bg"></div>
+      <div class="featured-deco1"></div>
+      <div class="featured-deco2"></div>
+      <div class="featured-inner">
+        <div class="featured-badge">⭐ FEATURED — MUST HAVE IN JAPAN</div>
+        <div style="display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;">
+          <div class="featured-logo">🗾</div>
+          <div style="flex:1;min-width:200px;">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+              <span class="featured-title">found-local.JP</span>
+              <span class="featured-free">Free</span>
+            </div>
+            <div class="featured-desc">The all-in-one Japan travel companion used by millions of Japanese locals. Record your journey, connect with friends, and <strong style="color:#fff;">chat directly with Japanese people you meet on your trip</strong> — in real time.</div>
+            <div class="feature-pills">
+              <span class="feature-pill">📖 Travel Journal</span>
+              <span class="feature-pill">👥 Connect with Locals</span>
+              <span class="feature-pill">💬 Chat with Japanese</span>
+              <span class="feature-pill">📍 Spot Discovery</span>
+              <span class="feature-pill">🚨 Earthquake Alerts</span>
+            </div>
+            <div class="why-box">
+              <div class="why-box-title">Why it matters for travellers</div>
+              <div class="why-item"><span class="why-check">✅</span>Most Japanese locals already use found-local.JP — no need to convince them to download a new app.</div>
+              <div class="why-item"><span class="why-check">✅</span>Met someone at a ramen shop or izakaya? Add them and keep chatting after you part ways.</div>
+              <div class="why-item"><span class="why-check">✅</span>Discover hidden local spots shared by real residents, not just tourist guides.</div>
+              <div class="why-item"><span class="why-check">✅</span>Built-in emergency earthquake alerts keep you informed even without mobile data.</div>
+            </div>
+            <div class="dl-btns">
+              <a href="https://found-local.jp" target="_blank" class="dl-btn white">🌐 Visit found-local.jp</a>
+              <a href="https://apps.apple.com/app/found-local" target="_blank" class="dl-btn dark">📱 App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=jp.found_local" target="_blank" class="dl-btn orange">▶ Google Play</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-text"><span>Other Recommended Apps</span></div>
+    <div id="apps-list"></div>
+  </div>
+
+  <!-- ── TRANSPORTATION ── -->
+  <div class="tab-content" id="tab-transportation">
+    <div class="tab-header">
+      <div class="tab-header-icon" style="background:rgba(45,125,154,.1);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D7D9A" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16"/><path d="M12 4v16"/></svg>
+      </div>
+      <div><h2>Transportation</h2><div class="tab-header-line"></div></div>
+    </div>
+
+    <div class="hero-banner">
+      <img src="shinkansen.webp" alt="Shinkansen" />
+      <div class="hero-banner-overlay">
+        <div><h2>Getting Around Japan</h2><p>From bullet trains to IC cards — everything you need to know</p></div>
+      </div>
+    </div>
+    <div id="transport-list"></div>
+  </div>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <p>Japan Travel Essentials by <a href="https://found-local.jp" target="_blank">found-local.JP</a> · Powered by <a href="https://www.symarch-llc.com" target="_blank">Symarch LLC</a> · Information current as of 2025</p>
+  <p>Emergency: <strong style="color:#dc2626;">Police 110</strong> · <strong style="color:#dc2626;">Ambulance/Fire 119</strong></p>
+  <div class="footer-links">
+    <a href="https://www.jnto.go.jp/eng/" target="_blank">JNTO Official</a>
+    <a href="https://vjw-lp.digital.go.jp/en/" target="_blank">Visit Japan Web</a>
+    <a href="https://found-local.jp" target="_blank">found-local.jp</a>
+    <a href="https://www.symarch-llc.com" target="_blank">Symarch LLC</a>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<script>
+// ============================================================
+// IMAGE ASSETS — すべて同ディレクトリ内の WebP ファイル
+// ============================================================
+const IMG = {
+  tokyo:         "tokyo.webp",
+  osaka:         "osaka.webp",
+  sapporo:       "sapporo.webp",
+  fukuoka:       "fukuoka.webp",
+  okinawa:       "okinawa.webp",
+  niigata:       "niigata.webp",
+  onsen:         "onsen.webp",
+  shinkansen:    "shinkansen.webp",
+  shrineTemple:  "shrine-temple.webp",
+  iccard:        "iccard.webp",
+};
+
+// ============================================================
+// TAB SWITCHING
+// ============================================================
+function switchTab(id) {
+  document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  document.querySelector('[data-tab="' + id + '"]').classList.add('active');
+  window.scrollTo({ top: document.querySelector('header').offsetTop - 40, behavior: 'smooth' });
+}
+
+// ============================================================
+// DISASTER ALERT — P2PQuake API
+// ============================================================
+async function loadEarthquakeAlerts() {
+  const bar = document.getElementById('disaster-bar');
+  bar.className = 'severity-clear';
+  bar.querySelector('.alert-icon').textContent = '⏳';
+  bar.querySelector('.alert-title').textContent = 'Checking for alerts…';
+  bar.querySelector('.alert-detail').textContent = '';
+  try {
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 6000);
+    const res = await fetch('https://api.p2pquake.net/v2/history?codes=551&limit=3', { signal: ctrl.signal });
+    clearTimeout(tid);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    if (!data || data.length === 0) { setAlertClear(); return; }
+    const eq = data[0];
+    const h = eq.earthquake?.hypocenter || {};
+    const name = h.name || 'Unknown area';
+    const mag  = h.magnitude && h.magnitude > 0 ? 'M' + h.magnitude : 'M?';
+    const depth = h.depth && h.depth > 0 ? 'Depth:' + h.depth + 'km' : '';
+    const scale = eq.earthquake?.maxScale;
+    let severity = 'low';
+    if (scale >= 50) severity = 'high';
+    else if (scale >= 30) severity = 'medium';
+    bar.className = 'severity-' + severity;
+    bar.querySelector('.alert-icon').textContent = severity === 'high' ? '🚨' : severity === 'medium' ? '⚠️' : 'ℹ️';
+    bar.querySelector('.alert-title').textContent = '🌏 Earthquake: ' + name + ' ' + mag;
+    bar.querySelector('.alert-detail').textContent = depth + (depth ? ' · ' : '') + 'Max Intensity: ' + (scale ? scale / 10 : '?') + ' · Source: P2PQuake';
+  } catch(e) {
+    if (e.name === 'AbortError') {
+      bar.querySelector('.alert-title').textContent = 'Alert service timeout';
+      bar.querySelector('.alert-detail').textContent = 'Could not reach P2PQuake API';
+    } else {
+      setAlertClear();
+    }
+  }
+}
+function setAlertClear() {
+  const bar = document.getElementById('disaster-bar');
+  bar.className = 'severity-clear';
+  bar.querySelector('.alert-icon').textContent = '✅';
+  bar.querySelector('.alert-title').textContent = 'No Active Alerts';
+  bar.querySelector('.alert-detail').textContent = 'Japan is currently calm. Data from P2PQuake API.';
+}
+loadEarthquakeAlerts();
+setInterval(loadEarthquakeAlerts, 60000);
+
+// ============================================================
+// TRANSLATE WIDGET
+// ============================================================
+function toggleTranslate() {
+  document.getElementById('translate-panel').classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  const panel = document.getElementById('translate-panel');
+  if (!panel.contains(e.target) && !e.target.closest('.translate-btn')) {
+    panel.classList.remove('open');
+  }
+});
+document.getElementById('translate-input').addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') doTranslate();
+});
+async function doTranslate() {
+  const text = document.getElementById('translate-input').value.trim();
+  if (!text) return;
+  const src = document.getElementById('src-lang').value;
+  const dst = document.getElementById('dst-lang').value;
+  const result = document.getElementById('translate-result');
+  result.className = 'translate-result show';
+  result.textContent = 'Translating…';
+  try {
+    const ctrl = new AbortController();
+    setTimeout(() => ctrl.abort(), 8000);
+    const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${src}|${dst}`, { signal: ctrl.signal });
+    const data = await res.json();
+    result.textContent = data.responseData?.translatedText || 'Translation unavailable.';
+  } catch(e) {
+    result.textContent = 'Translation failed. Please try again.';
+  }
+}
+function doSpeak() {
+  const text = document.getElementById('translate-result').textContent;
+  if (!text || text === 'Translating…') return;
+  const dst = document.getElementById('dst-lang').value;
+  const langMap = { ja: 'ja-JP', zh: 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', es: 'es-ES', de: 'de-DE', en: 'en-US' };
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = langMap[dst] || dst;
+  speechSynthesis.speak(utter);
+}
+
+// ============================================================
+// VISA DATA
+// ============================================================
+const VISA_DATA = {
+  "United States":    { free: true, days: 90,  note: "Visa-free under the Japan-US Visa Waiver agreement." },
+  "United Kingdom":   { free: true, days: 90,  note: "Visa-free under the UK-Japan Visa Waiver agreement." },
+  "Canada":           { free: true, days: 90,  note: "Visa-free for tourism and short-term stays." },
+  "Australia":        { free: true, days: 90,  note: "Visa-free under the Australia-Japan Visa Waiver." },
+  "New Zealand":      { free: true, days: 90,  note: "Visa-free for tourism." },
+  "France":           { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Germany":          { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Italy":            { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Spain":            { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Netherlands":      { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Sweden":           { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Switzerland":      { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Norway":           { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Denmark":          { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Finland":          { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Austria":          { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Belgium":          { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Portugal":         { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Ireland":          { free: true, days: 90,  note: "Visa-free for tourism." },
+  "Greece":           { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Poland":           { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Czech Republic":   { free: true, days: 90,  note: "Visa-free as EU/Schengen country." },
+  "Singapore":        { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "South Korea":      { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Hong Kong":        { free: true, days: 90,  note: "Visa-free for HKSAR passport holders." },
+  "Taiwan":           { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Malaysia":         { free: true, days: 90,  note: "Visa-free for tourism." },
+  "Thailand":         { free: true, days: 30,  note: "Visa-free for up to 30 days." },
+  "Brazil":           { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Mexico":           { free: true, days: 90,  note: "Visa-free for tourism." },
+  "UAE":              { free: true, days: 30,  note: "Visa-free for UAE passport holders." },
+  "Israel":           { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Argentina":        { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Chile":            { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Peru":             { free: true, days: 90,  note: "Visa-free under bilateral agreement." },
+  "Colombia":         { free: true, days: 90,  note: "Visa-free for tourism." },
+  "South Africa":     { free: false, note: "Visa required. Apply at the nearest Japanese embassy." },
+  "China":            { free: false, note: "Visa required. Apply at the Japanese Embassy or Consulate in China." },
+  "India":            { free: false, note: "Visa required. Apply at the Japanese Embassy or Consulate in India." },
+  "Indonesia":        { free: false, note: "Visa required. Apply at the nearest Japanese embassy." },
+  "Philippines":      { free: false, note: "Visa required. Apply at the Japanese Embassy in Manila." },
+  "Vietnam":          { free: false, note: "Visa required. Apply at the nearest Japanese embassy." },
+  "Bangladesh":       { free: false, note: "Visa required." },
+  "Pakistan":         { free: false, note: "Visa required." },
+  "Nigeria":          { free: false, note: "Visa required." },
+  "Egypt":            { free: false, note: "Visa required." },
+  "Russia":           { free: false, note: "Visa required." },
+  "Turkey":           { free: false, note: "Visa required." },
+  "Iran":             { free: false, note: "Visa required." },
+};
+function showVisaResult() {
+  const country = document.getElementById('visa-country').value;
+  const el = document.getElementById('visa-result');
+  if (!country) { el.className = 'visa-result'; return; }
+  const d = VISA_DATA[country] || { free: false, note: "Please check with the Japanese embassy in your country." };
+  el.className = 'visa-result show';
+  if (d.free) {
+    el.innerHTML = `
+      <div class="visa-result-box ok">
+        <div class="visa-days-circle"><div class="days-num">${d.days}</div><div class="days-label">days</div></div>
+        <div>
+          <div class="visa-country">✅ ${country}</div>
+          <div class="visa-desc">Visa-free for up to <strong>${d.days} days</strong>. ${d.note}</div>
+          <div class="visa-links">
+            <a href="https://vjw-lp.digital.go.jp/en/" target="_blank" class="visa-link">Visit Japan Web ↗</a>
+            <a href="https://www.mofa.go.jp/j_info/visit/visa/index.html" target="_blank" class="visa-link">MOFA Visa Info ↗</a>
+          </div>
+        </div>
+      </div>`;
+  } else {
+    el.innerHTML = `
+      <div class="visa-result-box req">
+        <div class="visa-req-circle">🛂</div>
+        <div>
+          <div class="visa-country req">⚠️ ${country}</div>
+          <div class="visa-desc req">Visa required. ${d.note}</div>
+          <div class="visa-links">
+            <a href="https://www.mofa.go.jp/j_info/visit/visa/index.html" target="_blank" class="visa-link">MOFA Visa Application ↗</a>
+          </div>
+        </div>
+      </div>`;
+  }
+}
+
+// ============================================================
+// CLIMATE DATA
+// ============================================================
+const CITIES = [
+  { id: 'tokyo',    name: 'Tokyo',    img: IMG.tokyo,    desc: 'Humid subtropical. Hot summers, mild winters. Best: spring & autumn.',
+    temp: [6,7,10,15,20,23,27,29,25,19,13,8],
+    rain: [52,56,117,125,138,168,154,168,210,198,93,51] },
+  { id: 'osaka',    name: 'Osaka',    img: IMG.osaka,    desc: 'Similar to Tokyo. Slightly warmer. Famous for food culture.',
+    temp: [6,7,11,16,21,25,29,31,26,20,14,8],
+    rain: [45,60,104,105,145,185,175,90,160,105,68,43] },
+  { id: 'sapporo',  name: 'Sapporo',  img: IMG.sapporo,  desc: 'Humid continental. Heavy snowfall in winter. Cool summers.',
+    temp: [-3,-3,1,8,14,18,22,24,19,12,4,-1],
+    rain: [113,94,77,56,53,46,81,123,135,108,104,112] },
+  { id: 'fukuoka',  name: 'Hakata',   img: IMG.fukuoka,  desc: 'Mild climate. Gateway to Kyushu. Warm most of the year.',
+    temp: [7,8,12,17,21,25,29,30,26,20,14,9],
+    rain: [68,71,112,117,140,255,277,172,178,73,83,60] },
+  { id: 'okinawa',  name: 'Okinawa',  img: IMG.okinawa,  desc: 'Subtropical. Warm year-round. Typhoon season Jun–Oct.',
+    temp: [17,17,19,22,25,28,30,29,28,25,22,18],
+    rain: [107,119,161,166,232,247,141,240,260,152,110,103] },
+  { id: 'niigata',  name: 'Niigata',  img: IMG.niigata,  desc: 'Heavy snowfall in winter. Faces the Sea of Japan. Rice country.',
+    temp: [2,3,6,12,17,21,25,27,22,16,10,4],
+    rain: [184,130,103,89,97,116,175,122,149,165,210,222] },
+];
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const PACKING = [
+  { name: 'January — Winter',   items: ['Heavy coat or down jacket','Thermal underlayer','Wool sweater','Scarf, gloves, hat','Waterproof boots','Hand warmers (kairo)'] },
+  { name: 'February — Winter',  items: ['Heavy coat','Thermal underlayer','Sweater','Scarf & gloves','Waterproof footwear','Allergy meds (cedar pollen starts)'] },
+  { name: 'March — Early Spring',items: ['Light jacket + layering pieces','Sweater','Comfortable walking shoes','Umbrella (spring rain)','Allergy medication'] },
+  { name: 'April — Spring',     items: ['Light jacket','T-shirts & long sleeves','Comfortable walking shoes','Compact umbrella','Sunscreen SPF30+'] },
+  { name: 'May — Spring',       items: ['Light jacket for evenings','T-shirts','Comfortable walking shoes','Sunscreen','Sunglasses'] },
+  { name: 'June — Rainy Season',items: ['Compact umbrella or rain jacket','Quick-dry clothes','Breathable fabrics','Waterproof shoes','Deodorant (humidity)'] },
+  { name: 'July — Summer',      items: ['Light breathable clothing','Portable fan','Cooling towel','Sunscreen SPF50+','Sunglasses & hat','Hydration bottle'] },
+  { name: 'August — Summer',    items: ['Lightest clothing possible','Portable fan & cooling spray','Sunscreen SPF50+','Hat','Electrolyte drinks'] },
+  { name: 'September — Autumn', items: ['Light jacket (typhoon season)','Umbrella','T-shirts + long sleeves','Comfortable walking shoes','Typhoon alert app'] },
+  { name: 'October — Autumn',   items: ['Light jacket','Layering pieces','Comfortable walking shoes','Compact umbrella','Camera for fall foliage'] },
+  { name: 'November — Autumn',  items: ['Medium jacket','Sweater','Scarf','Comfortable walking shoes','Compact umbrella'] },
+  { name: 'December — Winter',  items: ['Heavy coat','Thermal underlayer','Sweater','Scarf, gloves, hat','Waterproof boots'] },
+];
+
+let activeCity = 0;
+let activeMonth = new Date().getMonth();
+let climateChart = null;
+
+function buildCityGrid() {
+  const grid = document.getElementById('city-grid');
+  grid.innerHTML = CITIES.map((c, i) => `
+    <button class="city-btn${i === activeCity ? ' active' : ''}" onclick="selectCity(${i})">
+      <img src="${c.img}" alt="${c.name}" loading="lazy" />
+      <div class="city-btn-label">${c.name}</div>
+    </button>`).join('');
+}
+function buildMonthGrid() {
+  const grid = document.getElementById('month-grid');
+  grid.innerHTML = MONTHS.map((m, i) => `
+    <button class="month-btn${i === activeMonth ? ' active' : ''}" onclick="selectMonth(${i})">${m}</button>`).join('');
+}
+function selectCity(i) {
+  activeCity = i;
+  buildCityGrid();
+  updateChart();
+  document.getElementById('city-desc-text').textContent = CITIES[i].name + ' — ' + CITIES[i].desc;
+}
+function selectMonth(i) {
+  activeMonth = i;
+  buildMonthGrid();
+  updatePacking();
+}
+function updateChart() {
+  const city = CITIES[activeCity];
+  document.getElementById('chart-title').textContent = city.name + ' — Monthly Temperature & Precipitation';
+  if (climateChart) climateChart.destroy();
+  const ctx = document.getElementById('climate-chart').getContext('2d');
+  climateChart = new Chart(ctx, {
+    data: {
+      labels: MONTHS,
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Precipitation (mm)',
+          data: city.rain,
+          backgroundColor: 'rgba(45,125,154,0.25)',
+          borderColor: 'rgba(45,125,154,0.6)',
+          borderWidth: 1,
+          yAxisID: 'y1',
+        },
+        {
+          type: 'line',
+          label: 'Avg Temp (°C)',
+          data: city.temp,
+          borderColor: '#f89a26',
+          backgroundColor: 'rgba(248,154,38,0.1)',
+          borderWidth: 2.5,
+          pointBackgroundColor: '#f89a26',
+          pointRadius: 4,
+          tension: 0.4,
+          yAxisID: 'y',
+          fill: true,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { position: 'top', labels: { font: { size: 12 } } } },
+      scales: {
+        y:  { type: 'linear', position: 'left',  title: { display: true, text: '°C' }, grid: { color: '#f0f0f0' } },
+        y1: { type: 'linear', position: 'right', title: { display: true, text: 'mm' }, grid: { drawOnChartArea: false } },
+      },
+    },
+  });
+}
+function updatePacking() {
+  const p = PACKING[activeMonth];
+  document.getElementById('packing-title').textContent = p.name;
+  document.getElementById('packing-items').innerHTML = p.items.map(item =>
+    `<div class="packing-item"><div class="packing-dot"></div>${item}</div>`).join('');
+}
+
+// ============================================================
+// LAWS DATA
+// ============================================================
+const LAWS = [
+  { icon: '🚬', title: 'Smoking', color: '#C85A3A', items: [
+    { type: 'dont', text: 'Smoking on the street is prohibited in most city centres (Tokyo, Osaka, Kyoto).' },
+    { type: 'dont', text: 'Smoking in non-designated areas can result in on-the-spot fines of ¥1,000–¥2,000.' },
+    { type: 'do',   text: 'Use designated smoking areas (喫煙所) — usually marked with a cigarette icon.' },
+    { type: 'info', text: 'E-cigarettes and vaping follow the same rules as regular cigarettes.' },
+  ]},
+  { icon: '🍺', title: 'Alcohol', color: '#7A5C2D', items: [
+    { type: 'dont', text: 'Legal drinking age is 20 years old. Purchasing alcohol under 20 is illegal.' },
+    { type: 'dont', text: 'Drunk driving: zero tolerance. BAC limit is 0.03% — stricter than most countries.' },
+    { type: 'info', text: 'Drinking in public spaces (parks, streets) is generally legal but culturally frowned upon.' },
+    { type: 'do',   text: 'Convenience stores sell alcohol 24/7 — ID may be requested for young-looking buyers.' },
+  ]},
+  { icon: '💊', title: 'Drugs & Medications', color: '#7f1d1d', items: [
+    { type: 'dont', text: 'Japan has some of the strictest drug laws in the world. Possession of even small amounts of cannabis can result in 5 years imprisonment.' },
+    { type: 'dont', text: 'Stimulant drugs (amphetamines) are completely banned — even with a foreign prescription.' },
+    { type: 'dont', text: 'Some over-the-counter medications from your home country (e.g. Sudafed, Vicks inhalers) may be illegal in Japan.' },
+    { type: 'info', text: 'Bring a Yakkan Shoumei (import certificate) if carrying more than a 1-month supply of prescription medicine.' },
+    { type: 'info', text: 'Check the MHLW website before travelling with any medication.' },
+  ]},
+  { icon: '🚲', title: 'Bicycle Rules', color: '#1B3A6B', items: [
+    { type: 'dont', text: 'Riding on the pavement (sidewalk) is generally prohibited unless marked.' },
+    { type: 'dont', text: 'Using a smartphone while cycling is illegal and can result in a fine.' },
+    { type: 'dont', text: 'Riding under the influence of alcohol is illegal.' },
+    { type: 'do',   text: 'Helmets are strongly recommended (mandatory for children).' },
+    { type: 'do',   text: 'Use bicycle parking areas — illegally parked bikes will be impounded.' },
+  ]},
+  { icon: '📸', title: 'Photography', color: '#5C7A5C', items: [
+    { type: 'dont', text: 'Photography inside shrines, temples, and museums is often prohibited — check signs.' },
+    { type: 'dont', text: 'Do not photograph people without consent, especially in private situations.' },
+    { type: 'info', text: 'Geisha in Gion (Kyoto) have explicitly asked tourists not to photograph them.' },
+    { type: 'do',   text: 'Street photography is generally legal in public spaces.' },
+  ]},
+  { icon: '🗑️', title: 'Littering & Waste', color: '#374151', items: [
+    { type: 'dont', text: 'Littering is illegal and carries fines. Japan has very few public bins.' },
+    { type: 'do',   text: 'Carry a small bag for your rubbish until you find a bin (convenience stores usually have them).' },
+    { type: 'info', text: 'Rubbish must be sorted into categories: burnable, non-burnable, recyclable.' },
+  ]},
+];
+
+function buildLaws() {
+  const container = document.getElementById('laws-list');
+  container.innerHTML = LAWS.map(law => `
+    <div class="card">
+      <div class="card-header" style="border-left-color:${law.color};">
+        <div class="card-header-icon" style="background:${law.color}18;font-size:16px;">${law.icon}</div>
+        <h3>${law.title}</h3>
+      </div>
+      <div class="card-body">
+        <div class="badge-row">
+          ${law.items.map(item => `<div class="badge ${item.type}"><span class="badge-icon">${item.type==='do'?'✅':item.type==='dont'?'🚫':'ℹ️'}</span>${item.text}</div>`).join('')}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ============================================================
+// ETIQUETTE DATA
+// ============================================================
+const ETIQUETTE = [
+  { icon: '♨️', title: 'Onsen & Sentō', img: IMG.onsen, color: '#7A3D6B', items: [
+    { type: 'do',   text: 'Wash and rinse your body thoroughly before entering the bath.' },
+    { type: 'do',   text: 'Keep your small towel out of the water — fold it on your head.' },
+    { type: 'dont', text: 'Tattoos are prohibited in most traditional onsen. Look for tattoo-friendly facilities.' },
+    { type: 'dont', text: 'Do not bring your phone or camera into the bathing area.' },
+    { type: 'dont', text: 'Swimwear is not worn — onsen are used naked.' },
+    { type: 'info', text: 'Men\'s (男) and women\'s (女) baths are always separate. Check the noren (curtain) colour.' },
+  ]},
+  { icon: '⛩️', title: 'Shrines & Temples', img: IMG.shrineTemple, color: '#7A5C2D', items: [
+    { type: 'do',   text: 'Bow slightly when passing through the torii gate.' },
+    { type: 'do',   text: 'Purify hands at the temizuya (water basin) before approaching the main hall.' },
+    { type: 'do',   text: 'Toss a coin, bow twice, clap twice, then bow once at Shinto shrines.' },
+    { type: 'dont', text: 'Avoid loud talking, running, or disrespectful behaviour on sacred grounds.' },
+    { type: 'dont', text: 'Do not touch sacred objects or step on thresholds.' },
+    { type: 'info', text: 'Photography rules vary — always check signs at each site.' },
+  ]},
+  { icon: '💴', title: 'Tipping Culture', img: null, color: '#1B3A6B', items: [
+    { type: 'dont', text: 'Do NOT tip in Japan. It can be considered rude or insulting.' },
+    { type: 'dont', text: 'Do not leave money on the table after a meal.' },
+    { type: 'info', text: 'Excellent service is the standard in Japan — it is not a reward for exceptional service.' },
+    { type: 'do',   text: 'If you want to show appreciation, say "Gochisōsama deshita" (ごちそうさまでした) after a meal.' },
+  ]},
+  { icon: '🚃', title: 'Train Manners', img: IMG.shinkansen, color: '#2D7D9A', items: [
+    { type: 'do',   text: 'Queue in the marked lines on the platform and let passengers exit first.' },
+    { type: 'do',   text: 'Keep your voice low — quiet carriages exist on Shinkansen.' },
+    { type: 'dont', text: 'Do not eat on local trains (Shinkansen is OK).' },
+    { type: 'dont', text: 'Do not talk on your phone — put it on silent mode.' },
+    { type: 'dont', text: 'Do not put your bag on the seat during rush hour.' },
+    { type: 'info', text: 'Priority seats (優先席) are for elderly, pregnant, and disabled passengers.' },
+  ]},
+  { icon: '🍜', title: 'Dining Etiquette', img: null, color: '#7A5C2D', items: [
+    { type: 'do',   text: 'Say "Itadakimasu" (いただきます) before eating and "Gochisōsama" after.' },
+    { type: 'do',   text: 'It is acceptable and even polite to slurp noodles.' },
+    { type: 'dont', text: 'Do not stick chopsticks upright in rice — this is a funeral ritual.' },
+    { type: 'dont', text: 'Do not pass food chopstick-to-chopstick — also a funeral custom.' },
+    { type: 'dont', text: 'Do not eat or drink while walking on the street.' },
+    { type: 'info', text: 'Oshibori (wet towel) is for wiping hands only, not your face.' },
+  ]},
+  { icon: '🏠', title: 'Entering Homes & Ryokan', img: null, color: '#4a1d96', items: [
+    { type: 'do',   text: 'Always remove shoes when entering a home, ryokan, or any place with a genkan (entrance step).' },
+    { type: 'do',   text: 'Wear the provided slippers inside — remove them before stepping on tatami mats.' },
+    { type: 'info', text: 'Separate toilet slippers are provided in bathrooms — remember to change back.' },
+    { type: 'dont', text: 'Do not walk on tatami with socks or shoes.' },
+  ]},
+];
+
+function buildEtiquette() {
+  const container = document.getElementById('etiquette-list');
+  container.innerHTML = ETIQUETTE.map(section => `
+    <div class="card">
+      ${section.img ? `<div style="height:140px;overflow:hidden;border-radius:16px 16px 0 0;"><img src="${section.img}" alt="${section.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy"/></div>` : ''}
+      <div class="card-header" style="border-left-color:${section.color};">
+        <div class="card-header-icon" style="background:${section.color}18;font-size:16px;">${section.icon}</div>
+        <h3>${section.title}</h3>
+      </div>
+      <div class="card-body">
+        <div class="badge-row">
+          ${section.items.map(item => `<div class="badge ${item.type}"><span class="badge-icon">${item.type==='do'?'✅':item.type==='dont'?'🚫':'ℹ️'}</span>${item.text}</div>`).join('')}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ============================================================
+// EARTHQUAKE STEPS
+// ============================================================
+function buildEarthquakeSteps() {
+  const steps = [
+    { phase: 'During Shaking', color: '#dc2626', icon: '🚨', items: [
+      { type: 'do',   text: 'DROP to the ground immediately.' },
+      { type: 'do',   text: 'Take COVER under a sturdy desk, table, or against an interior wall.' },
+      { type: 'do',   text: 'HOLD ON until the shaking stops.' },
+      { type: 'dont', text: 'Do NOT run outside during shaking — falling debris is the main danger.' },
+      { type: 'dont', text: 'Do NOT use elevators.' },
+    ]},
+    { phase: 'Immediately After', color: '#ea580c', icon: '⚠️', items: [
+      { type: 'do',   text: 'Check yourself and others for injuries.' },
+      { type: 'do',   text: 'Turn off gas if you smell it — open windows and evacuate.' },
+      { type: 'do',   text: 'Follow evacuation signs (避難場所) to the nearest shelter.' },
+      { type: 'info', text: 'Aftershocks are common — stay alert for the next 24–72 hours.' },
+    ]},
+    { phase: 'Tsunami Warning', color: '#7f1d1d', icon: '🌊', items: [
+      { type: 'dont', text: 'If near the coast and shaking lasts more than 1 minute — evacuate to high ground immediately.' },
+      { type: 'dont', text: 'Do NOT wait for an official warning — act immediately.' },
+      { type: 'do',   text: 'Move to at least 30m elevation or 500m inland.' },
+      { type: 'info', text: 'Tsunami evacuation routes are marked with blue signs (津波避難場所).' },
+    ]},
+  ];
+  const container = document.getElementById('earthquake-steps');
+  container.innerHTML = steps.map(s => `
+    <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="font-size:18px;">${s.icon}</span>
+        <span style="font-size:13px;font-weight:700;color:${s.color};">${s.phase}</span>
+      </div>
+      <div class="badge-row">
+        ${s.items.map(item => `<div class="badge ${item.type}"><span class="badge-icon">${item.type==='do'?'✅':item.type==='dont'?'🚫':'ℹ️'}</span>${item.text}</div>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+// ============================================================
+// APPS DATA
+// ============================================================
+const APP_CATEGORIES = [
+  { label: 'Navigation & Maps', icon: '🗺️', color: '#1B3A6B', apps: [
+    { name: 'Google Maps',         icon: '🗺️', stars: 5, desc: 'Best overall navigation. Download offline maps before your trip.', tip: 'Download offline maps for your destination before arriving.', ios: 'https://apps.apple.com/app/google-maps/id585027354', android: 'https://play.google.com/store/apps/details?id=com.google.android.apps.maps' },
+    { name: 'NAVITIME Japan Travel',icon: '🚃', stars: 5, desc: 'Public transport routing including buses and ferries.', tip: 'Works offline. Great for complex multi-modal journeys.', ios: 'https://apps.apple.com/app/navitime-japan-travel/id1073677140', android: 'https://play.google.com/store/apps/details?id=com.navitime.inbound.transit' },
+    { name: 'Yahoo! カーナビ',      icon: '🚗', stars: 4, desc: 'Best driving navigation in Japan with real-time traffic.', tip: 'Essential if you plan to rent a car.', ios: null, android: null },
+    { name: 'Hyperdia',            icon: '🚄', stars: 4, desc: 'Detailed train schedules including Shinkansen.', tip: 'Use to plan Shinkansen routes and check fares.', ios: null, android: null },
+  ]},
+  { label: 'Translation & Language', icon: '💬', color: '#5C7A5C', apps: [
+    { name: 'Google Translate', icon: '💬', stars: 5, desc: 'Camera translation for menus and signs. Works offline.', tip: 'Download Japanese language pack for offline use.', ios: 'https://apps.apple.com/app/google-translate/id414706506', android: 'https://play.google.com/store/apps/details?id=com.google.android.apps.translate' },
+    { name: 'Papago',           icon: '🦜', stars: 5, desc: 'Excellent for Japanese ↔ Korean/Chinese. Very accurate.', tip: 'Better than Google Translate for Asian languages.', ios: 'https://apps.apple.com/app/papago/id1147874819', android: 'https://play.google.com/store/apps/details?id=com.naver.labs.translator' },
+    { name: 'Yomiwa',           icon: '📖', stars: 4, desc: 'Japanese dictionary with kanji recognition camera.', tip: 'Point camera at kanji to get instant readings.', ios: null, android: null },
+    { name: 'Duolingo',         icon: '🦉', stars: 4, desc: 'Learn basic Japanese phrases before your trip.', tip: 'Even 10 minutes a day helps enormously.', ios: 'https://apps.apple.com/app/duolingo/id570060128', android: 'https://play.google.com/store/apps/details?id=com.duolingo' },
+  ]},
+  { label: 'Safety & Emergency', icon: '🚨', color: '#C85A3A', apps: [
+    { name: 'Safety tips', icon: '🚨', stars: 5, desc: 'Official Japan Tourism Agency disaster alert app. Multilingual push notifications for earthquakes, typhoons, and tsunamis.', tip: 'MUST HAVE — install before arriving in Japan.', ios: 'https://apps.apple.com/app/safety-tips/id858357174', android: 'https://play.google.com/store/apps/details?id=jp.co.rcsc.safetyTips.android' },
+    { name: 'NHK World',   icon: '📺', stars: 5, desc: 'Live English news and emergency broadcasts.', tip: 'Reliable source for official disaster information.', ios: 'https://apps.apple.com/app/nhk-world-tv/id1183923229', android: 'https://play.google.com/store/apps/details?id=jp.or.nhk.nhkworld' },
+    { name: 'Yahoo! 防災速報', icon: '⚠️', stars: 4, desc: 'Real-time earthquake and disaster alerts (Japanese).', tip: 'Very fast alerts — faster than Safety tips in some cases.', ios: null, android: null },
+  ]},
+  { label: 'Food & Dining', icon: '🍜', color: '#7A5C2D', apps: [
+    { name: 'Tabelog',    icon: '🍜', stars: 5, desc: "Japan's largest restaurant review platform. Essential for finding authentic local restaurants.", tip: 'Filter by area and cuisine. Ratings above 3.5 are excellent.', ios: 'https://apps.apple.com/app/tabelog/id370346608', android: 'https://play.google.com/store/apps/details?id=com.tabelog.android' },
+    { name: 'Gurunavi',   icon: '🍱', stars: 4, desc: 'Restaurant search with English menus and online reservations.', tip: 'Good for making reservations at popular restaurants.', ios: null, android: null },
+    { name: 'HappyCow',   icon: '🥗', stars: 4, desc: 'Find vegan and vegetarian restaurants across Japan.', tip: 'Japan has more vegan options than you might expect.', ios: 'https://apps.apple.com/app/happycow-vegan-food-near-me/id435871950', android: 'https://play.google.com/store/apps/details?id=com.hccorp.happycow' },
+  ]},
+  { label: 'Payment & Money', icon: '💳', color: '#2D7D9A', apps: [
+    { name: 'Wise',       icon: '💱', stars: 5, desc: 'Best exchange rates for foreign currency. Low fees.', tip: 'Get a Wise card before your trip for ATM withdrawals.', ios: 'https://apps.apple.com/app/wise-money-without-borders/id612261027', android: 'https://play.google.com/store/apps/details?id=com.transferwise.android' },
+    { name: 'PayPay',     icon: '📱', stars: 4, desc: "Japan's most popular QR payment app. Widely accepted.", tip: 'Some foreign cards can be linked. Check compatibility.', ios: 'https://apps.apple.com/app/paypay/id1435783608', android: 'https://play.google.com/store/apps/details?id=jp.ne.paypay.android.app' },
+    { name: '7-Bank ATM', icon: '🏧', stars: 4, desc: 'Find 7-Eleven ATMs that accept foreign cards.', tip: '7-Eleven ATMs are the most reliable for foreign cards.', ios: null, android: null },
+  ]},
+];
+function buildApps() {
+  const container = document.getElementById('apps-list');
+  container.innerHTML = APP_CATEGORIES.map(cat => `
+    <div class="card">
+      <div class="card-header" style="border-left-color:${cat.color};">
+        <div class="card-header-icon" style="background:${cat.color}18;font-size:16px;">${cat.icon}</div>
+        <h3>${cat.label}</h3>
+      </div>
+      <div class="card-body">
+        <div class="grid-2">
+          ${cat.apps.map(app => `
+            <div class="app-card">
+              <div class="app-header">
+                <span class="app-emoji">${app.icon}</span>
+                <div>
+                  <div class="app-name">${app.name}</div>
+                  <div class="app-stars">${'★'.repeat(app.stars)}${'☆'.repeat(5-app.stars)}</div>
+                </div>
+              </div>
+              <div class="app-desc">${app.desc}</div>
+              <div class="app-tip">💡 ${app.tip}</div>
+              <div class="app-store-btns">
+                ${app.ios ? `<a href="${app.ios}" target="_blank" class="app-store-btn ios">App Store</a>` : ''}
+                ${app.android ? `<a href="${app.android}" target="_blank" class="app-store-btn android">Google Play</a>` : ''}
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+// ============================================================
+// TRANSPORTATION DATA
+// ============================================================
+function buildTransport() {
+  const container = document.getElementById('transport-list');
+  container.innerHTML = `
+    ${buildAccordion('IC Cards (Suica / Pasmo / ICOCA)', '💳', '#2D7D9A', true, buildICContent())}
+    ${buildAccordion('Shinkansen (Bullet Train)', '🚄', '#2D7D9A', false, buildShinkansenContent())}
+    ${buildAccordion('Local Transport (Metro, Bus, Taxi)', '🚇', '#2D7D9A', false, buildLocalContent())}
+    ${buildAccordion('Domestic Flights (LCC)', '✈️', '#2D7D9A', false, buildFlightsContent())}
+    ${buildAccordion('Car Rental & Driving', '🚗', '#2D7D9A', false, buildCarContent())}
+  `;
+  // Open first accordion
+  const first = container.querySelector('.accordion-item');
+  if (first) first.classList.add('open');
+}
+function buildAccordion(title, icon, color, open, content) {
+  return `
+    <div class="accordion-item${open?' open':''}" onclick="toggleAccordion(this)">
+      <button class="accordion-trigger">
+        <div class="accordion-icon" style="background:${color}18;font-size:18px;">${icon}</div>
+        <span class="accordion-title">${title}</span>
+        <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">${content}</div>
+      </div>
+    </div>`;
+}
+function toggleAccordion(el) {
+  el.classList.toggle('open');
+}
+function buildICContent() {
+  return `
+    <div style="margin-bottom:12px;">
+      <img src="${IMG.iccard}" alt="IC Card" style="width:100%;height:160px;object-fit:cover;border-radius:10px;margin-bottom:12px;" loading="lazy"/>
+      <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:12px;">IC cards are rechargeable smart cards used for trains, buses, subways, and convenience store purchases across Japan. They are the single most useful item for getting around Japan.</p>
+    </div>
+    <div class="grid-3" style="margin-bottom:12px;">
+      ${[{name:'Suica',region:'Tokyo / East Japan',color:'#4CAF50',desc:"JR East's IC card. Available at JR stations and as a digital card on iPhone/Apple Watch."},
+         {name:'Pasmo',region:'Tokyo Metro & buses',color:'#E91E63',desc:'Interoperable with Suica. Accepted on Tokyo Metro, Toei, and most private railways.'},
+         {name:'ICOCA',region:'Osaka / West Japan',color:'#2196F3',desc:"JR West's IC card. Works across most of Japan. Available at JR stations in Kansai."}
+      ].map(c=>`<div class="ic-card"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><div class="ic-dot" style="background:${c.color};"></div><strong style="font-size:13px;">${c.name}</strong></div><div style="font-size:11px;color:#1B3A6B;font-weight:700;margin-bottom:4px;">${c.region}</div><div style="font-size:11px;color:#6b7280;">${c.desc}</div></div>`).join('')}
+    </div>
+    <div class="info-box indigo"><strong>💡 Pro Tips</strong><br/>
+      • All IC cards are interoperable nationwide — one card works everywhere.<br/>
+      • Minimum charge: ¥500 deposit + ¥1,000 minimum top-up.<br/>
+      • Refundable at JR stations when leaving Japan (¥220 handling fee).<br/>
+      • Apple Pay / Google Pay Suica available for iPhone 8+ and newer Android.
+    </div>`;
+}
+function buildShinkansenContent() {
+  const routes = [
+    {route:'Tokyo → Osaka',time:'~2h 30min',price:'~¥13,870',line:'Tokaido Shinkansen'},
+    {route:'Tokyo → Kyoto',time:'~2h 15min',price:'~¥13,320',line:'Tokaido Shinkansen'},
+    {route:'Tokyo → Sapporo',time:'~5h',price:'~¥22,690',line:'Hokkaido Shinkansen'},
+    {route:'Tokyo → Fukuoka',time:'~5h',price:'~¥22,220',line:'Sanyo Shinkansen'},
+    {route:'Osaka → Fukuoka',time:'~2h 20min',price:'~¥11,000',line:'Sanyo Shinkansen'},
+    {route:'Tokyo → Niigata',time:'~1h 40min',price:'~¥10,560',line:'Joetsu Shinkansen'},
+  ];
+  return `
+    <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:12px;">Japan's high-speed rail network connects major cities at speeds up to 320 km/h. Punctual, comfortable, and the best way to travel between cities.</p>
+    <div class="grid-2" style="margin-bottom:12px;">
+      ${routes.map(r=>`<div class="route-item"><div class="route-icon">🚄</div><div style="flex:1;"><div class="route-name">${r.route}</div><div class="route-line">${r.line}</div></div><div style="text-align:right;"><div class="route-time">${r.time}</div><div class="route-price">${r.price}</div></div></div>`).join('')}
+    </div>
+    <div class="grid-2">
+      <div class="info-box green"><strong>JR Pass — Worth It?</strong><br/>The 7-day JR Pass (¥50,000) is worth it if you plan to travel between 3+ cities. Calculate your route costs first. <a href="https://www.jrpass.com/" target="_blank" style="color:#15803d;font-weight:700;">JR Pass Official ↗</a></div>
+      <div class="info-box blue"><strong>Booking Tips</strong><br/>Reserve seats up to 1 month in advance. Use the JR Ticket Office (みどりの窓口) or Shinkansen apps. <a href="https://www.jreast.co.jp/e/" target="_blank" style="color:#1e40af;font-weight:700;">JR East Official ↗</a></div>
+    </div>`;
+}
+function buildLocalContent() {
+  const modes = [
+    {icon:'🚇',title:'Subway / Metro',items:['Tokyo Metro: 9 lines, ¥170–320 per ride','Osaka Metro: 9 lines, ¥180–360 per ride','Sapporo Subway: 3 lines','IC card or single tickets at machines','24/48/72-hour passes available for tourists']},
+    {icon:'🚌',title:'City Bus',items:['Flat fare in many cities (¥100–230)','Enter from the back, exit from the front','IC card accepted on most routes','Night buses available in major cities','Highway buses: cheapest intercity option']},
+    {icon:'🚕',title:'Taxi',items:['Flag fall: ¥500–730 depending on city','Late-night surcharge (after 10pm): +20%','Most taxis accept IC cards and credit cards','GO app: Japan\'s main taxi booking app','Uber available in limited areas']},
+  ];
+  return `<div class="grid-3">${modes.map(m=>`<div style="padding:14px;background:#f9fafb;border:1px solid #f0f0f0;border-radius:12px;"><div style="font-size:24px;margin-bottom:8px;">${m.icon}</div><div style="font-size:13px;font-weight:700;margin-bottom:8px;">${m.title}</div><ul style="list-style:none;">${m.items.map(i=>`<li style="font-size:12px;color:#4b5563;display:flex;align-items:flex-start;gap:6px;margin-bottom:4px;"><span style="color:#1B3A6B;margin-top:3px;">•</span>${i}</li>`).join('')}</ul></div>`).join('')}</div>`;
+}
+function buildFlightsContent() {
+  const airlines = [
+    {name:'Peach Aviation',hub:'Osaka (Kansai)',routes:'Okinawa, Sapporo, Fukuoka, Taipei',price:'From ¥3,000',url:'https://www.flypeach.com/en'},
+    {name:'Jetstar Japan',hub:'Tokyo (Narita)',routes:'Osaka, Fukuoka, Sapporo, Okinawa',price:'From ¥3,490',url:'https://www.jetstar.com/jp/en/home'},
+    {name:'Skymark Airlines',hub:'Tokyo (Haneda)',routes:'Fukuoka, Sapporo, Okinawa, Kobe',price:'From ¥5,000',url:'https://www.skymark.co.jp/en/'},
+  ];
+  return `
+    <p style="font-size:13px;color:#4b5563;line-height:1.6;margin-bottom:12px;">For long distances (e.g. Tokyo to Okinawa or Sapporo), domestic flights can be faster and cheaper than the Shinkansen.</p>
+    <div class="grid-3" style="margin-bottom:12px;">
+      ${airlines.map(a=>`<div style="padding:14px;background:#f9fafb;border:1px solid #f0f0f0;border-radius:12px;"><div style="font-size:13px;font-weight:700;margin-bottom:4px;">✈️ ${a.name}</div><div style="font-size:11px;color:#6b7280;margin-bottom:2px;">Hub: ${a.hub}</div><div style="font-size:11px;color:#4b5563;margin-bottom:4px;">${a.routes}</div><div style="font-size:12px;font-weight:700;color:#15803d;margin-bottom:6px;">${a.price}</div><a href="${a.url}" target="_blank" style="font-size:11px;font-weight:700;color:#1B3A6B;text-decoration:underline;">Book now ↗</a></div>`).join('')}
+    </div>
+    <div class="info-box amber">💡 <strong>Tip:</strong> Tokyo → Okinawa by Shinkansen + ferry takes 24h+. Flying takes 2.5h from ¥5,000. Always compare before booking.</div>`;
+}
+function buildCarContent() {
+  const companies = [
+    {name:'Toyota Rent a Car',url:'https://rent.toyota.co.jp/en/'},
+    {name:'Nippon Rent-A-Car',url:'https://www.nipponrentacar.co.jp/english/'},
+    {name:'Times Car Rental',url:'https://rental.timescar.jp/en/'},
+    {name:'Orix Car Rental',url:'https://car.orix.co.jp/eng/'},
+  ];
+  return `
+    <div class="grid-2">
+      <div class="badge-row">
+        <div class="badge info"><span class="badge-icon">ℹ️</span>International Driving Permit (IDP) required — get one before leaving your country.</div>
+        <div class="badge do"><span class="badge-icon">✅</span>Drive on the LEFT side of the road.</div>
+        <div class="badge do"><span class="badge-icon">✅</span>ETC card available at rental — use for expressway toll discounts.</div>
+        <div class="badge dont"><span class="badge-icon">🚫</span>Strict zero-tolerance for drunk driving (0.15mg/L blood alcohol).</div>
+        <div class="badge info"><span class="badge-icon">ℹ️</span>Expressway tolls are expensive — Tokyo to Osaka costs ~¥5,000.</div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">Major Rental Companies</div>
+        ${companies.map(c=>`<a href="${c.url}" target="_blank" style="display:flex;align-items:center;gap:8px;padding:10px 12px;background:#f9fafb;border:1px solid #f0f0f0;border-radius:8px;margin-bottom:6px;font-size:12px;font-weight:600;color:#1a1a1a;transition:border-color .15s;" onmouseover="this.style.borderColor='#1B3A6B'" onmouseout="this.style.borderColor='#f0f0f0'">🚗 ${c.name} <span style="margin-left:auto;color:#9ca3af;font-size:10px;">↗</span></a>`).join('')}
+      </div>
+    </div>`;
+}
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  buildCityGrid();
+  buildMonthGrid();
+  updateChart();
+  updatePacking();
+  buildLaws();
+  buildEtiquette();
+  buildApps();
+  buildTransport();
+  buildEarthquakeSteps();
+  document.getElementById('city-desc-text').textContent = CITIES[0].name + ' — ' + CITIES[0].desc;
+});
+</script>
