@@ -49,10 +49,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "itinerary": {
       "@type": "ItemList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Japanese lesson at a local café in Shinjuku — 17:00" },
-        { "@type": "ListItem", "position": 2, "name": "First izakaya at Omoide Yokocho — 18:00" },
-        { "@type": "ListItem", "position": 3, "name": "Second izakaya — locals-only hidden spot — 19:00" },
-        { "@type": "ListItem", "position": 4, "name": "End of tour — 20:00" }
+        { "@type": "ListItem", "position": 1, "name": "Japanese lesson at a local café in Shinjuku — 18:00" },
+        { "@type": "ListItem", "position": 2, "name": "First izakaya at Omoide Yokocho — 19:00" },
+        { "@type": "ListItem", "position": 3, "name": "Second izakaya — locals-only hidden spot — 20:00" },
+        { "@type": "ListItem", "position": 4, "name": "End of tour — 21:00" }
       ]
     }
   }
@@ -538,6 +538,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .timeline::before { left: 26px; }
       .timeline-dot { width: 52px; height: 52px; }
     }
+
+    /* ════════════════════════════════════════
+       EDITORIAL REFRESH (match home) + fixes
+    ════════════════════════════════════════ */
+
+    /* Fix: undefined tokens — map to the shared palette */
+    :root { --ink: var(--dark); --ink-muted: var(--mid); }
+
+    /* Kicker label with a leading hairline (same as home) */
+    .tour-section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .tour-section-label::before {
+      content: '';
+      width: 24px;
+      height: 1px;
+      background: var(--brand);
+      opacity: 0.85;
+    }
+    .schedule-inner .tour-section-label::before { background: #f9c46a; }
+
+    /* Tighter, more confident headings */
+    .tour-section-title { letter-spacing: -0.015em; }
+
+    /* Active nav highlight */
+    .nav-links a.active { color: var(--brand); font-weight: 500; }
+
+    /* Numbered timeline (replaces decorative icons) */
+    .timeline-dot {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #f9c46a;
+    }
   </style>
 </head>
 <body>
@@ -587,7 +624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </li>
         <li><a href="/pricing">Pricing</a></li>
-        <li><a href="tour/index.html" class="active">Tour</a></li>
+        <li><a href="index.html" class="active">Tour</a></li>
         <li class="has-dropdown" id="nav-company">
           <button onclick="toggleNav('nav-company')">
             Company
@@ -597,6 +634,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="../index.html">Home Page</a>
             <a href="https://www.symarch-llc.com">About Us</a>
             <a href="https://www.found-local.jp">Blog</a>
+            <a href="/japan-travel">Travel Info</a>
           </div>
         </li>
       </ul>
@@ -621,7 +659,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="mobile-sub">
       <a href="/courses/intensive">Intensive Course</a>
       <a href="/courses/1-week">1-Week Course</a>
-      <a href="courses/weekend">Weekend Course</a>
+      <a href="/courses/weekend">Weekend Course</a>
     </div>
   </div>
   <div class="mobile-nav-item">
@@ -648,6 +686,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="../index.html">Home Page</a>
       <a href="https://www.symarch-llc.com">About Us</a>
       <a href="https://www.found-local.jp">Blog</a>
+      <a href="/japan-travel">Travel Info</a>
     </div>
   </div>
   <div style="margin-top:2rem;">
@@ -672,7 +711,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="tour-hero-content">
     <div class="tour-hero-tag">
-      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
       Every Friday · Shinjuku
     </div>
     <h1 class="tour-hero-title">
@@ -705,28 +743,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       the way locals <em>actually talk</em>
     </h2>
     <p class="tour-section-body">
-      Every Friday evening, we meet at a cozy local café in Shinjuku for a 45-minute Japanese lesson with one of our professional teachers. Then we head out — bar hopping through two of our favourite izakayas where you put everything you just learned into practice, ordering drinks and food in Japanese, chatting with the staff, and making friends along the way.
+      Every Friday evening, we meet at a cozy local café in Shinjuku for a 60-minute Japanese lesson with one of our professional teachers. Then we head out — bar hopping through two of our favourite izakayas where you put everything you just learned into practice, ordering drinks and food in Japanese, chatting with the staff, and making friends along the way.
     </p>
     <p class="tour-section-body" style="margin-top:0.75rem;">
       This isn't a tourist experience. It's the Friday night that locals have — and you're invited.
     </p>
     <div class="tour-pills">
-      <span class="tour-pill">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        Small groups only
-      </span>
-      <span class="tour-pill">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        3 hours
-      </span>
-      <span class="tour-pill">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Shinjuku, Tokyo
-      </span>
-      <span class="tour-pill">
-        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        $75 all-inclusive
-      </span>
+      <span class="tour-pill">Small groups only</span>
+      <span class="tour-pill">3 hours</span>
+      <span class="tour-pill">Shinjuku, Tokyo</span>
+      <span class="tour-pill">$75 all-inclusive</span>
     </div>
   </div>
 </section>
@@ -793,26 +819,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="timeline">
 
       <div class="timeline-item">
-        <div class="timeline-dot">
-          <!-- Book / lesson icon -->
-          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        </div>
+        <div class="timeline-dot">1</div>
         <div class="timeline-body">
-          <div class="timeline-time">17:00</div>
+          <div class="timeline-time">18:00</div>
           <div class="timeline-title">Japanese Lesson — Local café, Shinjuku</div>
           <div class="timeline-desc">
-            Meet your group at a neighbourhood café. Your teacher — a professional from the Chat Japanese team — runs a 45-minute session focused on ordering phrases, food vocabulary, and dining etiquette. Practical, fun, and exactly what you'll need in the next two hours.
+            Meet your group at a neighbourhood café. Your teacher — a professional from the Chat Japanese team — runs a 60-minute session focused on ordering phrases, food vocabulary, and dining etiquette. Practical, fun, and exactly what you'll need in the next two hours.
           </div>
         </div>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot">
-          <!-- Cheers / drinks icon -->
-          <svg viewBox="0 0 24 24"><path d="M8 22h8"/><path d="M12 11v11"/><path d="m19 3-7 8-7-8Z"/></svg>
-        </div>
+        <div class="timeline-dot">2</div>
         <div class="timeline-body">
-          <div class="timeline-time">18:00</div>
+          <div class="timeline-time">19:00</div>
           <div class="timeline-title">First Stop — Omoide Yokocho</div>
           <div class="timeline-desc">
             We head to one of the most atmospheric alleys in Shinjuku — narrow, smoky, and full of character. You'll order your first round entirely in Japanese. The staff here are used to our students and always make it a great experience.
@@ -821,12 +841,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot">
-          <!-- Map pin / hidden spot icon -->
-          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
+        <div class="timeline-dot">3</div>
         <div class="timeline-body">
-          <div class="timeline-time">19:00</div>
+          <div class="timeline-time">20:00</div>
           <div class="timeline-title">Second Stop — Locals-only hidden izakaya</div>
           <div class="timeline-desc">
             This one isn't on any map. It's the kind of place you only find if a local takes you there. Squeeze in, order something from the handwritten menu, and have a real conversation with the people around you. This is the moment the lesson clicks.
@@ -835,12 +852,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-dot">
-          <!-- Star / end icon -->
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
+        <div class="timeline-dot">4</div>
         <div class="timeline-body">
-          <div class="timeline-time">20:00</div>
+          <div class="timeline-time">21:00</div>
           <div class="timeline-title">End of tour</div>
           <div class="timeline-desc">
             We wrap up at the second bar. Feel free to stay on and keep the conversation going — or head home with a head full of new vocabulary and a great Friday night story.
@@ -877,7 +891,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul class="pricing-includes">
         <li>
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          60-mins Japanese lesson with a professional teacher
+          60-minute Japanese lesson with a professional teacher
         </li>
         <li>
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
@@ -957,14 +971,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ── Shared JS ── -->
 <script src="../main.js"></script>
-
-<!-- ── Active nav highlight ── -->
-<script>
-  document.querySelectorAll('.nav-links a[href="tour.html"]').forEach(el => {
-    el.style.color = 'var(--brand)';
-    el.style.fontWeight = '600';
-  });
-</script>
 
 </body>
 </html>
