@@ -75,7 +75,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(20,15,10,0.78) 0%, rgba(20,15,10,0.2) 50%, transparent 100%);
+      background:
+        linear-gradient(to right, rgba(20,15,10,0.6) 0%, rgba(20,15,10,0.25) 42%, rgba(20,15,10,0) 75%),
+        linear-gradient(to top, rgba(20,15,10,0.9) 0%, rgba(20,15,10,0.5) 42%, rgba(20,15,10,0.18) 70%, transparent 100%);
     }
     .course-hero-content {
       position: relative;
@@ -90,17 +92,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.0;
       letter-spacing: 0.01em;
       margin: 0 0 1rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
     }
     .course-hero-title .word-intensive { color: #f99b30; }
     .course-hero-title .word-course    { color: #53ccde; }
     .course-hero-sub {
       font-family: 'DM Sans', sans-serif;
       font-size: clamp(0.9rem, 2.2vw, 1.05rem);
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.92);
       font-weight: 300;
       max-width: 560px;
       line-height: 1.65;
       margin: 0 0 1.75rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
     }
     .hero-tracks {
       display: flex;
@@ -607,7 +611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="course-hero">
   <div class="course-hero-bg">
     <img
-      src="intensive/intensive-hero.jpg"
+      src="intensive-hero.jpg"
       alt="Japanese teacher and students in a Tokyo cafe lesson"
       fetchpriority="high"
     />
@@ -616,8 +620,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 class="course-hero-title"><span class="word-intensive">Intensive</span><br><span class="word-course">Course</span></h1>
     <p class="course-hero-sub">A dual-track immersion program — Linguistic Connection through conversation-first lessons, and Cultural Connection through curated weekend activities.</p>
     <div class="hero-tracks">
-      <div class="hero-track-pill"><span>🗣️</span> Linguistic Connection</div>
-      <div class="hero-track-pill"><span>🏯</span> Cultural Connection</div>
+      <div class="hero-track-pill">Linguistic Connection</div>
+      <div class="hero-track-pill">Cultural Connection</div>
     </div>
   </div>
 </section>
@@ -636,7 +640,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="overview-image">
         <img
-          src="intensive/firstview2.jpg"
+          src="firstview2.jpg"
           alt="Students and teacher in a cozy Tokyo cafe lesson"
           loading="lazy"
         />
@@ -738,14 +742,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="c-body">Lessons begin in a relaxed cafe environment. Then we go outside. You don't just learn "how to order" — you go to a local market and do it.</p>
         <div class="field-items">
           <div class="field-item">
-            <div class="field-item-icon">☕</div>
             <div class="field-item-body">
               <h4>Daily Field Implementation</h4>
               <p>Every morning lesson is immediately applied in the city — markets, shops, train stations. The living street of Japan is your real classroom.</p>
             </div>
           </div>
           <div class="field-item">
-            <div class="field-item-icon">🏮</div>
             <div class="field-item-body">
               <h4>Weekend Cultural Immersion</h4>
               <p>Exclusive weekend activities — traditional craft workshops, hidden local festivals, neighbourhood walks — provide the cultural context for the language you've spent the week learning.</p>
@@ -755,7 +757,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="field-image-col">
         <img
-          src="intensive/intensive-field-lesson.jpg"
+          src="intensive-field-lesson.jpg"
           alt="Language students practicing Japanese at a local market"
           loading="lazy"
         />

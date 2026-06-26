@@ -75,7 +75,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(20,15,10,0.78) 0%, rgba(20,15,10,0.2) 50%, transparent 100%);
+      background:
+        linear-gradient(to right, rgba(20,15,10,0.6) 0%, rgba(20,15,10,0.25) 42%, rgba(20,15,10,0) 75%),
+        linear-gradient(to top, rgba(20,15,10,0.9) 0%, rgba(20,15,10,0.5) 42%, rgba(20,15,10,0.18) 70%, transparent 100%);
     }
     .course-hero-content {
       position: relative;
@@ -103,17 +105,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.0;
       letter-spacing: 0.01em;
       margin: 0 0 1rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
     }
     .course-hero-title .word-1week  { color: #f99b30; }
     .course-hero-title .word-course { color: #53ccde; }
     .course-hero-sub {
       font-family: 'DM Sans', sans-serif;
       font-size: clamp(0.9rem, 2.2vw, 1.05rem);
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.92);
       font-weight: 300;
       max-width: 560px;
       line-height: 1.65;
       margin: 0 0 1.75rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
     }
     .hero-pills {
       display: flex;
@@ -496,7 +500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="course-hero">
   <div class="course-hero-bg">
     <img
-      src="1-week/imagawayaki.jpg"
+      src="imagawayaki.jpg"
       alt="Japanese teacher and students in a Tokyo cafe lesson"
       fetchpriority="high"
     />
@@ -509,8 +513,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </h1>
     <p class="course-hero-sub">Four days of conversation-first Japanese — the basics you actually need, without committing to a full intensive program.</p>
     <div class="hero-pills">
-      <div class="hero-pill"><span>📅</span> Mon – Thu</div>
-      <div class="hero-pill"><span>🗣️</span> Conversation First</div>
+      <div class="hero-pill">Mon – Thu</div>
+      <div class="hero-pill">Conversation First</div>
     </div>
   </div>
 </section>
@@ -549,7 +553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="overview-image">
         <img
-          src="1-week/class.jpg"
+          src="class.jpg"
           alt="Students and teacher in a cozy Tokyo cafe lesson"
           loading="lazy"
         />
@@ -568,21 +572,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="c-body">Lessons don't end when you leave the café. Every morning session is designed to be applied immediately.</p>
         <div class="field-items">
           <div class="field-item">
-            <div class="field-item-icon">☕</div>
             <div class="field-item-body">
               <h4>Café-Based Learning</h4>
               <p>Sessions are held in local cafés — a relaxed, real-world setting that puts you in the mindset of a conversation, not a classroom.</p>
             </div>
           </div>
           <div class="field-item">
-            <div class="field-item-icon">🗺️</div>
             <div class="field-item-body">
               <h4>Immediate Field Practice</h4>
               <p>After each lesson, you head out into the city with the phrases you just learned. Markets, trains, izakayas — the city is your practice ground.</p>
             </div>
           </div>
           <div class="field-item">
-            <div class="field-item-icon">🤝</div>
             <div class="field-item-body">
               <h4>Local Connection</h4>
               <p>Each session includes time with local Japanese speakers — not scripted exchanges, but genuine conversations that build real confidence.</p>
@@ -592,7 +593,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="field-image-col">
         <img
-          src="1-week/intensive-field-lesson.jpg"
+          src="intensive-field-lesson.jpg"
           alt="Language students practicing Japanese at a local market"
           loading="lazy"
         />

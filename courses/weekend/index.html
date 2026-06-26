@@ -74,7 +74,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(20,15,10,0.82) 0%, rgba(20,15,10,0.22) 55%, transparent 100%);
+      background:
+        linear-gradient(to right, rgba(20,15,10,0.6) 0%, rgba(20,15,10,0.25) 42%, rgba(20,15,10,0) 75%),
+        linear-gradient(to top, rgba(20,15,10,0.9) 0%, rgba(20,15,10,0.5) 42%, rgba(20,15,10,0.18) 70%, transparent 100%);
     }
     .course-hero-content {
       position: relative;
@@ -102,17 +104,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.0;
       letter-spacing: 0.01em;
       margin: 0 0 1rem;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
     }
     .course-hero-title .word-weekend { color: #f99b30; }
     .course-hero-title .word-course  { color: #53ccde; }
     .course-hero-sub {
       font-family: 'DM Sans', sans-serif;
       font-size: clamp(0.88rem, 2.2vw, 1rem);
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.92);
       font-weight: 300;
       max-width: 520px;
       line-height: 1.65;
       margin: 0 0 1.5rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
     }
     .hero-pills {
       display: flex;
@@ -478,8 +482,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 </head>
 <body>
-</head>
-<body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC9WRKLD"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -617,8 +619,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </h1>
     <p class="course-hero-sub">Two days of language basics and hands-on cultural immersion. No preparation needed — just show up with a notebook and curiosity.</p>
     <div class="hero-pills">
-      <div class="hero-pill"><span>🗓️</span> Sat &amp; Sun</div>
-      <div class="hero-pill"><span>🎌</span> Cultural Experience Included</div>
+      <div class="hero-pill">Sat &amp; Sun</div>
+      <div class="hero-pill">Cultural Experience Included</div>
   
     </div>
   </div>
@@ -650,7 +652,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="overview-image">
         <img
-          src="weekend/weekend-hero.jpg"
+          src="weekend-hero.jpg"
           alt="Students making sushi with a professional chef"
           loading="lazy"
         />
@@ -728,12 +730,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="c-title">Busy Travelers with Eagerness of Cultural Immersion</h2>
     <div class="for-cards">
       <div class="for-card">
-        <div class="for-card-icon">🏯</div>
         <h3>Japan culture enthusiasts</h3>
         <p>You love Japanese culture — food, art, tradition — and want to experience it from the inside, not just as a spectator. This course puts you in the room with the experts.</p>
       </div>
       <div class="for-card">
-        <div class="for-card-icon">🧳</div>
         <h3>Travelers with limited time</h3>
         <p>You're in Japan for a week or two and can't commit to a full course — but you still want to pick up the basics. Ordering, greetings, convenience store Japanese. Two days is enough.</p>
       </div>
@@ -755,14 +755,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up">
         <div class="activity-card-img">
           <img
-            src="weekend/weekend-sushi.jpg"
+            src="weekend-sushi.jpg"
             alt="Sushi making workshop"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Activity 01</div>
-          <h3>🍣 Sushi Making</h3>
+          <h3>Sushi Making</h3>
           <p>Learn the history of sushi — where it comes from, how it evolved, and what makes each type of neta (topping) unique. Then make your own rolls from scratch with a professional sushi chef.</p>
           <span class="activity-card-tag">All materials provided</span>
         </div>
@@ -772,14 +772,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up" style="transition-delay:0.1s">
         <div class="activity-card-img">
           <img
-            src="weekend/weekend-hero.jpg"
+            src="weekend-hero.jpg"
             alt="Shodo Japanese calligraphy workshop"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Activity 02</div>
-          <h3>🖌️ Shodo Calligraphy</h3>
+          <h3>Shodo Calligraphy</h3>
           <p>Start from zero — brush technique, ink, posture, the meaning behind each stroke. Tell the instructor what kanji you want to write (a feeling, a word, your name's meaning) and they'll teach you exactly that. The paper you write on makes a perfect souvenir.</p>
           <span class="activity-card-tag">All materials provided</span>
         </div>
@@ -789,14 +789,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up" style="transition-delay:0.2s">
         <div class="activity-card-img">
           <img
-            src="weekend/weekend-matcha.jpg"
+            src="weekend-matcha.jpg"
             alt="Matcha tea ceremony experience"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Activity 03</div>
-          <h3>🍵 Matcha Ceremony</h3>
+          <h3>Matcha Ceremony</h3>
           <p>Discover the deep history and rituals of Japanese tea culture — why matcha is prepared the way it is, what each gesture means, and how to drink it properly. A slow, mindful experience that reveals a side of Japan most tourists never see.</p>
           <span class="activity-card-tag">All materials provided</span>
         </div>
