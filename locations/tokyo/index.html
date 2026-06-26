@@ -103,6 +103,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .course-hero-title .word-dive { color: #f99b30; }
     .course-hero-title .word-into  { color: #53ccde; }
+    /* City-forward hero */
+    .hero-kicker {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.95rem, 2.6vw, 1.4rem);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 0.4rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+    }
+    .hero-city {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.3rem 1rem;
+    }
+    .hero-city-en {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2.8rem, 9vw, 6rem);
+      line-height: 1;
+      color: #f99b30;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
+    }
+    .hero-city-jp {
+      font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+      font-weight: 700;
+      font-size: clamp(2.3rem, 7.5vw, 5rem);
+      line-height: 1;
+      color: #53ccde;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
+    }
     .course-hero-sub {
       font-family: 'DM Sans', sans-serif;
       font-size: clamp(0.88rem, 2.2vw, 1rem);
@@ -456,15 +489,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="course-hero">
   <div class="course-hero-bg">
     <img
-      src="tokyo/locations-tokyo.jpg"
+      src="locations-tokyo.jpg"
       alt="Travelers from all over the world exploring Monzen-Nakacho"
       fetchpriority="high"
     />
   </div>
   <div class="course-hero-content container">
     <h1 class="course-hero-title">
-      <span class="word-dive">Dive</span><br>
-      <span class="word-into">into Tokyo</span>
+      <span class="hero-kicker">Dive into</span>
+      <span class="hero-city"><span class="hero-city-en">Tokyo</span><span class="hero-city-jp">東京</span></span>
     </h1>
     <p class="course-hero-sub">Shibuya, Shinjuku... If you want to visit those cities, you don't need to join us. Our Focus is alwasys on the connection with locals. We visit local-loved neighbourhood, while studying Japanese.</p>
   </div>
@@ -483,14 +516,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up">
         <div class="activity-card-img">
           <img
-            src="tokyo/sangenjaya.jpg"
+            src="sangenjaya.jpg"
             alt="Scenery in Sangenjaya"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Neighbourhood 01</div>
-          <h3>🏢 Sangenjaya　三軒茶屋</h3>
+          <h3>Sangenjaya　三軒茶屋</h3>
           <p>Sangenjaya is a local favorite known for its friendly vibe and beautiful spots like Setagaya Park. It’s the perfect place to chat while walking through the greenery or enjoying a famous Imagawayaki sweet from a local shop.</p>
         </div>
       </div>
@@ -499,14 +532,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up" style="transition-delay:0.1s">
         <div class="activity-card-img">
           <img
-            src="tokyo/monnaka.jpg"
+            src="monnaka.jpg"
             alt="Scenery in Monzen-nakacho"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Neighbourhood 02</div>
-          <h3>⛩ Monzenn-Nakacho　門前仲町</h3>
+          <h3>Monzenn-Nakacho　門前仲町</h3>
           <p>Monzen-Nakacho is a historic district home to famous shrines and a warm, traditional atmosphere. Its calm streets and local charm make it the perfect, stress-free place to practice Japanese.</p>
         </div>
       </div>
@@ -515,21 +548,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up" style="transition-delay:0.2s">
         <div class="activity-card-img">
           <img
-            src="tokyo/kiyosumi.jpg"
+            src="kiyosumi.jpg"
             alt="Scenery in Kiyosumishirakawa"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Neighbourhood 03</div>
-          <h3>🍵 Kiyosumi-Shirakawa　清澄白河</h3>
+          <h3>Kiyosumi-Shirakawa　清澄白河</h3>
           <p>Kiyosumi-Shirakawa is a peaceful area where old history meets modern coffee culture. You can walk through the beautiful Kiyosumi Garden and then enjoy a great cup of coffee at a local cafe.</p>
         </div>
       </div>
 
     </div>
     <div class="activities-notice">
-      <div class="activities-notice-icon">🎌</div>
       <p><strong>Our Method; Dynamic Classroom for the further understanding of Tokyo.</strong>Tokyo is the largest city in the world and there are too many places to visit. We change our location every single day so that you can see the other side of Tokyo where normal tourist would never see.</p>
     </div>
   </div>
@@ -547,14 +579,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="c-body">As our mission is to connect you with real side of Japan, our classroom is always changing, we won't stay at single place like a normal school. Tomorrow's classroom is different from today's!</p>
         <div class="field-items">
           <div class="field-item">
-            <div class="field-item-icon">☕</div>
             <div class="field-item-body">
               <h4>Explore Tokyo</h4>
               <p>Every single lesson is held in different locations. Even though our classroom can be anywhere in Tokyo, we don't visit crowded, touristy area. <strong>Find hidden gem, Find your own Tokyo!</strong></p>
             </div>
           </div>
           <div class="field-item">
-            <div class="field-item-icon">🗾</div>
             <div class="field-item-body">
               <h4>Explore all over Japan</h4>
               <p>As our classroom can be found in various areas in Japan, we can keep studying Japanese while traveling. W-1, you can learn basic Japanese in Tokyo, W-2 you can change your destination to Yokohama and keep learning since our teachers share infos on what you've studied before!</p>
@@ -564,7 +594,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="field-image-col">
         <img
-          src="tokyo/intensive-field-lesson.jpg"
+          src="intensive-field-lesson.jpg"
           alt="Language students practicing Japanese at a local market"
           loading="lazy"
         />

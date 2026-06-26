@@ -103,6 +103,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .course-hero-title .word-dive { color: #f99b30; }
     .course-hero-title .word-into  { color: #53ccde; }
+    /* City-forward hero */
+    .hero-kicker {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.95rem, 2.6vw, 1.4rem);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 0.4rem;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.55);
+    }
+    .hero-city {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.3rem 1rem;
+    }
+    .hero-city-en {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(2.8rem, 9vw, 6rem);
+      line-height: 1;
+      color: #f99b30;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
+    }
+    .hero-city-jp {
+      font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+      font-weight: 700;
+      font-size: clamp(2.3rem, 7.5vw, 5rem);
+      line-height: 1;
+      color: #53ccde;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5), 0 1px 4px rgba(0,0,0,0.4);
+    }
     .course-hero-sub {
       font-family: 'DM Sans', sans-serif;
       font-size: clamp(0.88rem, 2.2vw, 1rem);
@@ -456,15 +489,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="course-hero">
   <div class="course-hero-bg">
     <img
-      src="yokohama/main-yokohama.jpg"
+      src="main-yokohama.jpg"
       alt="Travelers from all over the world exploring Monzen-Nakacho"
       fetchpriority="high"
     />
   </div>
   <div class="course-hero-content container">
     <h1 class="course-hero-title">
-      <span class="word-dive">Live like locals</span><br>
-      <span class="word-into">in Yokohama</span>
+      <span class="hero-kicker">Live like locals in</span>
+      <span class="hero-city"><span class="hero-city-en">Yokohama</span><span class="hero-city-jp">横浜</span></span>
     </h1>
     <p class="course-hero-sub">Escape the city rush and find your flow in beautiful Yokohama. > From peaceful harbor views to historic brick warehouses, it’s the perfect place for natural conversation.</p>
   </div>
@@ -483,14 +516,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up">
         <div class="activity-card-img">
           <img
-            src="yokohama/noge.jpg"
+            src="noge.jpg"
             alt="Scenery in Noge, Yokohama"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Neighbourhood 01</div>
-          <h3>🏮 Noge　野毛</h3>
+          <h3>Noge　野毛</h3>
           <p>Noge is a nostalgic district beloved by locals, filled with retro charm and post-war history. Unlike the polished tourist spots, this area offers a glimpse into real, everyday life. Its narrow streets packed with small shops create a lively, friendly atmosphere, making it the best place to pick up authentic Japanese through natural interactions with the community.</p>
         </div>
       </div>
@@ -499,14 +532,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up" style="transition-delay:0.1s">
         <div class="activity-card-img">
           <img
-            src="yokohama/minatomirai.jpg"
+            src="minatomirai.jpg"
             alt="Scenery in Minato Mirai"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Neighbourhood 02</div>
-          <h3>🏢 Minato Mirai　みなとみらい</h3>
+          <h3>Minato Mirai　みなとみらい</h3>
           <p>Built on former shipyards, Minato Mirai is Yokohama’s iconic waterfront district. This area is characterized by wide-open seaside parks and stunning modern architecture, offering a refreshing environment for your lessons. Walking along the coast with the ocean breeze makes it easy to relax, clear your mind, and focus on your Japanese conversation.</p>
         </div>
       </div>
@@ -515,21 +548,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="activity-card fade-up" style="transition-delay:0.2s">
         <div class="activity-card-img">
           <img
-            src="yokohama/bashamichi.jpg"
+            src="bashamichi.jpg"
             alt="Scenery in Bashamichi"
             loading="lazy"
           />
         </div>
         <div class="activity-card-body">
           <div class="activity-card-num">Neighbourhood 03</div>
-          <h3>🍵 Bashamichi 馬車道</h3>
+          <h3>Bashamichi 馬車道</h3>
           <p>Bashamichi is an elegant area where Japan’s history of opening to the world is still visible today. With its vintage gas lamps and red-brick buildings, the street carries a sophisticated, quiet energy. It is a perfect setting for those who appreciate history and architecture, providing a calm and intellectual space to enjoy deep conversations.</p>
         </div>
       </div>
 
     </div>
     <div class="activities-notice">
-      <div class="activities-notice-icon">🎌</div>
       <p><strong>Our Method; Dynamic Classroom for the further understanding of Yokohama.</strong>With so much to see from world-largest Chinatown to the Ramen museums, 1-Week trip isn't enough to find all the charms in Yokohama.</p>
     </div>
   </div>
@@ -547,14 +579,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="c-body">As our mission is to connect you with real side of Japan, our classroom is always changing, we won't stay at single place like a normal school. Tomorrow's classroom is different from today's!</p>
         <div class="field-items">
           <div class="field-item">
-            <div class="field-item-icon">☕</div>
             <div class="field-item-body">
               <h4>Explore Yokohama</h4>
               <p>Every single lesson is held in different locations. Even though our classroom can be anywhere in Yokohama, we don't visit crowded, touristy area. <br>Find hidden gem, Find your own Tokyo!</br></p>
             </div>
           </div>
           <div class="field-item">
-            <div class="field-item-icon">🗾</div>
             <div class="field-item-body">
               <h4>Explore all over Japan</h4>
               <p>As our classroom can be found in various areas in Japan, we can keep studying Japanese while traveling. W-1, you can learn basic Japanese in Tokyo, W-2 you can change your destination to Yokohama and keep learning since our teachers share infos on what you've studied before!</p>
@@ -564,7 +594,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="field-image-col">
         <img
-          src="yokohama/yokohama-3spots.jpg"
+          src="yokohama-3spots.jpg"
           alt="3 spots to see in Yokohama"
           loading="lazy"
         />
