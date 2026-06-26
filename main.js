@@ -37,6 +37,22 @@ function smoothScroll(e, id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
+/* ── Campaign banner: measure height so the fixed navbar + heroes offset correctly ── */
+(function () {
+  const banner = document.querySelector('.campaign-banner');
+  const nav = document.getElementById('navbar');
+  if (!banner) return;
+  const root = document.documentElement;
+  const apply = () => {
+    const bh = banner.offsetHeight;
+    root.style.setProperty('--banner-h', bh + 'px');
+    root.style.setProperty('--header-h', (bh + (nav ? nav.offsetHeight : 0)) + 'px');
+  };
+  apply();
+  window.addEventListener('resize', apply);
+  window.addEventListener('load', apply);
+})();
+
 /* ── Scroll reveal ── */
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });

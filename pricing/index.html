@@ -71,26 +71,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.65;
     }
 
-    /* ── Campaign banner ── */
-    .campaign-banner {
-      position: relative;
-      z-index: 200;
-      background: #f99b30;
-      color: #fff;
-      text-align: center;
-      padding: 0.75rem 1rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-    .campaign-banner span {
-      background: rgba(255,255,255,0.25);
-      border-radius: 4px;
-      padding: 0.15rem 0.5rem;
-      margin-left: 0.5rem;
-      font-size: 0.75rem;
-    }
+    /* Campaign banner styles are shared (style.css). Clear the fixed banner + navbar: */
+    body { padding-top: var(--header-h); }
 
     /* ── Pricing section ── */
     .pricing-section {
@@ -671,11 +653,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- CAMPAIGN BANNER -->
-<div class="campaign-banner">
-  🎉 Registration Fee Waived Until June 30
-  <span>Limited time</span>
-</div>
+<!-- LAUNCH CAMPAIGN BANNER -->
+<div class="campaign-banner">Launch Campaign: <strong>$30 registration fee waived</strong> until July 31.</div>
 
 
 <!-- ════════════════════════════════════════
@@ -706,7 +685,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
         </svg>
-        <span><strong>Free until June 30</strong> — Registration fee is waived as part of our early-access campaign.</span>
+        <span><strong>Free until July 31</strong> — $30 registration fee is waived as part of our launch campaign.</span>
       </div>
     </div>
 
