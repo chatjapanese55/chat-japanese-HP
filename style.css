@@ -32,14 +32,15 @@ a { text-decoration: none; color: inherit; }
   --card:       #f5f0e8;
   --border:     rgba(42,36,32,0.09);
   --banner-h:   36px;
+  --nav-h:      66px;
   --header-h:   102px;
 }
 
 /* ── Launch campaign banner (fixed, above navbar) ── */
 .campaign-banner {
   position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 101;
+  top: var(--nav-h); left: 0; right: 0;
+  z-index: 100;
   background: var(--brand);
   color: #fff;
   text-align: center;
@@ -127,8 +128,8 @@ a { text-decoration: none; color: inherit; }
    ============================================================ */
 #navbar {
   position: fixed;
-  top: var(--banner-h); left: 0; right: 0;
-  z-index: 100;
+  top: 0; left: 0; right: 0;
+  z-index: 101;
   background: #fff;
   box-shadow: 0 1px 0 var(--border);
   padding: 0.7rem 0;

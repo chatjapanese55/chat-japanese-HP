@@ -45,8 +45,10 @@ function smoothScroll(e, id) {
   const root = document.documentElement;
   const apply = () => {
     const bh = banner.offsetHeight;
+    const nh = nav ? nav.offsetHeight : 0;
     root.style.setProperty('--banner-h', bh + 'px');
-    root.style.setProperty('--header-h', (bh + (nav ? nav.offsetHeight : 0)) + 'px');
+    root.style.setProperty('--nav-h', nh + 'px');
+    root.style.setProperty('--header-h', (bh + nh) + 'px');
   };
   apply();
   window.addEventListener('resize', apply);
