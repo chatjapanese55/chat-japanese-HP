@@ -315,8 +315,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     /* ── Recommended-for image bands (no boxes, hairline dividers) ── */
     .rec-bands {
+      position: relative;
       margin-top: 2rem;
       border-top: 1px solid var(--border);
+    }
+    /* Single overlay across all three bands so no unfiltered gaps show between items */
+    .rec-bands::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(20,15,10,0.82) 0%, rgba(20,15,10,0.62) 50%, rgba(20,15,10,0.5) 100%);
+      z-index: 1;
+      pointer-events: none;
     }
     .rec-band {
       position: relative;
@@ -325,15 +335,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border-bottom: 1px solid var(--border);
       overflow: hidden;
     }
-    .rec-band::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(20,15,10,0.82) 0%, rgba(20,15,10,0.62) 50%, rgba(20,15,10,0.5) 100%);
-    }
     .rec-band-inner {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       display: flex;
       align-items: center;
       gap: 1.25rem;

@@ -286,11 +286,11 @@ a { text-decoration: none; color: inherit; }
 #mobile-menu {
   display: none;
   position: fixed;
-  top: var(--header-h); left: 0; right: 0; bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(255,255,255,0.98);
   backdrop-filter: blur(16px);
-  z-index: 99;
-  padding: 3.25rem 2rem 2rem;
+  z-index: 200;
+  padding: 4.5rem 2rem 2rem;
   overflow-y: auto;
 }
 #mobile-menu.open { display: block; }
@@ -386,6 +386,11 @@ a { text-decoration: none; color: inherit; }
   text-shadow: 0 2px 18px rgba(0,0,0,0.55), 0 1px 4px rgba(0,0,0,0.45);
 }
 .hero-h1 em { font-style: normal; color: var(--brand); }
+/* Mobile: shrink hero height so the image doesn't leave a large empty band above the content */
+@media (max-width: 640px) {
+  #hero { min-height: calc(100svh - var(--header-h) - 110px); }
+  .hero-content { padding-top: 4rem; }
+}
 .hero-brand {
   font-family: 'Anton', sans-serif;
   font-size: clamp(3rem, 9vw, 7.5rem);
