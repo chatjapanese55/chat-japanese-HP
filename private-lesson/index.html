@@ -312,6 +312,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top: 1.25rem;
     }
 
+    /* ── Recommended-for image bands (no boxes, hairline dividers) ── */
+    .rec-bands {
+      margin-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .rec-band {
+      position: relative;
+      background-size: cover;
+      background-position: center 35%;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .rec-band::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(20,15,10,0.82) 0%, rgba(20,15,10,0.55) 45%, rgba(20,15,10,0.15) 100%);
+    }
+    .rec-band-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      min-height: 200px;
+      padding: 2rem 1.75rem;
+      max-width: 640px;
+    }
+    .rec-band-no {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #f9c46a;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .rec-band-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.15;
+      margin: 0 0 0.5rem;
+    }
+    .rec-band-text p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.86);
+      line-height: 1.6;
+      margin: 0;
+    }
+    @media (min-width: 768px) {
+      .rec-band-inner { min-height: 240px; padding: 2.5rem 3rem; gap: 1.75rem; }
+      .rec-band-no { font-size: 2.8rem; }
+      .rec-band-text h3 { font-size: 1.9rem; }
+    }
+
     /* ── Plan comparison ── */
     .plan-grid {
       display: grid;
@@ -459,6 +517,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-left: 0.5rem;
       vertical-align: middle;
     }
+    .loc-card { padding-top: 0; overflow: hidden; }
+    .loc-img {
+      margin: 0 -1.4rem 1.25rem;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+    .loc-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .loc-card .loc-name { margin-top: 1.4rem; }
     .loc-card .loc-areas {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.78rem;
@@ -863,8 +934,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="pt-hero" aria-label="Private tour hero">
   <div class="pt-hero-bg">
     <img
-      src="/tour/Tour-new.jpg"
-      alt="Traveler practicing Japanese with a private guide while exploring Tokyo"
+      src="/private-lesson/family-tour.jpg"
+      alt="Family practicing Japanese with a private local guide on a Tokyo street"
       fetchpriority="high"
       decoding="sync"
     />
@@ -918,10 +989,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="pt-section-inner">
     <p class="pt-label">Who it's for</p>
     <h2 class="pt-title">Recommended for</h2>
-    <div class="pt-cards cols-3">
-      <div class="pt-card"><h3>Families &amp; small groups</h3><p>Kids are welcome too. With 3 or more people, your private tour is discounted compared to a regular lesson.</p></div>
-      <div class="pt-card"><h3>Groups of friends</h3><p>Coming with friends? With 3 or more people, you get the same group discount over a regular lesson.</p></div>
-      <div class="pt-card"><h3>Learners who want fast progress</h3><p>Move at your own pace, not someone else's. A private tour is built entirely around you, so you grow as quickly as you want.</p></div>
+    <div class="rec-bands">
+
+      <article class="rec-band" style="background-image:url('/private-lesson/family-tour.jpg');">
+        <div class="rec-band-inner">
+          <span class="rec-band-no">01</span>
+          <div class="rec-band-text">
+            <h3>Families &amp; small groups</h3>
+            <p>Kids are welcome too. With 3 or more people, your private tour is discounted compared to a regular lesson.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rec-band" style="background-image:url('/private-lesson/friends-cafe.jpg');">
+        <div class="rec-band-inner">
+          <span class="rec-band-no">02</span>
+          <div class="rec-band-text">
+            <h3>Groups of friends</h3>
+            <p>Coming with friends? With 3 or more people, you get the same group discount over a regular lesson.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="rec-band" style="background-image:url('/private-lesson/private-lesson.jpg');">
+        <div class="rec-band-inner">
+          <span class="rec-band-no">03</span>
+          <div class="rec-band-text">
+            <h3>Learners who want fast progress</h3>
+            <p>Move at your own pace, not someone else's. A private tour is built entirely around you, so you grow as quickly as you want.</p>
+          </div>
+        </div>
+      </article>
+
     </div>
     <p class="pt-note">No Japanese experience is required. Your guide will support you in English when needed.</p>
   </div>
@@ -1004,6 +1103,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pt-cards cols-2">
 
       <div class="pt-card loc-card">
+        <div class="loc-img"><img src="/private-lesson/tokyo.jpg" alt="Aerial view of Tokyo at sunset with Tokyo Tower" loading="lazy" /></div>
         <h2 class="loc-name">Tokyo</h2>
         <p class="plan-best">Best for</p>
         <ul>
@@ -1016,6 +1116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="pt-card loc-card">
+        <div class="loc-img"><img src="/private-lesson/yokohama.jpg" alt="Yokohama Minato Mirai skyline at dusk over the water" loading="lazy" /></div>
         <h2 class="loc-name">Yokohama</h2>
         <p class="plan-best">Best for</p>
         <ul>
@@ -1032,47 +1133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ════════════════════════════════════════
-     7. WHAT YOU CAN PRACTICE
-════════════════════════════════════════ -->
-<section class="pt-section" aria-label="What you can practice">
-  <div class="pt-section-inner">
-    <p class="pt-label">In real situations</p>
-    <h2 class="pt-title">What you can <em>practice</em></h2>
-    <p class="pt-body" style="max-width:560px;">Every phrase is something you'll actually say on your tour — paired with the Japanese you'll use to say it.</p>
-
-    <div class="practice-list">
-      <div class="practice-row">
-        <span class="practice-en">Greeting people</span>
-        <span class="practice-jp">こんにちは</span>
-      </div>
-      <div class="practice-row">
-        <span class="practice-en">Ordering food and drinks</span>
-        <span class="practice-jp">〇〇をお願いします</span>
-      </div>
-      <div class="practice-row">
-        <span class="practice-en">Asking for recommendations</span>
-        <span class="practice-jp">おすすめは何ですか？</span>
-      </div>
-      <div class="practice-row">
-        <span class="practice-en">Asking &ldquo;What is this?&rdquo;</span>
-        <span class="practice-jp">これは何ですか？</span>
-      </div>
-      <div class="practice-row">
-        <span class="practice-en">Saying thank you</span>
-        <span class="practice-jp">ありがとうございます</span>
-      </div>
-      <div class="practice-row">
-        <span class="practice-en">Finishing a meal politely</span>
-        <span class="practice-jp">ごちそうさまでした</span>
-      </div>
-    </div>
-
-    <p class="practice-more">Plus: talking about likes and dislikes · reading simple menus and signs · using polite travel Japanese · understanding local manners.</p>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     8. SAMPLE PRIVATE TOUR FLOW
+     7. SAMPLE PRIVATE TOUR FLOW
 ════════════════════════════════════════ -->
 <section class="pt-flow" aria-label="Sample private tour flow">
   <div class="pt-flow-inner">
