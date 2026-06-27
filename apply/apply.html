@@ -1,253 +1,489 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MC9WRKLD');</script>
+<!-- End Google Tag Manager -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply Now — Chat Japanese</title>
+  <title>Book & Pay — Chat Japanese</title>
+  <meta name="description" content="Book your Chat Japanese program — choose your course, date, location and group size, then pay securely. Registration fee waived until July 31." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Stripe.js -->
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <style>
+    :root { --ink: var(--dark); --ink-muted: var(--mid); }
+
+    .bk-wrap {
+      margin-top: var(--header-h);
+      background: #faf8f4;
+      min-height: calc(100vh - var(--header-h));
+      padding: 3rem 1.5rem 5rem;
+    }
+    .bk-inner { max-width: 1080px; margin: 0 auto; }
+
+    .bk-head { margin-bottom: 2.5rem; max-width: 640px; }
+    .bk-kicker {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand);
+      margin-bottom: 0.9rem;
+    }
+    .bk-kicker::before { content: ''; width: 26px; height: 1px; background: var(--brand); opacity: 0.85; }
+    .bk-head h1 {
+      font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5.5vw, 3rem);
+      font-weight: 400; letter-spacing: -0.015em; color: var(--ink); line-height: 1.1; margin: 0 0 0.75rem;
+    }
+    .bk-head h1 em { font-style: italic; color: var(--brand); }
+    .bk-head p { font-family: 'DM Sans', sans-serif; font-size: 0.96rem; color: var(--ink-muted); line-height: 1.7; margin: 0; }
+
+    .bk-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
+    @media (min-width: 920px) { .bk-grid { grid-template-columns: 1fr 1fr; gap: 3.5rem; } }
+
+    /* ── Form (left) ── */
+    .bk-form { display: flex; flex-direction: column; gap: 1.5rem; }
+    .bk-field { display: flex; flex-direction: column; gap: 0.45rem; }
+    .bk-field label {
+      font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted);
+    }
+    .bk-field input, .bk-field select {
+      font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink);
+      background: #fff; border: 1.5px solid var(--border); border-radius: 8px;
+      padding: 0.85rem 1rem; width: 100%; transition: border-color 0.2s;
+    }
+    .bk-field input:focus, .bk-field select:focus { outline: none; border-color: var(--brand); }
+    .bk-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 480px) { .bk-row { grid-template-columns: 1fr; } }
+
+    /* ── Summary + checkout (right) ── */
+    .bk-side { position: sticky; top: calc(var(--header-h) + 1.5rem); display: flex; flex-direction: column; gap: 1.25rem; }
+    @media (max-width: 919px) { .bk-side { position: static; } }
+
+    .bk-summary {
+      background: #fff; border: 1.5px solid var(--border); border-radius: 14px; padding: 1.75rem;
+    }
+    .bk-summary h2 {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600;
+      color: var(--ink); margin: 0 0 1.25rem;
+    }
+    .bk-line { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.55rem 0; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink-muted); }
+    .bk-line span:last-child { color: var(--ink); font-weight: 500; text-align: right; }
+    .bk-line.free span:last-child { color: #16a34a; font-weight: 700; }
+    .bk-divider { border: none; border-top: 1px solid var(--border); margin: 0.5rem 0; }
+    .bk-total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 0.75rem; }
+    .bk-total .lbl { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+    .bk-total .amt { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--ink); line-height: 1; }
+    .bk-reg-note {
+      margin-top: 1rem; background: #fff8f0; border: 1px dashed #f99b30; border-radius: 8px;
+      padding: 0.6rem 0.9rem; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: #c47a20; line-height: 1.5;
+    }
+    .bk-reg-note strong { color: #f99b30; }
+
+    .bk-pay-btn {
+      width: 100%; border: none; cursor: pointer;
+      background: var(--brand); color: #fff;
+      font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase; padding: 1.05rem; border-radius: 10px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .bk-pay-btn:hover:not(:disabled) { background: #e8841a; transform: translateY(-1px); }
+    .bk-pay-btn:disabled { background: #d8cfc2; cursor: not-allowed; }
+
+    .bk-contact {
+      background: #fff8f0; border: 1.5px solid #f9c46a; border-radius: 12px; padding: 1.25rem 1.4rem;
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: #5a4e40; line-height: 1.65;
+    }
+    .bk-contact strong { color: var(--ink); }
+    .bk-contact a { color: var(--brand); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+    .bk-hidden { display: none !important; }
+
+    .bk-error { font-family: 'DM Sans', sans-serif; font-size: 0.85rem; color: #c0392b; margin-top: 0.5rem; }
+
+    #checkout { margin-top: 0.5rem; }
+
+    /* Thank-you */
+    .bk-thanks {
+      max-width: 560px; margin: 0 auto; text-align: center; background: #fff;
+      border: 1.5px solid var(--border); border-radius: 16px; padding: 3rem 2rem;
+    }
+    .bk-thanks .check {
+      width: 64px; height: 64px; border-radius: 50%; background: #eafaf0; border: 2px solid #16a34a;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;
+    }
+    .bk-thanks h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 600; color: var(--ink); margin: 0 0 0.75rem; }
+    .bk-thanks p { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink-muted); line-height: 1.7; margin: 0 0 1.75rem; }
+    .bk-thanks a.btn-primary { display: inline-block; }
+  </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC9WRKLD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-  <!-- ── Launch Campaign Banner ──────────────────────────────────────────── -->
-  <div style="background:#f99b30;color:#fff;text-align:center;padding:0.55rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.02em;line-height:1.35;">Launch Campaign: <strong>$30 registration fee waived</strong> until July 31.</div>
-
-  <!-- ── Top Banner ──────────────────────────────────────────────────────── -->
-  <div class="banner">
-    ✦ NO PAYMENT NEEDED — RESERVE YOUR SPOT FOR FREE ✦
-  </div>
-
-  <!-- ── Page Title ──────────────────────────────────────────────────────── -->
-  <div class="page-title-bar">
-    <h1 class="page-title">Choose Your Program</h1>
-    <p class="page-subtitle">Start your Japanese language journey — no payment required at this stage.</p>
-  </div>
-
-  <!-- ── Main ────────────────────────────────────────────────────────────── -->
-  <main class="main-wrapper">
-    <form id="applyForm" novalidate>
-      <div class="two-col">
-
-        <!-- ── LEFT: Program Selectors ──────────────────────────────────── -->
-        <div class="col-left">
-
-          <!-- Course Accordion -->
-          <div class="accordion" id="acc-course">
-            <button type="button" class="acc-header" aria-expanded="true" data-target="panel-course">
-              <span class="acc-icon-wrap" id="icon-course">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              </span>
-              <span class="acc-title">Course Type</span>
-              <span class="acc-summary" id="summary-course"></span>
-              <span class="acc-chevron">▾</span>
-            </button>
-            <div class="acc-panel" id="panel-course" role="region">
-              <div class="option-list" id="course-options">
-
-                <button type="button" class="option-card" data-group="course" data-value="1-Week Course">
-                  <span class="option-body">
-                    <span class="option-title">1-Week Course</span>
-                    <span class="option-sub">A focused one-week immersive experience</span>
-                  </span>
-                  <span class="option-check">✓</span>
-                </button>
-
-                <button type="button" class="option-card" data-group="course" data-value="Intensive Course">
-                  <span class="option-body">
-                    <span class="option-title">Intensive Course <span class="badge">Most Popular</span></span>
-                    <span class="option-sub">Deep dive into Japanese language &amp; culture</span>
-                  </span>
-                  <span class="option-check">✓</span>
-                </button>
-
-                <button type="button" class="option-card" data-group="course" data-value="Weekend Course">
-                  <span class="option-body">
-                    <span class="option-title">Weekend Course</span>
-                    <span class="option-sub">Learn at your own pace on weekends</span>
-                  </span>
-                  <span class="option-check">✓</span>
-                </button>
-
-                <button type="button" class="option-card" data-group="course" data-value="Chat Shinjuku Friday Tour">
-                  <span class="option-body">
-                    <span class="option-title">Chat Shinjuku Friday Tour <span class="badge badge-dark">Tokyo Only</span></span>
-                    <span class="option-sub">Explore Shinjuku while practising Japanese</span>
-                  </span>
-                  <span class="option-check">✓</span>
-                </button>
-
-              </div>
-              <p class="field-error hidden" id="err-course">Please select a course.</p>
-            </div>
-          </div><!-- /acc-course -->
-
-          <!-- Location Accordion -->
-          <div class="accordion" id="acc-location">
-            <button type="button" class="acc-header" aria-expanded="false" data-target="panel-location">
-              <span class="acc-icon-wrap" id="icon-location">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </span>
-              <span class="acc-title">Location</span>
-              <span class="acc-summary" id="summary-location"></span>
-              <span class="acc-chevron">▾</span>
-            </button>
-            <div class="acc-panel closed" id="panel-location" role="region">
-              <div class="option-list" id="location-options">
-
-                <button type="button" class="option-card" data-group="location" data-value="Tokyo">
-                  <span class="option-body">
-                    <span class="option-title">Tokyo</span>
-                    <span class="option-sub">Shinjuku area · Central access</span>
-                  </span>
-                  <span class="option-check">✓</span>
-                </button>
-
-                <button type="button" class="option-card" data-group="location" data-value="Yokohama">
-                  <span class="option-body">
-                    <span class="option-title">Yokohama</span>
-                    <span class="option-sub">Minato Mirai · Harbour city</span>
-                  </span>
-                  <span class="option-check">✓</span>
-                </button>
-
-              </div>
-              <p class="field-error hidden" id="err-location">Please select a location.</p>
-            </div>
-          </div><!-- /acc-location -->
-
-          <!-- Duration Accordion (hidden for Weekend / Friday Tour) -->
-          <div class="accordion" id="acc-duration">
-            <button type="button" class="acc-header" aria-expanded="false" data-target="panel-duration">
-              <span class="acc-icon-wrap" id="icon-duration">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </span>
-              <span class="acc-title">Duration</span>
-              <span class="acc-summary" id="summary-duration"></span>
-              <span class="acc-chevron">▾</span>
-            </button>
-            <div class="acc-panel closed" id="panel-duration" role="region">
-              <div class="option-grid" id="duration-options">
-                <button type="button" class="option-chip" data-group="duration" data-value="1 Week">1 Week</button>
-                <button type="button" class="option-chip" data-group="duration" data-value="2 Weeks">2 Weeks</button>
-                <button type="button" class="option-chip" data-group="duration" data-value="3 Weeks">3 Weeks</button>
-                <button type="button" class="option-chip" data-group="duration" data-value="4 Weeks">4 Weeks</button>
-                <button type="button" class="option-chip chip-wide" data-group="duration" data-value="More (Contact Us)">More — Contact us for longer programs</button>
-              </div>
-              <p class="field-error hidden" id="err-duration">Please select a duration.</p>
-            </div>
-          </div><!-- /acc-duration -->
-
-          <!-- Start Date -->
-          <div class="date-section" id="dateSection">
-            <label class="date-label" for="startDate">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Preferred Start Date
-            </label>
-            <p class="date-hint" id="dateHint"></p>
-            <input type="date" id="startDate" name="startDate" class="date-input" />
-            <p class="field-error hidden" id="err-date">Please select a valid start date.</p>
-          </div>
-
-        </div><!-- /col-left -->
-
-        <!-- ── RIGHT: Personal Details Form ─────────────────────────────── -->
-        <div class="col-right">
-          <h2 class="section-title">Your Details</h2>
-
-          <div class="form-card">
-
-            <!-- Selection summary pill -->
-            <div class="selection-summary hidden" id="selectionSummary">
-              <span class="summary-label">Your Selection</span>
-              <span class="summary-text" id="summaryText"></span>
-            </div>
-
-            <!-- Name row -->
-            <div class="field-row">
-              <div class="field-group">
-                <label class="field-label" for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" class="field-input" placeholder="Yuki" autocomplete="given-name" />
-                <p class="field-error hidden" id="err-firstName">First name is required.</p>
-              </div>
-              <div class="field-group">
-                <label class="field-label" for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" class="field-input" placeholder="Tanaka" autocomplete="family-name" />
-                <p class="field-error hidden" id="err-lastName">Last name is required.</p>
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="field-group">
-              <label class="field-label" for="email">Email Address</label>
-              <input type="email" id="email" name="email" class="field-input" placeholder="yuki@example.com" autocomplete="email" />
-              <p class="field-error hidden" id="err-email">Please enter a valid email address.</p>
-            </div>
-
-            <!-- Confirm Email -->
-            <div class="field-group">
-              <label class="field-label" for="emailConfirm">Confirm Email Address</label>
-              <input type="email" id="emailConfirm" name="emailConfirm" class="field-input" placeholder="yuki@example.com" autocomplete="email" />
-              <p class="field-error hidden" id="err-emailConfirm">Email addresses do not match.</p>
-            </div>
-
-            <!-- Privacy note -->
-            <p class="privacy-note">
-              By submitting this form, you agree to be contacted by Chat Japanese regarding your application. No payment is required at this stage.
-            </p>
-
-            <!-- Submit button -->
-            <button type="submit" class="submit-btn" id="submitBtn">
-              <span id="submitLabel">Apply Now →</span>
-              <span id="submitSpinner" class="spinner hidden"></span>
-            </button>
-
-            <!-- Form-level error -->
-            <p class="form-error hidden" id="formError">Please fill in all required fields above.</p>
-          </div>
-        </div><!-- /col-right -->
-
-      </div><!-- /two-col -->
-    </form>
-  </main>
-
-  <!-- ── Thank You Page ──────────────────────────────────────────────────── -->
-  <div class="thanks-overlay hidden" id="thanksPage">
-    <div class="thanks-card">
-      <div class="thanks-check">
-        <svg viewBox="0 0 52 52" class="check-svg">
-          <circle class="check-circle" cx="26" cy="26" r="25" fill="none"/>
-          <path class="check-tick" fill="none" d="M14 27l8 8 16-16"/>
-        </svg>
-      </div>
-      <p class="thanks-eyebrow">Application Received</p>
-      <h1 class="thanks-heading" id="thanksHeading">Thank you!</h1>
-      <p class="thanks-body">
-        Your application has been successfully submitted.<br />
-        We will get back to you within <strong>1–2 business days</strong> with the next steps.
-      </p>
-      <div class="thanks-pills">
-        <div class="thanks-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <div>
-            <span class="pill-label">Confirmation sent to</span>
-            <span class="pill-value" id="thanksEmail"></span>
-          </div>
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="../logo-chat-japanese.webp" alt="Chat Japanese logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
+        <div>
+          <div class="nav-logo-name"><span class="chat">Chat</span><span class="japanese">Japanese</span></div>
+          <div class="nav-logo-sub">Japanese School</div>
         </div>
-        <div class="thanks-pill">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <div>
-            <span class="pill-label">Response time</span>
-            <span class="pill-value">Within 1–2 business days</span>
+      </a>
+      <ul class="nav-links">
+        <li class="has-dropdown" id="nav-courses">
+          <button onclick="toggleNav('nav-courses')">Courses
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
+          <div class="nav-dropdown">
+            <a href="/courses/intensive">Intensive Course</a>
+            <a href="/courses/1-week">1-Week Course</a>
+            <a href="/courses/weekend">Weekend Course</a>
           </div>
-        </div>
+        </li>
+        <li class="has-dropdown" id="nav-locations">
+          <button onclick="toggleNav('nav-locations')">Locations
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
+          <div class="nav-dropdown">
+            <a href="/locations/tokyo">Tokyo</a>
+            <a href="/locations/yokohama">Yokohama</a>
+            <a href="/locations/kamakura">Kamakura</a>
+            <a href="/locations/osaka">Osaka</a>
+            <a href="/locations/kyoto">Kyoto</a>
+          </div>
+        </li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/tour">Tour</a></li>
+        <li><a href="/private-lesson">Private Tour</a></li>
+        <li class="has-dropdown" id="nav-company">
+          <button onclick="toggleNav('nav-company')">Company
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
+          <div class="nav-dropdown">
+            <a href="../index.html">Home Page</a>
+            <a href="https://www.symarch-llc.com">About Us</a>
+          </div>
+        </li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="/apply/apply.html" class="nav-apply">Book Now</a>
+        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
-      <div class="thanks-summary" id="thanksSummary"></div>
-      <button type="button" class="back-btn" id="backBtn">← Back to Apply Page</button>
     </div>
   </div>
+</nav>
 
-  <script src="script.js"></script>
+<!-- LAUNCH CAMPAIGN BANNER -->
+<div class="campaign-banner">Launch Campaign: <strong>$30 registration fee waived</strong> until July 31.</div>
+
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">Courses
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mobile-sub">
+      <a href="/courses/intensive">Intensive Course</a>
+      <a href="/courses/1-week">1-Week Course</a>
+      <a href="/courses/weekend">Weekend Course</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">Locations
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mobile-sub">
+      <a href="/locations/tokyo">Tokyo</a>
+      <a href="/locations/yokohama">Yokohama</a>
+      <a href="/locations/kamakura">Kamakura</a>
+      <a href="/locations/osaka">Osaka</a>
+      <a href="/locations/kyoto">Kyoto</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing">Pricing</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/tour">Tour</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/private-lesson">Private Tour</a></div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">Company
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
+    <div class="mobile-sub">
+      <a href="../index.html">Home Page</a>
+      <a href="https://www.symarch-llc.com">About Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING -->
+<main class="bk-wrap">
+  <div class="bk-inner">
+
+    <!-- Booking view -->
+    <div id="bookingView">
+      <div class="bk-head">
+        <span class="bk-kicker">Book &amp; Pay</span>
+        <h1>Reserve your <em>place</em></h1>
+        <p>Choose your program, date, location and group size. Your total updates instantly — then pay securely below. The $30 registration fee is waived until July 31.</p>
+      </div>
+
+      <div class="bk-grid">
+
+        <!-- LEFT: form -->
+        <form class="bk-form" id="bkForm" autocomplete="on">
+          <div class="bk-field">
+            <label for="course">Program</label>
+            <select id="course" name="course">
+              <option value="weekend">Weekend Course — $185 / person</option>
+              <option value="1-week">1-Week Course — $245 / person</option>
+              <option value="intensive">Intensive Course — $330 / person</option>
+              <option value="tour">Friday Bar Hopping Tour — $75 / person</option>
+              <option value="private-1day">Private Tour — 1 Day — $250 / group</option>
+              <option value="private-2days">Private Tour — 2 Days — $450 / group</option>
+              <option value="private-1week">Private Tour — 1 Week — $720 / group</option>
+            </select>
+          </div>
+
+          <div class="bk-row">
+            <div class="bk-field">
+              <label for="date">Preferred start date</label>
+              <input type="date" id="date" name="date" />
+            </div>
+            <div class="bk-field">
+              <label for="location">Location</label>
+              <select id="location" name="location">
+                <option value="Tokyo" selected>Tokyo</option>
+                <option value="Yokohama">Yokohama</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="bk-field">
+            <label for="people">Number of people <span id="peopleHint" style="text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink-muted);"></span></label>
+            <input type="number" id="people" name="people" min="1" value="1" />
+          </div>
+
+          <div class="bk-row">
+            <div class="bk-field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Yuki Tanaka" autocomplete="name" />
+            </div>
+            <div class="bk-field">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+81 90 1234 5678" autocomplete="tel" />
+            </div>
+          </div>
+        </form>
+
+        <!-- RIGHT: summary + checkout -->
+        <div class="bk-side">
+          <div class="bk-summary">
+            <h2>Your booking</h2>
+            <div class="bk-line"><span id="sumCourse">Weekend Course</span><span id="sumUnit">$185</span></div>
+            <div class="bk-line"><span id="sumPeopleLabel">People</span><span id="sumPeople">× 1</span></div>
+            <div class="bk-line free"><span>Registration fee</span><span>FREE</span></div>
+            <hr class="bk-divider" />
+            <div class="bk-total"><span class="lbl">Total</span><span class="amt" id="sumTotal">$185</span></div>
+            <div class="bk-reg-note"><strong>Registration fee waived</strong> — the usual $30 one-time fee is free until July 31.</div>
+
+            <button type="button" class="bk-pay-btn" id="payBtn" style="margin-top:1.5rem;">Proceed to Payment</button>
+            <p class="bk-error bk-hidden" id="bkError"></p>
+          </div>
+
+          <!-- Contact-required notice (private > 5, or group > max) -->
+          <div class="bk-contact bk-hidden" id="contactBox">
+            <strong>Planning for a larger group?</strong><br>
+            For groups beyond this size, we arrange your program individually. Please contact us and we'll take care of the details.<br>
+            <a href="mailto:info@sym-arch.com?subject=Group%20booking%20inquiry%20%E2%80%94%20Chat%20Japanese">info@sym-arch.com</a>
+          </div>
+
+          <!-- Embedded Stripe checkout mounts here -->
+          <div id="checkout"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Thank-you view -->
+    <div id="thanksView" class="bk-hidden">
+      <div class="bk-thanks">
+        <div class="check">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h1>Thank you!</h1>
+        <p>Your booking and payment are complete. We've received your details and will email you shortly with the next steps and your meeting point.</p>
+        <a href="../index.html" class="btn-primary">Back to Home →</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name"><span class="chat">Chat</span><br><span class="japanese">Japanese</span></div>
+        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences across Japan.</p>
+        <a href="/apply/apply.html" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Book Now →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="/courses/intensive">Intensive Course</a></li>
+          <li><a href="/courses/1-week">1-Week Course</a></li>
+          <li><a href="/courses/weekend">Weekend Course</a></li>
+          <li><a href="/tour">Tour</a></li>
+          <li><a href="/private-lesson">Private Tour</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="/locations/tokyo">Tokyo</a></li>
+          <li><a href="/locations/yokohama">Yokohama</a></li>
+          <li><a href="/locations/kamakura">Kamakura</a></li>
+          <li><a href="/locations/osaka">Osaka</a></li>
+          <li><a href="/locations/kyoto">Kyoto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../index.html">Home Page</a></li>
+          <li><a href="https://www.symarch-llc.com">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Chat Japanese. All rights reserved.</p>
+      <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+<script>
+  // ── Stripe publishable key (safe to expose) ──
+  const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TmpfkCjjB5LKFeR4KMq33WBROCsivttLDDBts7haQwUbgKtjsQJLZ9JixWkpmkTvMzdq9guXjX7oJogdPuBRMeW00wowibZN7';
+
+  const COURSES = {
+    'weekend':       { price: 185, perPerson: true,  maxPeople: 8, label: 'Weekend Course' },
+    '1-week':        { price: 245, perPerson: true,  maxPeople: 8, label: '1-Week Course' },
+    'intensive':     { price: 330, perPerson: true,  maxPeople: 8, label: 'Intensive Course' },
+    'tour':          { price: 75,  perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
+    'private-1day':  { price: 250, perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
+    'private-2days': { price: 450, perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
+    'private-1week': { price: 720, perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
+  };
+
+  const $ = (id) => document.getElementById(id);
+  const courseEl = $('course'), peopleEl = $('people'), dateEl = $('date'),
+        locationEl = $('location'), nameEl = $('name'), phoneEl = $('phone');
+  let checkout = null;
+
+  // Preselect course from ?course=
+  const params = new URLSearchParams(location.search);
+  const pre = params.get('course');
+  if (pre && COURSES[pre]) courseEl.value = pre;
+
+  function recalc() {
+    const cfg = COURSES[courseEl.value];
+    let ppl = parseInt(peopleEl.value, 10) || 1;
+    if (ppl < 1) { ppl = 1; peopleEl.value = 1; }
+
+    $('sumCourse').textContent = cfg.label;
+    $('sumUnit').textContent = '$' + cfg.price + (cfg.perPerson ? ' / person' : ' / group');
+    $('peopleHint').textContent = cfg.perPerson ? '(max ' + cfg.maxPeople + ')' : '(group price, up to ' + cfg.maxPeople + ')';
+
+    const tooMany = ppl > cfg.maxPeople;
+    const total = cfg.perPerson ? cfg.price * ppl : cfg.price;
+
+    if (cfg.perPerson) {
+      $('sumPeopleLabel').textContent = 'People';
+      $('sumPeople').textContent = '× ' + ppl;
+    } else {
+      $('sumPeopleLabel').textContent = 'Group of';
+      $('sumPeople').textContent = ppl + ' (flat price)';
+    }
+    $('sumTotal').textContent = '$' + total.toLocaleString();
+
+    // Contact-required state
+    const payBtn = $('payBtn'), contactBox = $('contactBox');
+    if (tooMany) {
+      contactBox.classList.remove('bk-hidden');
+      payBtn.disabled = true;
+      payBtn.textContent = 'Contact us for this group size';
+    } else {
+      contactBox.classList.add('bk-hidden');
+      payBtn.disabled = false;
+      payBtn.textContent = 'Proceed to Payment';
+    }
+    // Reset any mounted checkout if inputs change
+    if (checkout) { try { checkout.destroy(); } catch(e){} checkout = null; $('checkout').innerHTML = ''; }
+  }
+
+  ['change','input'].forEach(ev => {
+    courseEl.addEventListener(ev, recalc);
+    peopleEl.addEventListener(ev, recalc);
+  });
+  recalc();
+
+  function showError(msg) { const e = $('bkError'); e.textContent = msg; e.classList.remove('bk-hidden'); }
+  function clearError() { $('bkError').classList.add('bk-hidden'); }
+
+  $('payBtn').addEventListener('click', async () => {
+    clearError();
+    if (!nameEl.value.trim()) { showError('Please enter your name.'); nameEl.focus(); return; }
+    if (!phoneEl.value.trim()) { showError('Please enter your phone number.'); phoneEl.focus(); return; }
+    if (!dateEl.value) { showError('Please choose a preferred start date.'); dateEl.focus(); return; }
+
+    const btn = $('payBtn');
+    btn.disabled = true; btn.textContent = 'Loading payment…';
+
+    try {
+      const res = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          course: courseEl.value,
+          people: parseInt(peopleEl.value, 10) || 1,
+          date: dateEl.value,
+          location: locationEl.value,
+          name: nameEl.value.trim(),
+          phone: phoneEl.value.trim(),
+        }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Could not start payment.');
+
+      const stripe = Stripe(STRIPE_PUBLISHABLE_KEY);
+      checkout = await stripe.initEmbeddedCheckout({ clientSecret: data.clientSecret });
+      checkout.mount('#checkout');
+      btn.classList.add('bk-hidden');
+      $('checkout').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } catch (err) {
+      showError(err.message);
+      btn.disabled = false; btn.textContent = 'Proceed to Payment';
+    }
+  });
+
+  // Show thank-you after Stripe redirect (?paid=...)
+  if (params.get('paid')) {
+    $('bookingView').classList.add('bk-hidden');
+    $('thanksView').classList.remove('bk-hidden');
+  }
+</script>
 </body>
 </html>
