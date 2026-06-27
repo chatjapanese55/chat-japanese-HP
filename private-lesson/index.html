@@ -482,43 +482,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       width: 5px; height: 5px; border-radius: 50%; background: var(--brand);
     }
 
-    /* ── Phrases ── */
-    .phrase-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    /* ── Practice (paired EN / JP, no boxes) ── */
+    .practice-list {
       margin-top: 2rem;
+      border-top: 1px solid var(--border);
+      max-width: 720px;
     }
-    @media (min-width: 760px) { .phrase-grid { grid-template-columns: 1fr 1fr; } }
-    .phrase-box {
-      background: #fff;
-      border: 1.5px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
+    .practice-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 1rem 0.25rem;
+      border-bottom: 1px solid var(--border);
     }
-    .phrase-box h3 {
+    .practice-en {
       font-family: 'DM Sans', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--brand);
-      margin: 0 0 1rem;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      flex: 1;
     }
-    .phrase-box.jp-box {
-      background: #1a1410;
-      border-color: #1a1410;
-    }
-    .phrase-box.jp-box h3 { color: #f9c46a; }
-    .phrase-jp-list {
-      list-style: none; padding: 0; margin: 0;
-      display: grid; gap: 0.75rem;
-    }
-    .phrase-jp-list li {
+    .practice-jp {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      color: #f5f0e8;
-      line-height: 1.3;
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      font-weight: 500;
+      color: var(--ink);
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .practice-more {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      margin-top: 1.5rem;
+      max-width: 720px;
+    }
+
+    /* ── Why choose (editorial rows, no boxes) ── */
+    .why-list {
+      margin-top: 2.5rem;
+      display: grid;
+      gap: 2rem;
+      max-width: 760px;
+    }
+    @media (min-width: 720px) {
+      .why-list { grid-template-columns: 1fr 1fr; gap: 2.5rem 3rem; max-width: none; }
+    }
+    .why-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .why-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid #f9c46a;
+      background: #fff8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .why-icon svg { width: 20px; height: 20px; }
+    .why-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+      margin: 0.25rem 0 0.5rem;
+    }
+    .why-body p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+      margin: 0;
     }
 
     /* ── Schedule timeline (dark) ── */
@@ -954,33 +995,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ════════════════════════════════════════
-     5. FLEXIBLE START DATE
-════════════════════════════════════════ -->
-<section class="pt-section" aria-label="Flexible start date">
-  <div class="pt-narrow">
-    <p class="pt-label">Flexible scheduling</p>
-    <h2 class="pt-title">Start <em>whenever</em> works for you</h2>
-    <p class="pt-body">
-      Unlike regular weekday or weekend courses, private language tours do not need to start on a fixed weekday.
-      You can request your preferred date and time depending on guide availability.
-    </p>
-    <ul class="pt-checks">
-      <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Start anytime depending on availability</li>
-      <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Morning, afternoon, or evening options may be available</li>
-      <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Good for travelers with limited schedules</li>
-      <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Customizable by location, interest, and Japanese level</li>
-    </ul>
-  </div>
-</section>
-
-<!-- ════════════════════════════════════════
-     6. LOCATIONS
+     5. LOCATIONS
 ════════════════════════════════════════ -->
 <section class="pt-section" aria-label="Locations">
   <div class="pt-section-inner">
     <p class="pt-label">Where we go</p>
     <h2 class="pt-title">Locations</h2>
-    <div class="pt-cards cols-3">
+    <div class="pt-cards cols-2">
 
       <div class="pt-card loc-card">
         <h2 class="loc-name">Tokyo</h2>
@@ -1006,17 +1027,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="loc-areas"><strong>Example areas:</strong><br>Minato Mirai, Chinatown, Motomachi, local seaside areas</p>
       </div>
 
-      <div class="pt-card loc-card">
-        <h2 class="loc-name">Kamakura <span class="loc-soon">Coming Soon</span></h2>
-        <p class="plan-best">Best for</p>
-        <ul>
-          <li>Temples</li>
-          <li>Seaside streets</li>
-          <li>Traditional atmosphere</li>
-          <li>Slower cultural experience</li>
-        </ul>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1028,32 +1038,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="pt-section-inner">
     <p class="pt-label">In real situations</p>
     <h2 class="pt-title">What you can <em>practice</em></h2>
-    <div class="phrase-grid">
-      <div class="phrase-box">
-        <h3>Real-life skills</h3>
-        <ul class="pt-checks" style="margin-top:0;">
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ordering food and drinks</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Asking for recommendations</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Greeting people</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Asking &ldquo;What is this?&rdquo;</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Talking about likes and dislikes</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Reading simple menus and signs</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Using polite travel Japanese</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Understanding local manners</li>
-        </ul>
+    <p class="pt-body" style="max-width:560px;">Every phrase is something you'll actually say on your tour — paired with the Japanese you'll use to say it.</p>
+
+    <div class="practice-list">
+      <div class="practice-row">
+        <span class="practice-en">Greeting people</span>
+        <span class="practice-jp">こんにちは</span>
       </div>
-      <div class="phrase-box jp-box">
-        <h3>Phrases you'll use</h3>
-        <ul class="phrase-jp-list">
-          <li>こんにちは</li>
-          <li>〇〇をお願いします</li>
-          <li>おすすめは何ですか？</li>
-          <li>これは何ですか？</li>
-          <li>ありがとうございます</li>
-          <li>ごちそうさまでした</li>
-        </ul>
+      <div class="practice-row">
+        <span class="practice-en">Ordering food and drinks</span>
+        <span class="practice-jp">〇〇をお願いします</span>
+      </div>
+      <div class="practice-row">
+        <span class="practice-en">Asking for recommendations</span>
+        <span class="practice-jp">おすすめは何ですか？</span>
+      </div>
+      <div class="practice-row">
+        <span class="practice-en">Asking &ldquo;What is this?&rdquo;</span>
+        <span class="practice-jp">これは何ですか？</span>
+      </div>
+      <div class="practice-row">
+        <span class="practice-en">Saying thank you</span>
+        <span class="practice-jp">ありがとうございます</span>
+      </div>
+      <div class="practice-row">
+        <span class="practice-en">Finishing a meal politely</span>
+        <span class="practice-jp">ごちそうさまでした</span>
       </div>
     </div>
+
+    <p class="practice-more">Plus: talking about likes and dislikes · reading simple menus and signs · using polite travel Japanese · understanding local manners.</p>
   </div>
 </section>
 
@@ -1073,7 +1087,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="flow-row">
         <span class="flow-time">9:00 AM</span>
-        <span class="flow-desc"><strong>Lesson</strong> — a small-group session in a café with a city walk. Conversation, useful phrases, and real-life scenarios with your local guide.</span>
+        <span class="flow-desc"><strong>Lesson</strong> — a private lesson with a professional local teacher in a café, followed by a city walk. Conversation, useful phrases, and real-life scenarios shaped entirely around you.</span>
       </div>
       <div class="flow-row">
         <span class="flow-time">12:00 PM</span>
@@ -1091,17 +1105,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="pt-label">Our value</p>
     <h2 class="pt-title">Why choose <em>Chat Japanese Tokyo?</em></h2>
     <p class="pt-body" style="max-width:620px;">
-      We focus on Japanese you can actually use during your trip, not just textbook expressions.
+      We focus on Japanese you can actually use during your trip, not just textbook expressions. Real language lives in real places, with real people.
     </p>
-    <div class="value-grid">
-      <div class="value-chip">Real-life Japanese</div>
-      <div class="value-chip">Learn by doing</div>
-      <div class="value-chip">Beginner-friendly</div>
-      <div class="value-chip">Private and flexible</div>
-      <div class="value-chip">English support</div>
-      <div class="value-chip">Local culture included</div>
-      <div class="value-chip">Safe, relaxed atmosphere</div>
-      <div class="value-chip">Practical phrases you can use now</div>
+
+    <div class="why-list">
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <div class="why-body">
+          <h3>Real-life Japanese, learned by doing</h3>
+          <p>No textbooks or grammar drills. You practice the exact phrases you need in the moment you need them — ordering, asking, greeting, connecting.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="why-body">
+          <h3>Private, flexible &amp; beginner-friendly</h3>
+          <p>It's just your group and your guide, moving at your pace. No Japanese experience required — English support is there whenever you need it.</p>
+        </div>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f99b30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="why-body">
+          <h3>Local culture, the safe and relaxed way</h3>
+          <p>Your guide is a local who knows the city from the inside. You explore real neighborhoods in a calm, welcoming atmosphere — never a scripted tourist route.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
