@@ -45,7 +45,7 @@ module.exports = async (req, res) => {
     const origin = req.headers.origin || `https://${req.headers.host}`;
 
     const params = new URLSearchParams();
-    params.append('ui_mode', 'embedded');
+    params.append('ui_mode', 'embedded_page');
     params.append('mode', 'payment');
     params.append('line_items[0][price]', cfg.price);
     params.append('line_items[0][quantity]', String(quantity));
