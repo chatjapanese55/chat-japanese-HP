@@ -201,17 +201,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-val">From $185</div>
-          <div class="hero-stat-label">Cheapest in Japan</div>
+          <div class="hero-stat-label">Starting price</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-val">2 Days</div>
           <div class="hero-stat-label">Min. course length</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-val">3 Courses</div>
+          <div class="hero-stat-val">4 Programs</div>
           <div class="hero-stat-label">Immersive options</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     1.5  OUR PROGRAMS
+============================================================ -->
+<style>
+  #programs { background: #fff; padding: 5.5rem 0; }
+  #programs .section-header { text-align: center; max-width: 640px; margin: 0 auto 3rem; }
+  .prog-grid {
+    display: grid; grid-template-columns: 1fr; gap: 1.75rem;
+  }
+  @media (min-width: 640px) { .prog-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1040px) { .prog-grid { grid-template-columns: repeat(4, 1fr); gap: 1.25rem; } }
+  .prog-card {
+    display: flex; flex-direction: column;
+    background: #fff; border: 1px solid var(--border); border-radius: 14px;
+    overflow: hidden; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .prog-card:hover { transform: translateY(-4px); box-shadow: 0 18px 44px -24px rgba(42,36,32,0.45); border-color: #e2d4c2; }
+  .prog-img { aspect-ratio: 4 / 3; overflow: hidden; }
+  .prog-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+  .prog-card:hover .prog-img img { transform: scale(1.05); }
+  .prog-body { padding: 1.4rem 1.4rem 1.6rem; display: flex; flex-direction: column; flex: 1; }
+  .prog-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600;
+    color: var(--dark); line-height: 1.1; margin: 0 0 0.5rem;
+  }
+  .prog-meta {
+    font-family: 'DM Sans', sans-serif; font-size: 0.66rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: #f99b30; margin-bottom: 0.6rem;
+  }
+  .prog-desc {
+    font-family: 'DM Sans', sans-serif; font-size: 0.86rem; color: var(--mid);
+    line-height: 1.6; margin: 0 0 1.1rem;
+  }
+  .prog-link {
+    margin-top: auto;
+    font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark);
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .prog-link svg { width: 12px; height: 12px; transition: transform 0.2s; }
+  .prog-card:hover .prog-link { color: #f99b30; }
+  .prog-card:hover .prog-link svg { transform: translateX(3px); }
+</style>
+<section id="programs">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Our Programs</span>
+      <h2>Four ways to <em>learn &amp; explore</em></h2>
+      <p>From a single focused week to a fully private tour — choose the experience that fits your trip.</p>
+    </div>
+
+    <div class="prog-grid">
+
+      <a class="prog-card fade-up" href="/courses/1-week">
+        <div class="prog-img"><img src="/courses/1-week/imagawayaki.jpg" alt="1-Week Course" loading="lazy" /></div>
+        <div class="prog-body">
+          <div class="prog-meta">Weekdays · 4 days</div>
+          <h3 class="prog-name">1-Week Course</h3>
+          <p class="prog-desc">Four weekday mornings of conversation-first Japanese — the practical basics you actually need, with afternoons free to explore.</p>
+          <span class="prog-link">View course <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="prog-card fade-up" href="/courses/intensive">
+        <div class="prog-img"><img src="/courses/intensive/intensive-hero.jpg" alt="Intensive Course" loading="lazy" /></div>
+        <div class="prog-body">
+          <div class="prog-meta">6 days a week</div>
+          <h3 class="prog-name">Intensive Course</h3>
+          <p class="prog-desc">A dual-track immersion: conversation-first weekday lessons plus weekend cultural activities. The fastest path to real connection.</p>
+          <span class="prog-link">View course <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="prog-card fade-up" href="/courses/weekend">
+        <div class="prog-img"><img src="/courses/weekend/weekend-hero.jpg" alt="Weekend Course" loading="lazy" /></div>
+        <div class="prog-body">
+          <div class="prog-meta">Sat &amp; Sun</div>
+          <h3 class="prog-name">Weekend Course</h3>
+          <p class="prog-desc">Two relaxed days mixing language basics with hands-on culture — sushi making, calligraphy, and a matcha ceremony.</p>
+          <span class="prog-link">View course <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></span>
+        </div>
+      </a>
+
+      <a class="prog-card fade-up" href="/private-lesson">
+        <div class="prog-img"><img src="/private-lesson/family-tour.webp" alt="Private Tour" loading="lazy" /></div>
+        <div class="prog-body">
+          <div class="prog-meta">Private · flexible dates</div>
+          <h3 class="prog-name">Private Tour</h3>
+          <p class="prog-desc">Your own private guide in Tokyo or Yokohama. Learn real Japanese while you explore, at your own pace — great for families and groups.</p>
+          <span class="prog-link">View tour <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6h7M6.5 3l3 3-3 3"/></svg></span>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -764,6 +862,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   @media (max-width: 560px) {
     .bi-a { padding-left: calc(1.6rem + 1.1rem); }
   }
+  .bi-a a, .bi-note a {
+    color: #f99b30;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .bi-a a:hover, .bi-note a:hover { color: #e8841a; }
 </style>
 <section id="basic-info">
   <span id="faq" style="position:relative;top:calc(-1 * var(--header-h));"></span>
@@ -774,7 +879,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="bi-kicker">Basic Info</span>
         <h2>Everything you need<br>to know</h2>
         <p>Everything you need to know before joining Chat Japanese Tokyo — from group sizes to cancellations.</p>
-        <p class="bi-note">Have a question that isn't here? Just reach out — we're happy to help you plan your trip.</p>
+        <p class="bi-note">Have a question that isn't here? Just reach out — we're happy to help you plan your trip. <a href="mailto:info@sym-arch.com?subject=Question%20%E2%80%94%20Chat%20Japanese%20Tokyo">Email us at info@sym-arch.com</a>.</p>
       </div>
 
       <div class="bi-list">
@@ -784,7 +889,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </details>
         <details class="bi-item">
           <summary><span class="bi-num">02</span><span class="bi-q">Group Size</span><span class="bi-sign"></span></summary>
-          <p class="bi-a">Regular group programs have a maximum of 8 participants. Private programs are designed for small private groups of up to 5 people. If your group has more than 5 people, please contact us in advance. Additional fees may apply depending on the program.</p>
+          <p class="bi-a">Regular group programs have a maximum of 8 participants. Private programs are designed for small private groups of up to 5 people. If your group has more than 5 people, please contact us in advance — <a href="mailto:info@sym-arch.com?subject=Group%20booking%20inquiry%20%E2%80%94%20Chat%20Japanese%20Tokyo">mail to us (info@sym-arch.com)</a>. Additional fees may apply depending on the program.</p>
         </details>
         <details class="bi-item">
           <summary><span class="bi-num">03</span><span class="bi-q">Food, Drinks &amp; Transportation</span><span class="bi-sign"></span></summary>
@@ -792,7 +897,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </details>
         <details class="bi-item">
           <summary><span class="bi-num">04</span><span class="bi-q">Meeting Point</span><span class="bi-sign"></span></summary>
-          <p class="bi-a">The meeting point changes depending on the program, date, and route. We usually meet at a stylish local cafe or an easy-to-find nearby location. Discovering local cafes that visitors would not easily find on their own is part of the Chat Japanese Tokyo experience.</p>
+          <p class="bi-a">The meeting point changes depending on the program, date, and route. We usually meet at a stylish local cafe or an easy-to-find nearby location. Discovering local cafes that visitors would not easily find on their own is part of the Chat Japanese Tokyo experience. We will send you the exact meeting point via WhatsApp after you complete your registration.</p>
         </details>
         <details class="bi-item">
           <summary><span class="bi-num">05</span><span class="bi-q">Language Support</span><span class="bi-sign"></span></summary>
@@ -800,7 +905,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </details>
         <details class="bi-item">
           <summary><span class="bi-num">06</span><span class="bi-q">Booking Deadline</span><span class="bi-sign"></span></summary>
-          <p class="bi-a">We recommend booking at least 1 week in advance. Last-minute requests may be accepted depending on availability.</p>
+          <p class="bi-a">We recommend booking at least 1 week in advance. Last-minute requests may be accepted depending on availability — even bookings made the day before are often possible, so feel free to ask.</p>
         </details>
         <details class="bi-item">
           <summary><span class="bi-num">07</span><span class="bi-q">Payment</span><span class="bi-sign"></span></summary>
@@ -825,6 +930,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <details class="bi-item">
           <summary><span class="bi-num">12</span><span class="bi-q">Availability</span><span class="bi-sign"></span></summary>
           <p class="bi-a">Program availability depends on the date, instructor schedule, location, and group size. Please contact us before making fixed travel plans around a program.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">13</span><span class="bi-q">Course Start Day</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">The 1-Week Course and the Intensive Course start on Monday. You are welcome to join from a different day, but please note that there are no make-up lessons for any sessions missed before your start day.</p>
         </details>
       </div>
 
