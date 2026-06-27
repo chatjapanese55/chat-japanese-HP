@@ -1121,3 +1121,50 @@ body { background: #f3eee4; }
   justify-content: center;
   padding: 0.45rem 0;
 }
+
+/* ============================================================
+   WHAT IS CHAT JAPANESE  (café › city flow — shared)
+   ============================================================ */
+.what-is { background: #fff; padding: 5.5rem 0; }
+.what-is.alt { background: #faf8f4; }
+.wi-head { text-align: center; max-width: 640px; margin: 0 auto 2.75rem; }
+.wi-kicker {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--brand); margin-bottom: 1rem;
+}
+.wi-kicker::before, .wi-kicker::after { content: ''; width: 24px; height: 1px; background: var(--brand); opacity: 0.85; }
+.wi-head h2 {
+  font-family: 'Cormorant Garamond', serif; font-size: clamp(1.9rem, 5vw, 2.9rem);
+  font-weight: 400; letter-spacing: -0.015em; color: var(--dark); line-height: 1.12; margin: 0;
+}
+.wi-head h2 em { font-style: italic; color: var(--brand); }
+
+.wi-flow {
+  display: flex; align-items: stretch; justify-content: center; gap: 0;
+  max-width: 920px; margin: 0 auto 2.5rem;
+}
+.wi-fig { flex: 1; margin: 0; position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 3; }
+.wi-fig img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.wi-fig figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(20,15,10,0.78), rgba(20,15,10,0));
+  color: #fff; font-family: 'DM Sans', sans-serif; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; padding: 1.5rem 1rem 0.85rem; text-align: center;
+}
+.wi-arrow {
+  flex-shrink: 0; align-self: center; width: 3.25rem; text-align: center;
+  font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--brand); line-height: 1;
+}
+.wi-body { max-width: 640px; margin: 0 auto; text-align: center; }
+.wi-body p {
+  font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--mid);
+  line-height: 1.8; margin: 0 0 1rem;
+}
+.wi-body p:last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+  .wi-flow { flex-direction: column; gap: 0; max-width: 420px; }
+  .wi-arrow { width: auto; padding: 0.5rem 0; transform: rotate(90deg); font-size: 2rem; }
+  .wi-fig { width: 100%; }
+}
