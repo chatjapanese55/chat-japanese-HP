@@ -650,6 +650,189 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ============================================================
+     BASIC INFO  (editorial accordion)
+============================================================ -->
+<style>
+  #basic-info {
+    background: #faf8f4;
+    padding: 6rem 0;
+  }
+  .bi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  @media (min-width: 900px) {
+    .bi-grid { grid-template-columns: 40% 1fr; gap: 5rem; align-items: start; }
+    .bi-left { position: sticky; top: calc(var(--header-h) + 2rem); }
+  }
+  .bi-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #f99b30;
+    margin-bottom: 1.1rem;
+  }
+  .bi-kicker::before { content: ''; width: 26px; height: 1px; background: #f99b30; opacity: 0.85; }
+  .bi-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 400;
+    color: #1a1410;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    margin: 0 0 1.25rem;
+  }
+  .bi-left p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.98rem;
+    color: #6b5e4e;
+    line-height: 1.75;
+    max-width: 360px;
+    margin: 0 0 1.25rem;
+  }
+  .bi-left .bi-note {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: #9e8a76;
+    line-height: 1.7;
+    max-width: 360px;
+  }
+
+  /* Accordion list — hairline dividers, no boxes */
+  .bi-list { border-top: 1px solid #e2d9cc; }
+  .bi-item { border-bottom: 1px solid #e2d9cc; }
+  .bi-item > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+    gap: 1.1rem;
+    padding: 1.35rem 0;
+    transition: color 0.2s;
+  }
+  .bi-item > summary::-webkit-details-marker { display: none; }
+  .bi-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #f99b30;
+    flex-shrink: 0;
+    min-width: 1.6rem;
+    line-height: 1.4;
+  }
+  .bi-q {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 500;
+    color: #1a1410;
+    line-height: 1.4;
+    flex: 1;
+  }
+  .bi-sign {
+    position: relative;
+    width: 14px; height: 14px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .bi-sign::before, .bi-sign::after {
+    content: '';
+    position: absolute;
+    background: #b8a48d;
+    transition: transform 0.25s, opacity 0.2s;
+  }
+  .bi-sign::before { top: 6px; left: 0; width: 14px; height: 1.5px; }
+  .bi-sign::after  { left: 6px; top: 0; width: 1.5px; height: 14px; }
+  .bi-item[open] .bi-sign::after { transform: rotate(90deg); opacity: 0; }
+  .bi-item[open] .bi-q { color: #f99b30; }
+  .bi-item > summary:hover .bi-q { color: #f99b30; }
+  .bi-a {
+    padding: 0 0 1.5rem calc(1.6rem + 1.1rem);
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    color: #6b5e4e;
+    line-height: 1.8;
+    max-width: 620px;
+  }
+  @media (max-width: 560px) {
+    .bi-a { padding-left: calc(1.6rem + 1.1rem); }
+  }
+</style>
+<section id="basic-info">
+  <span id="faq" style="position:relative;top:calc(-1 * var(--header-h));"></span>
+  <div class="container">
+    <div class="bi-grid">
+
+      <div class="bi-left">
+        <span class="bi-kicker">Basic Info</span>
+        <h2>Everything you need<br>to know</h2>
+        <p>Everything you need to know before joining Chat Japanese Tokyo — from group sizes to cancellations.</p>
+        <p class="bi-note">Have a question that isn't here? Just reach out — we're happy to help you plan your trip.</p>
+      </div>
+
+      <div class="bi-list">
+        <details class="bi-item">
+          <summary><span class="bi-num">01</span><span class="bi-q">Programs</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Chat Japanese Tokyo offers weekday courses, weekend courses, intensive programs, private language tours, and family plans. Each program is designed to help beginners use practical Japanese in real situations.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">02</span><span class="bi-q">Group Size</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Regular group programs have a maximum of 8 participants. Private programs are designed for small private groups of up to 5 people. If your group has more than 5 people, please contact us in advance. Additional fees may apply depending on the program.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">03</span><span class="bi-q">Food, Drinks &amp; Transportation</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Food, drinks, transportation, entrance fees, and personal purchases are not included unless clearly stated. Participants pay these costs separately.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">04</span><span class="bi-q">Meeting Point</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">The meeting point changes depending on the program, date, and route. We usually meet at a stylish local cafe or an easy-to-find nearby location. Discovering local cafes that visitors would not easily find on their own is part of the Chat Japanese Tokyo experience.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">05</span><span class="bi-q">Language Support</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">English support is available. Our programs are designed for international visitors and beginner Japanese learners.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">06</span><span class="bi-q">Booking Deadline</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">We recommend booking at least 1 week in advance. Last-minute requests may be accepted depending on availability.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">07</span><span class="bi-q">Payment</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Payment is made by credit card at the time of booking. Your reservation is confirmed after payment is completed.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">08</span><span class="bi-q">Cancellation Policy</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Cancellations made at least 48 hours before the program start time are eligible for a 100% refund.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">09</span><span class="bi-q">Rainy Weather</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Outdoor activities may be adjusted in case of rain. Light rain programs can usually continue with indoor or covered routes. In severe weather, we may discuss schedule changes or alternative options.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">10</span><span class="bi-q">Customization</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Some programs can be customized based on your interests, Japanese level, schedule, and group style. Private programs are the best option if you want a more personalized experience.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">11</span><span class="bi-q">Japanese Level</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Our standard programs are mainly designed for beginners. If you are an intermediate learner or want more advanced practice, we recommend choosing a private program.</p>
+        </details>
+        <details class="bi-item">
+          <summary><span class="bi-num">12</span><span class="bi-q">Availability</span><span class="bi-sign"></span></summary>
+          <p class="bi-a">Program availability depends on the date, instructor schedule, location, and group size. Please contact us before making fixed travel plans around a program.</p>
+        </details>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      FOOTER
 ============================================================ -->
 <footer id="footer">
