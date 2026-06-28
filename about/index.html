@@ -118,7 +118,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     #ab-hero {
       position: relative;
       margin-top: var(--header-h);
-      min-height: calc(82svh - var(--header-h));
+      min-height: calc(100svh - var(--header-h));
       display: flex;
       align-items: flex-end;
       overflow: hidden;
@@ -142,38 +142,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .ab-hero-inner {
       position: relative; z-index: 1;
       width: 100%;
-      padding: 3rem 0 4rem;
+      max-width: 680px;
+      padding: 7rem 0 4rem;
       color: #fff;
     }
-    .ab-hero-kicker {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: #f9c46a;
-      margin-bottom: 1.1rem;
-    }
+    /* Title matched to Home hero: Anton gothic, left-aligned, brand colors */
     .ab-hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.6rem, 8vw, 5rem);
-      font-weight: 300;
-      line-height: 1.05;
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(3rem, 9vw, 7.5rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      color: #fff;
       margin-bottom: 1.1rem;
+      text-shadow: 0 2px 22px rgba(0,0,0,0.45), 0 1px 5px rgba(0,0,0,0.35);
     }
+    .ab-hero-title .hero-chat { color: #f99b30; }
+    .ab-hero-title .hero-japanese { color: #53ccde; }
     .ab-hero-tag {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       font-size: clamp(1.25rem, 3.5vw, 1.9rem);
       font-weight: 300;
-      color: rgba(255,255,255,0.92);
+      color: rgba(255,255,255,0.95);
       margin-bottom: 1.25rem;
+      text-shadow: 0 2px 14px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
     }
     .ab-hero-tag em { color: #f9c46a; font-style: italic; }
     .ab-hero-note {
       font-family: 'DM Sans', sans-serif;
       font-size: 0.95rem; font-weight: 300;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.82);
       max-width: 520px;
       line-height: 1.7;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
     }
 
     /* ── Mission (dark, dramatic) ── */
@@ -415,6 +417,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     /* ── Responsive ── */
     @media (max-width: 720px) {
+      #ab-hero { min-height: calc(100svh - var(--header-h) - 110px); }
+      .ab-hero-inner { padding-top: 4rem; }
       .ab-section { padding: 4rem 0; }
       .ab-values { flex-direction: column; gap: 0; }
       .ab-value { padding: 1.75rem 0; border-top: 1px solid var(--border); }
@@ -553,10 +557,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div id="ab-hero-bg">
     <img src="/about_us.webp" alt="A Japanese teacher holding phrase cards in a café lesson with two travelers" fetchpriority="high" decoding="sync" />
   </div>
-  <div class="ab-hero-inner">
-    <div class="ab-wrap">
-      <p class="ab-hero-kicker">About Us</p>
-      <h1 class="ab-hero-title">About Chat Japanese</h1>
+  <div class="container">
+    <div class="ab-hero-inner">
+      <div class="hero-eyebrow">
+        <div class="hero-eyebrow-line"></div>
+        <span>About Us</span>
+      </div>
+      <h1 class="ab-hero-title">About<br><span class="hero-chat">Chat</span><span class="hero-japanese">Japanese</span></h1>
       <p class="ab-hero-tag">Learn Japanese. <em>Travel like a local.</em></p>
       <p class="ab-hero-note">What we set out to build — a different way to meet Japan.</p>
     </div>
