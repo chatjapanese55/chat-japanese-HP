@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MC9WRKLD');</script>
+<!-- End Google Tag Manager -->
+
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>About Chat Japanese — Learn Japanese, Travel Like a Local</title>
+  <meta name="description" content="Chat Japanese was built for travelers — not classrooms. Learn why we believe travelers should learn Japanese from Japan itself, our mission to connect Japan with the world, and where we're headed." />
+  <meta name="keywords" content="about Chat Japanese, Japanese language school story, learn Japanese while traveling, Japan immersion school" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.chat-japanese-school.com/about" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.chat-japanese-school.com/about" />
+  <meta property="og:title" content="About Chat Japanese — Learn Japanese, Travel Like a Local" />
+  <meta property="og:description" content="Built for travelers, not classrooms. Our story, mission, and vision for connecting Japan with the world through language." />
+  <meta property="og:site_name" content="Chat Japanese" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+    /* ════════════════════════════════════════
+       ABOUT PAGE — editorial, minimal boxes
+    ════════════════════════════════════════ */
+    :root { --ink: var(--dark); --ink-muted: var(--mid); }
+
+    .ab-wrap { max-width: 760px; margin: 0 auto; padding: 0 1.5rem; }
+    .ab-wide { max-width: 1040px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Section rhythm */
+    .ab-section { padding: 6rem 0; }
+    .ab-section.tight { padding: 4.5rem 0; }
+    .ab-section.bg-white { background: #fff; }
+    .ab-section.bg-cream { background: #faf8f4; }
+    .ab-section.bg-dark  { background: #1a1410; }
+
+    /* Kicker */
+    .ab-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 1.1rem;
+    }
+    .ab-kicker::before { content: ''; width: 26px; height: 1px; background: var(--brand); }
+
+    .ab-h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5.5vw, 3.2rem);
+      font-weight: 300;
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+    }
+    .ab-h2 em { font-style: italic; color: var(--brand); }
+    .bg-dark .ab-h2 { color: #fff; }
+    .bg-dark .ab-kicker { color: #f9c46a; }
+    .bg-dark .ab-kicker::before { background: #f9c46a; }
+
+    .ab-lead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 3vw, 1.7rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+    .ab-p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+    }
+    .bg-dark .ab-p { color: rgba(255,255,255,0.78); }
+
+    /* Story sub-heads */
+    .ab-subhead {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 3rem 0 0.85rem;
+      padding-top: 2.25rem;
+      border-top: 1px solid var(--border);
+    }
+    .ab-subhead:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+
+    /* ── Hero ── */
+    #ab-hero {
+      position: relative;
+      margin-top: var(--header-h);
+      min-height: calc(82svh - var(--header-h));
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    #ab-hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      /* Placeholder gradient — replace with hero image when provided */
+      background:
+        radial-gradient(120% 90% at 75% 15%, rgba(249,155,48,0.22) 0%, rgba(249,155,48,0) 55%),
+        linear-gradient(155deg, #241c16 0%, #2a2420 45%, #15110d 100%);
+    }
+    #ab-hero-bg img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 35%;
+    }
+    #ab-hero-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0.15) 100%);
+    }
+    .ab-hero-inner {
+      position: relative; z-index: 1;
+      width: 100%;
+      padding: 3rem 0 4rem;
+      color: #fff;
+    }
+    .ab-hero-kicker {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: #f9c46a;
+      margin-bottom: 1.1rem;
+    }
+    .ab-hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.6rem, 8vw, 5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      margin-bottom: 1.1rem;
+    }
+    .ab-hero-tag {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.25rem, 3.5vw, 1.9rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 1.25rem;
+    }
+    .ab-hero-tag em { color: #f9c46a; font-style: italic; }
+    .ab-hero-note {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem; font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* ── Mission (dark, dramatic) ── */
+    .ab-mission {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 300;
+      line-height: 1.18;
+      color: #fff;
+      text-align: center;
+      margin: 0 auto 1.75rem;
+      max-width: 800px;
+    }
+    .ab-mission em { font-style: italic; color: #f9c46a; }
+    .ab-mission-sub {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.72);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    /* ── Philosophy: three values, no boxes ── */
+    .ab-values {
+      display: flex;
+      gap: 0;
+      margin-top: 1rem;
+    }
+    .ab-value {
+      flex: 1;
+      text-align: center;
+      padding: 1.5rem 1.5rem;
+      position: relative;
+    }
+    .ab-value + .ab-value::before {
+      content: '';
+      position: absolute; left: 0; top: 15%; bottom: 15%;
+      width: 1px; background: var(--border);
+    }
+    .ab-value-no {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--brand);
+      margin-bottom: 0.75rem;
+    }
+    .ab-value-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    /* ── Comparison: two columns, hairlines, no boxes ── */
+    .ab-compare {
+      margin-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .ab-compare-head, .ab-compare-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .ab-compare-head > div {
+      padding: 1.1rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .ab-compare-head .old { color: var(--light); }
+    .ab-compare-head .new { color: var(--brand); }
+    .ab-compare-row > div {
+      padding: 1.15rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 300;
+    }
+    .ab-compare-row .old { color: var(--light); }
+    .ab-compare-row .new { color: var(--ink); position: relative; }
+    .ab-compare-row .new::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 2px; background: var(--brand);
+    }
+    .ab-compare-col-bg { background: rgba(249,155,48,0.04); }
+
+    /* ── Community: route flows ── */
+    .ab-community-block { margin-bottom: 3.5rem; }
+    .ab-community-block:last-child { margin-bottom: 0; }
+    .ab-route-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 1rem;
+    }
+    .ab-route {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.65rem;
+      margin-bottom: 1.5rem;
+    }
+    .ab-route .stop {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      font-weight: 300;
+      color: var(--ink);
+    }
+    .ab-route .arrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--brand);
+    }
+    .ab-route .more {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--light);
+    }
+    .ab-tadaima {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 300;
+      color: var(--brand);
+      margin-top: 0.5rem;
+    }
+
+    /* ── Looking ahead: marker list, no boxes ── */
+    .ab-vision-list { list-style: none; margin-top: 0.5rem; }
+    .ab-vision-list li {
+      position: relative;
+      padding: 1.5rem 0 1.5rem 2.25rem;
+      border-top: 1px solid var(--border);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-muted);
+    }
+    .ab-vision-list li:last-child { border-bottom: 1px solid var(--border); }
+    .ab-vision-list li strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+    .ab-vision-list li::before {
+      content: '';
+      position: absolute; left: 0; top: 1.95rem;
+      width: 12px; height: 1px; background: var(--brand);
+    }
+
+    /* ── Founder ── */
+    .ab-founder {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .ab-founder-photo {
+      aspect-ratio: 4/5;
+      border-radius: 10px;
+      overflow: hidden;
+      /* Placeholder — replace with founder photo when provided */
+      background:
+        radial-gradient(120% 100% at 30% 20%, rgba(249,155,48,0.18), rgba(249,155,48,0) 60%),
+        linear-gradient(160deg, #2a2420, #15110d);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ab-founder-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .ab-founder-photo .ph {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+    .ab-meta-line {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 0.35rem;
+    }
+    .ab-founder-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+    }
+    .ab-links {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      margin-top: 1.75rem;
+    }
+    .ab-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--brand);
+      border-bottom: 1px solid var(--brand-dim);
+      padding-bottom: 0.2rem;
+      transition: border-color 0.2s;
+    }
+    .ab-link:hover { border-color: var(--brand); }
+
+    .ab-founded {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--ink-muted);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .ab-founded strong { color: var(--ink); font-weight: 600; }
+
+    /* ── Closing CTA ── */
+    .ab-cta { text-align: center; }
+    .ab-cta .ab-h2 { margin-bottom: 1.25rem; }
+    .ab-cta-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--brand); color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 1rem 2.25rem; border-radius: 8px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .ab-cta-btn:hover { background: #e8891a; transform: translateY(-1px); }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .ab-section { padding: 4rem 0; }
+      .ab-values { flex-direction: column; gap: 0; }
+      .ab-value { padding: 1.75rem 0; border-top: 1px solid var(--border); }
+      .ab-value:first-child { border-top: none; }
+      .ab-value + .ab-value::before { display: none; }
+      .ab-founder { grid-template-columns: 1fr; gap: 2rem; }
+      .ab-founder-photo { max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC9WRKLD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <img src="../logo-chat-japanese.webp" alt="Chat Japanese logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
+        <div>
+          <div class="nav-logo-name">
+            <span class="chat">Chat</span><span class="japanese">Japanese</span>
+          </div>
+          <div class="nav-logo-sub">Japanese School</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li class="has-dropdown" id="nav-courses">
+          <button onclick="toggleNav('nav-courses')">
+            Courses
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/courses/intensive">Intensive Course</a>
+            <a href="/courses/1-week">1-Week Course</a>
+            <a href="/courses/weekend">Weekend Course</a>
+          </div>
+        </li>
+        <li class="has-dropdown" id="nav-locations">
+          <button onclick="toggleNav('nav-locations')">
+            Locations
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/locations/tokyo">Tokyo</a>
+            <a href="/locations/yokohama">Yokohama</a>
+            <a href="/locations/kamakura">Kamakura</a>
+            <a href="/locations/osaka">Osaka</a>
+            <a href="/locations/kyoto">Kyoto</a>
+          </div>
+        </li>
+        <li><a href="/pricing">Pricing</a></li>
+        <li><a href="/tour">Tour</a></li>
+        <li><a href="/private-lesson">Private Tour</a></li>
+        <li class="has-dropdown" id="nav-company">
+          <button onclick="toggleNav('nav-company')">
+            Company
+            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown">
+            <a href="/">Home Page</a>
+            <a href="/about">About Us</a>
+          </div>
+        </li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <a href="/apply/apply.html" class="nav-apply">Apply Now</a>
+        <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- LAUNCH CAMPAIGN BANNER -->
+<div class="campaign-banner">Launch Campaign: <strong>$30 registration fee waived</strong> until July 31.</div>
+
+<!-- Mobile menu -->
+<div id="mobile-menu">
+  <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Courses
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/courses/intensive">Intensive Course</a>
+      <a href="/courses/1-week">1-Week Course</a>
+      <a href="/courses/weekend">Weekend Course</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Locations
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/locations/tokyo">Tokyo</a>
+      <a href="/locations/yokohama">Yokohama</a>
+      <a href="/locations/kamakura">Kamakura</a>
+      <a href="/locations/osaka">Osaka</a>
+      <a href="/locations/kyoto">Kyoto</a>
+    </div>
+  </div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing">Pricing</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/tour">Tour</a></div>
+  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/private-lesson">Private Tour</a></div>
+  <div class="mobile-nav-item">
+    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
+      Company
+      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
+    </button>
+    <div class="mobile-sub">
+      <a href="/">Home Page</a>
+      <a href="/about">About Us</a>
+    </div>
+  </div>
+  <div style="margin-top:2rem;">
+    <a href="/apply/apply.html" class="btn-primary">Apply Now →</a>
+  </div>
+</div>
+
+<!-- ============================================================
+     1. HERO
+============================================================ -->
+<section id="ab-hero" aria-label="About hero">
+  <div id="ab-hero-bg">
+    <!-- HERO IMAGE: add <img src="/about/hero.jpg" alt="..." /> here when provided -->
+  </div>
+  <div class="ab-hero-inner">
+    <div class="ab-wrap">
+      <p class="ab-hero-kicker">About Us</p>
+      <h1 class="ab-hero-title">About Chat Japanese</h1>
+      <p class="ab-hero-tag">Learn Japanese. <em>Travel like a local.</em></p>
+      <p class="ab-hero-note">What we set out to build — a different way to meet Japan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. OUR STORY
+============================================================ -->
+<section class="ab-section bg-white" aria-label="Our story">
+  <div class="ab-wrap">
+    <span class="ab-kicker">Our Story</span>
+    <h2 class="ab-h2">Why we built <em>Chat Japanese</em></h2>
+
+    <h3 class="ab-subhead">The trip most travelers never finish</h3>
+    <p class="ab-p">So many travelers come all the way to Japan, yet leave without ever touching what the country is really about. How many can walk into a spot the locals love and simply say, in Japanese, "that was delicious"? Speaking a country's language is a quiet form of respect for it. And a single exchange in someone's own words can turn into a connection — and a memory — that lasts a lifetime.</p>
+
+    <h3 class="ab-subhead">Where traditional schools fall short</h3>
+    <p class="ab-p">Conventional language schools are tied to a fixed campus, and most ask for a minimum enrollment of a month or more. For someone passing through on a trip, that's an enormous barrier to ever getting started.</p>
+
+    <h3 class="ab-subhead">Travelers should learn from Japan itself — not a classroom</h3>
+    <p class="ab-p">Studying head-down at a desk does almost nothing for you out in real life, or on the road. We believe language is, above all, a tool for connecting with people. So our curriculum puts communication first — practical Japanese learned through real conversations in markets, in cafés, and out in the city.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. OUR MISSION (dark)
+============================================================ -->
+<section class="ab-section bg-dark" aria-label="Our mission">
+  <div class="ab-wide" style="text-align:center;">
+    <span class="ab-kicker" style="justify-content:center;">Our Mission</span>
+    <p class="ab-mission">Not to teach Japanese —<br><em>but to connect Japan with the world.</em></p>
+    <p class="ab-mission-sub">Through language, we want travelers to truly know Japan's culture and customs — not as spectators, but from the inside.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. OUR PHILOSOPHY
+============================================================ -->
+<section class="ab-section bg-cream" aria-label="Our philosophy">
+  <div class="ab-wide" style="text-align:center;">
+    <span class="ab-kicker" style="justify-content:center;">Our Philosophy</span>
+    <h2 class="ab-h2">Three values we live by</h2>
+    <div class="ab-values">
+      <div class="ab-value">
+        <div class="ab-value-no">01</div>
+        <div class="ab-value-name">Connect<br>with Local</div>
+      </div>
+      <div class="ab-value">
+        <div class="ab-value-no">02</div>
+        <div class="ab-value-name">Learn by<br>Experience</div>
+      </div>
+      <div class="ab-value">
+        <div class="ab-value-no">03</div>
+        <div class="ab-value-name">Travel<br>Together</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. WHY WE ARE DIFFERENT
+============================================================ -->
+<section class="ab-section bg-white" aria-label="Why we are different">
+  <div class="ab-wrap">
+    <span class="ab-kicker">Why We're Different</span>
+    <h2 class="ab-h2">A different idea of <em>learning</em></h2>
+    <div class="ab-compare">
+      <div class="ab-compare-head">
+        <div class="old">Traditional School</div>
+        <div class="new">Chat Japanese</div>
+      </div>
+      <div class="ab-compare-row">
+        <div class="old">Classroom</div>
+        <div class="new ab-compare-col-bg">Café</div>
+      </div>
+      <div class="ab-compare-row">
+        <div class="old">Textbook</div>
+        <div class="new ab-compare-col-bg">Real conversation</div>
+      </div>
+      <div class="ab-compare-row">
+        <div class="old">Grammar</div>
+        <div class="new ab-compare-col-bg">Communication</div>
+      </div>
+      <div class="ab-compare-row">
+        <div class="old">Teacher</div>
+        <div class="new ab-compare-col-bg">Local friend</div>
+      </div>
+      <div class="ab-compare-row">
+        <div class="old">Study</div>
+        <div class="new ab-compare-col-bg">Travel experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. OUR COMMUNITY
+============================================================ -->
+<section class="ab-section bg-cream" aria-label="Our community">
+  <div class="ab-wrap">
+    <span class="ab-kicker">Our Community</span>
+    <h2 class="ab-h2">A community that <em>travels</em></h2>
+
+    <div class="ab-community-block">
+      <p class="ab-route-label">Across Japan</p>
+      <div class="ab-route">
+        <span class="stop">Tokyo</span><span class="arrow">›</span>
+        <span class="stop">Yokohama</span><span class="arrow">›</span>
+        <span class="stop">Kyoto</span><span class="arrow">›</span>
+        <span class="stop">Osaka</span><span class="more">&amp; beyond</span>
+      </div>
+      <p class="ab-p">As you travel, you meet new people in every place you stop, and brush up against culture and language that belong to that region alone — the way people speak in Osaka is worlds apart from Tokyo.</p>
+    </div>
+
+    <div class="ab-community-block">
+      <p class="ab-route-label">Around the world</p>
+      <div class="ab-route">
+        <span class="stop">Japan</span><span class="arrow">›</span>
+        <span class="stop">Korea</span><span class="arrow">›</span>
+        <span class="stop">Thailand</span><span class="more">&amp; more</span>
+      </div>
+      <p class="ab-p">By learning across several countries, you connect deeply with each one and build your own local places everywhere you go.</p>
+      <p class="ab-tadaima">A world full of countries where you can say "tadaima" — I'm home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. LOOKING AHEAD
+============================================================ -->
+<section class="ab-section bg-white" aria-label="Looking ahead">
+  <div class="ab-wrap">
+    <span class="ab-kicker">Looking Ahead</span>
+    <h2 class="ab-h2">Where we're <em>headed</em></h2>
+    <ul class="ab-vision-list">
+      <li>
+        <strong>Expanding across all of Japan</strong>
+        Reaching beyond the big tourist cities to bring our experience everywhere.
+      </li>
+      <li>
+        <strong>Going deeper into Japanese culture</strong>
+        Not just Tokyo, Kyoto and Osaka — pairing language with the old, living culture of Japan's regions, far from the usual tourist trail.
+      </li>
+      <li>
+        <strong>The most memorable school in Japan</strong>
+        To become the place travelers from all over the world remember as the most unforgettable school they found in Japan.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. FOUNDER / BASIC INFO
+============================================================ -->
+<section class="ab-section bg-cream" aria-label="Founder">
+  <div class="ab-wide">
+    <span class="ab-kicker">The Founder</span>
+    <div class="ab-founder">
+      <div class="ab-founder-photo">
+        <!-- FOUNDER PHOTO: add <img src="/about/tai.jpg" alt="Tai, founder of Chat Japanese" /> here when provided -->
+        <span class="ph">Photo</span>
+      </div>
+      <div>
+        <p class="ab-meta-line">Representative</p>
+        <h3 class="ab-founder-name">Tai</h3>
+        <p class="ab-p">Traveling around the world, Tai kept adding to the list of countries where he could say "tadaima" — I'm home. Connecting with locals showed him the food and the culture you can only reach that way, and he wanted to offer that same experience to the travelers who come to Japan. That's why he started this school. Off the clock, you'll find him with a camera, on the road.</p>
+
+        <div class="ab-links">
+          <!-- PHOTO BOOK LINK: replace href when provided -->
+          <a class="ab-link" href="#" target="_blank" rel="noopener">Photography →</a>
+          <!-- INSTAGRAM LINK: replace href when provided -->
+          <a class="ab-link" href="#" target="_blank" rel="noopener">Instagram →</a>
+        </div>
+
+        <p class="ab-founded"><strong>Founded</strong> &nbsp;June 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. CLOSING CTA
+============================================================ -->
+<section class="ab-section tight bg-white" aria-label="Join us">
+  <div class="ab-wrap ab-cta">
+    <h2 class="ab-h2">Come meet Japan <em>with us.</em></h2>
+    <a href="/apply/apply.html" class="ab-cta-btn">Apply Now →</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">
+          <span class="chat">Chat</span><br><span class="japanese">Japanese</span>
+        </div>
+        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences across Japan.</p>
+        <a href="/apply/apply.html" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Apply Now →</a>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="/courses/intensive">Intensive Course</a></li>
+          <li><a href="/courses/1-week">1-Week Course</a></li>
+          <li><a href="/courses/weekend">Weekend Course</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/tour">Tour</a></li>
+          <li><a href="/private-lesson">Private Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="/locations/tokyo">Tokyo</a></li>
+          <li><a href="/locations/yokohama">Yokohama</a></li>
+          <li><a href="/locations/kamakura">Kamakura</a></li>
+          <li><a href="/locations/osaka">Osaka</a></li>
+          <li><a href="/locations/kyoto">Kyoto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/">Home Page</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="mailto:info@sym-arch.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Chat Japanese. All rights reserved.</p>
+      <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>
