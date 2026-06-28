@@ -114,6 +114,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .ab-subhead:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
 
+    /* Story image */
+    .ab-story-img {
+      margin: 2.75rem 0 0.5rem;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 3/2;
+    }
+    .ab-story-img img { width: 100%; height: 100%; object-fit: cover; }
+    .ab-story-cap {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: var(--light);
+      margin: 0.75rem 0 0;
+      text-align: center;
+    }
+
     /* ── Hero ── */
     #ab-hero {
       position: relative;
@@ -199,29 +215,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.8;
     }
 
-    /* ── Philosophy: three values, no boxes ── */
+    /* ── Philosophy: three values with images, no boxes ── */
     .ab-values {
       display: flex;
-      gap: 0;
-      margin-top: 1rem;
+      gap: 1.75rem;
+      margin-top: 2.5rem;
     }
     .ab-value {
       flex: 1;
       text-align: center;
-      padding: 1.5rem 1.5rem;
       position: relative;
     }
-    .ab-value + .ab-value::before {
-      content: '';
-      position: absolute; left: 0; top: 15%; bottom: 15%;
-      width: 1px; background: var(--border);
+    .ab-value-img {
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      margin-bottom: 1.4rem;
     }
+    .ab-value-img img { width: 100%; height: 100%; object-fit: cover; }
     .ab-value-no {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
       font-size: 1.4rem;
       color: var(--brand);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.4rem;
     }
     .ab-value-name {
       font-family: 'Cormorant Garamond', serif;
@@ -420,10 +437,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       #ab-hero { min-height: calc(100svh - var(--header-h) - 110px); }
       .ab-hero-inner { padding-top: 4rem; }
       .ab-section { padding: 4rem 0; }
-      .ab-values { flex-direction: column; gap: 0; }
-      .ab-value { padding: 1.75rem 0; border-top: 1px solid var(--border); }
-      .ab-value:first-child { border-top: none; }
-      .ab-value + .ab-value::before { display: none; }
+      .ab-values { flex-direction: column; gap: 2.25rem; }
+      .ab-value-img { aspect-ratio: 16/10; }
       .ab-founder { grid-template-columns: 1fr; gap: 2rem; }
       .ab-founder-photo { max-width: 320px; }
     }
@@ -581,6 +596,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h3 class="ab-subhead">The trip most travelers never finish</h3>
     <p class="ab-p">So many travelers come all the way to Japan, yet leave without ever touching what the country is really about. How many can walk into a spot the locals love and simply say, in Japanese, "that was delicious"? Speaking a country's language is a quiet form of respect for it. And a single exchange in someone's own words can turn into a connection — and a memory — that lasts a lifetime.</p>
 
+    <figure class="ab-story-img">
+      <img src="/about_us_img.webp" alt="Two travelers chatting with a local shopkeeper in a traditional Japanese store" loading="lazy" />
+    </figure>
+    <p class="ab-story-cap">A real conversation with a local — the moment a trip becomes a connection.</p>
+
     <h3 class="ab-subhead">Where traditional schools fall short</h3>
     <p class="ab-p">Conventional language schools are tied to a fixed campus, and most ask for a minimum enrollment of a month or more. For someone passing through on a trip, that's an enormous barrier to ever getting started.</p>
 
@@ -609,14 +629,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="ab-h2">Three values we live by</h2>
     <div class="ab-values">
       <div class="ab-value">
+        <figure class="ab-value-img"><img src="/cafe_lesson.webp" alt="A relaxed Japanese lesson and conversation with a local in a café" loading="lazy" /></figure>
         <div class="ab-value-no">01</div>
         <div class="ab-value-name">Connect<br>with Local</div>
       </div>
       <div class="ab-value">
+        <figure class="ab-value-img"><img src="/city_walk.webp" alt="Practicing Japanese out in the city on a walk" loading="lazy" /></figure>
         <div class="ab-value-no">02</div>
         <div class="ab-value-name">Learn by<br>Experience</div>
       </div>
       <div class="ab-value">
+        <figure class="ab-value-img"><img src="/family_tour.webp" alt="A small group traveling and learning together" loading="lazy" /></figure>
         <div class="ab-value-no">03</div>
         <div class="ab-value-name">Travel<br>Together</div>
       </div>
@@ -693,39 +716,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- ============================================================
-     7. LOOKING AHEAD
-============================================================ -->
-<section class="ab-section bg-white" aria-label="Looking ahead">
-  <div class="ab-wrap">
-    <span class="ab-kicker">Looking Ahead</span>
-    <h2 class="ab-h2">Where we're <em>headed</em></h2>
-    <ul class="ab-vision-list">
-      <li>
-        <strong>Expanding across all of Japan</strong>
-        Reaching beyond the big tourist cities to bring our experience everywhere.
-      </li>
-      <li>
-        <strong>Going deeper into Japanese culture</strong>
-        Not just Tokyo, Kyoto and Osaka — pairing language with the old, living culture of Japan's regions, far from the usual tourist trail.
-      </li>
-      <li>
-        <strong>The most memorable school in Japan</strong>
-        To become the place travelers from all over the world remember as the most unforgettable school they found in Japan.
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- ============================================================
-     8. FOUNDER / BASIC INFO
+     7. FOUNDER / BASIC INFO
 ============================================================ -->
 <section class="ab-section bg-cream" aria-label="Founder">
   <div class="ab-wide">
     <span class="ab-kicker">The Founder</span>
     <div class="ab-founder">
       <div class="ab-founder-photo">
-        <!-- FOUNDER PHOTO: add <img src="/about/tai.jpg" alt="Tai, founder of Chat Japanese" /> here when provided -->
-        <span class="ph">Photo</span>
+        <img src="/Tai_pic.webp" alt="Tai, founder of Chat Japanese, traveling abroad" loading="lazy" />
       </div>
       <div>
         <p class="ab-meta-line">Representative</p>
@@ -735,8 +733,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="ab-links">
           <!-- PHOTO BOOK LINK: replace href when provided -->
           <a class="ab-link" href="#" target="_blank" rel="noopener">Photography →</a>
-          <!-- INSTAGRAM LINK: replace href when provided -->
-          <a class="ab-link" href="#" target="_blank" rel="noopener">Instagram →</a>
+          <a class="ab-link" href="https://www.instagram.com/tiida_1207" target="_blank" rel="noopener">Instagram&nbsp; @tiida_1207 →</a>
         </div>
 
         <p class="ab-founded"><strong>Founded</strong> &nbsp;June 2026</p>
