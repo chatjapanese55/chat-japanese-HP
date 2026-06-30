@@ -395,7 +395,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="../main.js"></script>
 <script>
   // ── Stripe publishable key (safe to expose) ──
-  const STRIPE_PUBLISHABLE_KEY = 'pk_test_51TmpfkCjjB5LKFeR4KMq33WBROCsivttLDDBts7haQwUbgKtjsQJLZ9JixWkpmkTvMzdq9guXjX7oJogdPuBRMeW00wowibZN7';
+  // LIVE publishable key (production)
+  const STRIPE_PUBLISHABLE_KEY = 'pk_live_51TmpfVEJBeZ3Gx0lIrJsFUqGrQt8f2kW60IWJFrSJutjcroR8KLdISH4Yg1IuDXPRVus1i3rguxOrDDOEq65B11b00nDuFJX6W';
+  // TEST key (sandbox) — kept for reverting: pk_test_51TmpfkCjjB5LKFeR4KMq33WBROCsivttLDDBts7haQwUbgKtjsQJLZ9JixWkpmkTvMzdq9guXjX7oJogdPuBRMeW00wowibZN7
 
   const COURSES = {
     'weekend':       { price: 185, perPerson: true,  maxPeople: 8, label: 'Weekend Course' },

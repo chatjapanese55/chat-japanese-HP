@@ -3,15 +3,27 @@
 // (set it in the Vercel dashboard → Project → Settings → Environment Variables).
 // It is NEVER hard-coded or committed to the repository.
 
+// ── LIVE price IDs (production) ──
 const COURSES = {
-  'weekend':       { price: 'price_1TmpmMCjjB5LKFeRzB9LVVnL', perPerson: true,  maxPeople: 8, label: 'Weekend Course' },
-  '1-week':        { price: 'price_1TmpmPCjjB5LKFeRs90MBmCI', perPerson: true,  maxPeople: 8, label: '1-Week Course' },
-  'intensive':     { price: 'price_1TmpmSCjjB5LKFeRH3WieDVc', perPerson: true,  maxPeople: 8, label: 'Intensive Course' },
-  'tour':          { price: 'price_1TmpmUCjjB5LKFeRv5rNdyYk', perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
-  'private-1day':  { price: 'price_1TmpmXCjjB5LKFeRj0bpl0Ok', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
-  'private-2days': { price: 'price_1TmpmaCjjB5LKFeRJ1Oal0Bz', perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
-  'private-1week': { price: 'price_1TmpmdCjjB5LKFeRBbQXcTzF', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
+  'weekend':       { price: 'price_1TmrtBEJBeZ3Gx0ll04xCDxz', perPerson: true,  maxPeople: 8, label: 'Weekend Course' },
+  '1-week':        { price: 'price_1TmrtBEJBeZ3Gx0liGnUKSmk', perPerson: true,  maxPeople: 8, label: '1-Week Course' },
+  'intensive':     { price: 'price_1TmrtBEJBeZ3Gx0la0tVItiB', perPerson: true,  maxPeople: 8, label: 'Intensive Course' },
+  'tour':          { price: 'price_1TmrtBEJBeZ3Gx0liIVqei9o', perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
+  'private-1day':  { price: 'price_1TmrtBEJBeZ3Gx0lMziznhUs', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
+  'private-2days': { price: 'price_1TmrtBEJBeZ3Gx0ldLyQY4iZ', perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
+  'private-1week': { price: 'price_1TmrtBEJBeZ3Gx0lXBviIxmi', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
 };
+
+// ── TEST price IDs (sandbox) — kept for reverting to test mode ──
+// const COURSES = {
+//   'weekend':       { price: 'price_1TmpmMCjjB5LKFeRzB9LVVnL', perPerson: true,  maxPeople: 8, label: 'Weekend Course' },
+//   '1-week':        { price: 'price_1TmpmPCjjB5LKFeRs90MBmCI', perPerson: true,  maxPeople: 8, label: '1-Week Course' },
+//   'intensive':     { price: 'price_1TmpmSCjjB5LKFeRH3WieDVc', perPerson: true,  maxPeople: 8, label: 'Intensive Course' },
+//   'tour':          { price: 'price_1TmpmUCjjB5LKFeRv5rNdyYk', perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
+//   'private-1day':  { price: 'price_1TmpmXCjjB5LKFeRj0bpl0Ok', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
+//   'private-2days': { price: 'price_1TmpmaCjjB5LKFeRJ1Oal0Bz', perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
+//   'private-1week': { price: 'price_1TmpmdCjjB5LKFeRBbQXcTzF', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
+// };
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
