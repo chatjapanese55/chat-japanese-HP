@@ -40,6 +40,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Stripe.js -->
   <script src="https://js.stripe.com/v3/"></script>
 
+  <!-- Flatpickr — English date picker (independent of browser language) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
   <style>
     :root { --ink: var(--dark); --ink-muted: var(--mid); }
 
@@ -274,7 +278,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="bk-row">
             <div class="bk-field">
               <label for="date">Preferred start date</label>
-              <input type="date" id="date" name="date" />
+              <input type="text" id="date" name="date" placeholder="Select a date" readonly />
             </div>
             <div class="bk-field">
               <label for="location">Location</label>
@@ -460,6 +464,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     peopleEl.addEventListener(ev, recalc);
   });
   recalc();
+
+  // English date picker (independent of the visitor's browser language).
+  // Keeps the submitted value as YYYY-MM-DD for the database.
+  if (window.flatpickr) {
+    flatpickr('#date', {
+      altInput: true,
+      altFormat: 'F j, Y',
+      dateFormat: 'Y-m-d',
+      minDate: 'today',
+      disableMobile: true,
+    });
+  }
 
   function showError(msg) { const e = $('bkError'); e.textContent = msg; e.classList.remove('bk-hidden'); }
   function clearError() { $('bkError').classList.add('bk-hidden'); }

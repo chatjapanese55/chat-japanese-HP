@@ -59,6 +59,7 @@ module.exports = async (req, res) => {
     const params = new URLSearchParams();
     params.append('ui_mode', 'embedded_page');
     params.append('mode', 'payment');
+    params.append('locale', 'en'); // force English checkout regardless of browser language
     params.append('line_items[0][price]', cfg.price);
     params.append('line_items[0][quantity]', String(quantity));
     params.append('return_url', `${origin}/apply/apply.html?paid={CHECKOUT_SESSION_ID}`);
