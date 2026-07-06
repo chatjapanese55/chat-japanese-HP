@@ -334,7 +334,7 @@ a { text-decoration: none; color: inherit; }
   min-height: calc(100svh - var(--header-h));
   margin-top: var(--header-h);
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   overflow: hidden;
 }
 #hero-bg {
