@@ -31,34 +31,8 @@ a { text-decoration: none; color: inherit; }
   --bg-alt:     #ede7de;
   --card:       #f5f0e8;
   --border:     rgba(42,36,32,0.09);
-  --banner-h:   36px;
   --nav-h:      66px;
-  --header-h:   102px;
-}
-
-/* ── Launch campaign banner (fixed, above navbar) ── */
-.campaign-banner {
-  position: fixed;
-  top: var(--nav-h); left: 0; right: 0;
-  z-index: 100;
-  background: var(--brand);
-  color: #fff;
-  text-align: center;
-  padding: 0.55rem 1rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  line-height: 1.35;
-}
-.campaign-banner strong { font-weight: 700; }
-.campaign-banner .tag {
-  background: rgba(255,255,255,0.22);
-  border-radius: 4px;
-  padding: 0.1rem 0.5rem;
-  margin-left: 0.45rem;
-  font-size: 0.72rem;
-  white-space: nowrap;
+  --header-h:   66px;
 }
 
 /* ── Layout ── */

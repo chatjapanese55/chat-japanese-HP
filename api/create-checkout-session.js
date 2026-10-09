@@ -25,6 +25,9 @@ const COURSES = {
 //   'private-1week': { price: 'price_1TmpmdCjjB5LKFeRBbQXcTzF', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
 // };
 
+// Fully booked through January 2027.
+const FIRST_AVAILABLE_DATE = '2027-02-01';
+
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -44,6 +47,11 @@ module.exports = async (req, res) => {
     const cfg = COURSES[course];
     if (!cfg) {
       res.status(400).json({ error: 'Invalid course selected.' });
+      return;
+    }
+
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '') || date < FIRST_AVAILABLE_DATE) {
+      res.status(400).json({ error: 'We are fully booked through January 2027. Please choose a date from February 1, 2027.' });
       return;
     }
 
@@ -70,7 +78,6 @@ module.exports = async (req, res) => {
     params.append('metadata[location]', location || '');
     params.append('metadata[customer_name]', name || '');
     params.append('metadata[customer_phone]', phone || '');
-    // Registration fee ($30) is waived until July 31 — not charged.
 
     const r = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
