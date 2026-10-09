@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/locations/tokyo", "destination": "/courses/1-week", "permanent": true },
+    { "source": "/locations/tokyo/", "destination": "/courses/1-week", "permanent": true },
+    { "source": "/locations/tokyo/index.html", "destination": "/courses/1-week", "permanent": true }
+  ]
+}
