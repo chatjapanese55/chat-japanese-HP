@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book & Pay — Chat Japanese</title>
-  <meta name="description" content="Book your Chat Japanese program — choose your course, date, location and group size, then pay securely. Fully booked through January 2027 — now booking from February 2027." />
+  <meta name="description" content="Book your Chat Japanese program — choose your course, date, location and group size, then pay securely. Fully booked for 2026 — now booking from January 2027." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -177,9 +177,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button onclick="toggleNav('nav-courses')">Courses
             <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
           <div class="nav-dropdown">
-            <a href="/courses/intensive">Intensive Course</a>
             <a href="/courses/1-week">1-Week Course</a>
-            <a href="/courses/weekend">Weekend Course</a>
           </div>
         </li>
         <li class="has-dropdown" id="nav-locations">
@@ -187,10 +185,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg></button>
           <div class="nav-dropdown">
             <a href="/locations/tokyo">Tokyo</a>
-            <a href="/locations/yokohama">Yokohama</a>
-            <a href="/locations/kamakura">Kamakura</a>
-            <a href="/locations/osaka">Osaka</a>
-            <a href="/locations/kyoto">Kyoto</a>
           </div>
         </li>
         <li><a href="/pricing">Pricing</a></li>
@@ -220,9 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">Courses
       <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
     <div class="mobile-sub">
-      <a href="/courses/intensive">Intensive Course</a>
       <a href="/courses/1-week">1-Week Course</a>
-      <a href="/courses/weekend">Weekend Course</a>
     </div>
   </div>
   <div class="mobile-nav-item">
@@ -230,10 +222,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg></button>
     <div class="mobile-sub">
       <a href="/locations/tokyo">Tokyo</a>
-      <a href="/locations/yokohama">Yokohama</a>
-      <a href="/locations/kamakura">Kamakura</a>
-      <a href="/locations/osaka">Osaka</a>
-      <a href="/locations/kyoto">Kyoto</a>
     </div>
   </div>
   <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing">Pricing</a></div>
@@ -263,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <div class="bk-soldout" role="status">
         <span class="bk-soldout-tag">Sold out</span>
-        <p><strong>Fully booked through January 2027.</strong> Bookings are open for start dates from <strong>February 1, 2027</strong> onward.</p>
+        <p><strong>Fully booked through December 2026.</strong> Bookings are open for start dates from <strong>January 1, 2027</strong> onward.</p>
       </div>
 
       <div class="bk-grid">
@@ -273,9 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="bk-field">
             <label for="course">Program</label>
             <select id="course" name="course">
-              <option value="weekend">Weekend Course — $185 / person</option>
               <option value="1-week">1-Week Course — $245 / person</option>
-              <option value="intensive">Intensive Course — $330 / person</option>
               <option value="tour">Friday Bar Hopping Tour — $75 / person</option>
               <option value="private-1day">Private Tour — 1 Day — $250 / group</option>
               <option value="private-2days">Private Tour — 2 Days — $450 / group</option>
@@ -292,7 +278,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <label for="location">Location</label>
               <select id="location" name="location">
                 <option value="Tokyo" selected>Tokyo</option>
-                <option value="Yokohama">Yokohama</option>
               </select>
             </div>
           </div>
@@ -318,10 +303,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="bk-side">
           <div class="bk-summary">
             <h2>Your booking</h2>
-            <div class="bk-line"><span id="sumCourse">Weekend Course</span><span id="sumUnit">$185</span></div>
+            <div class="bk-line"><span id="sumCourse">1-Week Course</span><span id="sumUnit">$245</span></div>
             <div class="bk-line"><span id="sumPeopleLabel">People</span><span id="sumPeople">× 1</span></div>
             <hr class="bk-divider" />
-            <div class="bk-total"><span class="lbl">Total</span><span class="amt" id="sumTotal">$185</span></div>
+            <div class="bk-total"><span class="lbl">Total</span><span class="amt" id="sumTotal">$245</span></div>
 
             <button type="button" class="bk-pay-btn" id="payBtn" style="margin-top:1.5rem;">Proceed to Payment</button>
             <p class="bk-error bk-hidden" id="bkError"></p>
@@ -362,15 +347,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name"><span class="chat">Chat</span><br><span class="japanese">Japanese</span></div>
-        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences across Japan.</p>
+        <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences in Tokyo.</p>
         <a href="/apply/apply.html" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Book Now →</a>
       </div>
       <div class="footer-col">
         <h4>Courses</h4>
         <ul>
-          <li><a href="/courses/intensive">Intensive Course</a></li>
           <li><a href="/courses/1-week">1-Week Course</a></li>
-          <li><a href="/courses/weekend">Weekend Course</a></li>
           <li><a href="/tour">Tour</a></li>
           <li><a href="/private-lesson">Private Tour</a></li>
           <li><a href="/pricing">Pricing</a></li>
@@ -380,10 +363,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h4>Locations</h4>
         <ul>
           <li><a href="/locations/tokyo">Tokyo</a></li>
-          <li><a href="/locations/yokohama">Yokohama</a></li>
-          <li><a href="/locations/kamakura">Kamakura</a></li>
-          <li><a href="/locations/osaka">Osaka</a></li>
-          <li><a href="/locations/kyoto">Kyoto</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -410,17 +389,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   // TEST key (sandbox) — kept for reverting: pk_test_51TmpfkCjjB5LKFeR4KMq33WBROCsivttLDDBts7haQwUbgKtjsQJLZ9JixWkpmkTvMzdq9guXjX7oJogdPuBRMeW00wowibZN7
 
   const COURSES = {
-    'weekend':       { price: 185, perPerson: true,  maxPeople: 8, label: 'Weekend Course' },
     '1-week':        { price: 245, perPerson: true,  maxPeople: 8, label: '1-Week Course' },
-    'intensive':     { price: 330, perPerson: true,  maxPeople: 8, label: 'Intensive Course' },
     'tour':          { price: 75,  perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
     'private-1day':  { price: 250, perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
     'private-2days': { price: 450, perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
     'private-1week': { price: 720, perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
   };
 
-  // Fully booked through January 2027.
-  const FIRST_AVAILABLE_DATE = '2027-02-01';
+  // Fully booked through December 2026.
+  const FIRST_AVAILABLE_DATE = '2027-01-01';
 
   const $ = (id) => document.getElementById(id);
   const courseEl = $('course'), peopleEl = $('people'), dateEl = $('date'),
@@ -494,7 +471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (!nameEl.value.trim()) { showError('Please enter your name.'); nameEl.focus(); return; }
     if (!phoneEl.value.trim()) { showError('Please enter your phone number.'); phoneEl.focus(); return; }
     if (!dateEl.value) { showError('Please choose a preferred start date.'); dateEl.focus(); return; }
-    if (dateEl.value < FIRST_AVAILABLE_DATE) { showError('We are fully booked through January 2027. Please choose a date from February 1, 2027.'); return; }
+    if (dateEl.value < FIRST_AVAILABLE_DATE) { showError('We are fully booked through December 2026. Please choose a date from January 1, 2027.'); return; }
 
     const btn = $('payBtn');
     btn.disabled = true; btn.textContent = 'Loading payment…';

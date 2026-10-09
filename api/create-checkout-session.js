@@ -5,9 +5,7 @@
 
 // ── LIVE price IDs (production) ──
 const COURSES = {
-  'weekend':       { price: 'price_1TmrtBEJBeZ3Gx0ll04xCDxz', perPerson: true,  maxPeople: 8, label: 'Weekend Course' },
   '1-week':        { price: 'price_1TmrtBEJBeZ3Gx0liGnUKSmk', perPerson: true,  maxPeople: 8, label: '1-Week Course' },
-  'intensive':     { price: 'price_1TmrtBEJBeZ3Gx0la0tVItiB', perPerson: true,  maxPeople: 8, label: 'Intensive Course' },
   'tour':          { price: 'price_1TmrtBEJBeZ3Gx0liIVqei9o', perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
   'private-1day':  { price: 'price_1TmrtBEJBeZ3Gx0lMziznhUs', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
   'private-2days': { price: 'price_1TmrtBEJBeZ3Gx0ldLyQY4iZ', perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
@@ -16,17 +14,15 @@ const COURSES = {
 
 // ── TEST price IDs (sandbox) — kept for reverting to test mode ──
 // const COURSES = {
-//   'weekend':       { price: 'price_1TmpmMCjjB5LKFeRzB9LVVnL', perPerson: true,  maxPeople: 8, label: 'Weekend Course' },
 //   '1-week':        { price: 'price_1TmpmPCjjB5LKFeRs90MBmCI', perPerson: true,  maxPeople: 8, label: '1-Week Course' },
-//   'intensive':     { price: 'price_1TmpmSCjjB5LKFeRH3WieDVc', perPerson: true,  maxPeople: 8, label: 'Intensive Course' },
 //   'tour':          { price: 'price_1TmpmUCjjB5LKFeRv5rNdyYk', perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
 //   'private-1day':  { price: 'price_1TmpmXCjjB5LKFeRj0bpl0Ok', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
 //   'private-2days': { price: 'price_1TmpmaCjjB5LKFeRJ1Oal0Bz', perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
 //   'private-1week': { price: 'price_1TmpmdCjjB5LKFeRBbQXcTzF', perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
 // };
 
-// Fully booked through January 2027.
-const FIRST_AVAILABLE_DATE = '2027-02-01';
+// Fully booked through December 2026.
+const FIRST_AVAILABLE_DATE = '2027-01-01';
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
@@ -51,7 +47,7 @@ module.exports = async (req, res) => {
     }
 
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date || '') || date < FIRST_AVAILABLE_DATE) {
-      res.status(400).json({ error: 'We are fully booked through January 2027. Please choose a date from February 1, 2027.' });
+      res.status(400).json({ error: 'We are fully booked through December 2026. Please choose a date from January 1, 2027.' });
       return;
     }
 
