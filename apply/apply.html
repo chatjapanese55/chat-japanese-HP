@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book & Pay — Chat Japanese</title>
-  <meta name="description" content="Book your Chat Japanese program — choose your course, date, location and group size, then pay securely. Registration fee waived until July 31." />
+  <meta name="description" content="Book your Chat Japanese program — choose your course, date, location and group size, then pay securely. Fully booked through January 2027 — now booking from February 2027." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -102,16 +102,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .bk-line { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.55rem 0; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--ink-muted); }
     .bk-line span:last-child { color: var(--ink); font-weight: 500; text-align: right; }
-    .bk-line.free span:last-child { color: #16a34a; font-weight: 700; }
     .bk-divider { border: none; border-top: 1px solid var(--border); margin: 0.5rem 0; }
     .bk-total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 0.75rem; }
     .bk-total .lbl { font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
     .bk-total .amt { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--ink); line-height: 1; }
-    .bk-reg-note {
-      margin-top: 1rem; background: #fff8f0; border: 1px dashed #f99b30; border-radius: 8px;
-      padding: 0.6rem 0.9rem; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: #c47a20; line-height: 1.5;
+    .bk-soldout {
+      display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap;
+      background: #fff8f0; border: 1.5px solid #f9c46a; border-radius: 12px;
+      padding: 1rem 1.25rem; margin: -1rem 0 2.5rem; max-width: 640px;
     }
-    .bk-reg-note strong { color: #f99b30; }
+    .bk-soldout-tag {
+      flex-shrink: 0; background: #c0392b; color: #fff; border-radius: 4px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.7rem;
+    }
+    .bk-soldout p { flex: 1; min-width: 220px; margin: 0; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: #5a4e40; line-height: 1.6; }
+    .bk-soldout strong { color: var(--ink); }
 
     .bk-pay-btn {
       width: 100%; border: none; cursor: pointer;
@@ -207,9 +213,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </nav>
 
-<!-- LAUNCH CAMPAIGN BANNER -->
-<div class="campaign-banner">Launch Campaign: <strong>$30 registration fee waived</strong> until July 31.</div>
-
 <!-- Mobile menu -->
 <div id="mobile-menu">
   <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
@@ -255,7 +258,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="bk-head">
         <span class="bk-kicker">Book &amp; Pay</span>
         <h1>Reserve your <em>place</em></h1>
-        <p>Choose your program, date, location and group size. Your total updates instantly — then pay securely below. The $30 registration fee is waived until July 31.</p>
+        <p>Choose your program, date, location and group size. Your total updates instantly — then pay securely below.</p>
+      </div>
+
+      <div class="bk-soldout" role="status">
+        <span class="bk-soldout-tag">Sold out</span>
+        <p><strong>Fully booked through January 2027.</strong> Bookings are open for start dates from <strong>February 1, 2027</strong> onward.</p>
       </div>
 
       <div class="bk-grid">
@@ -312,10 +320,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h2>Your booking</h2>
             <div class="bk-line"><span id="sumCourse">Weekend Course</span><span id="sumUnit">$185</span></div>
             <div class="bk-line"><span id="sumPeopleLabel">People</span><span id="sumPeople">× 1</span></div>
-            <div class="bk-line free"><span>Registration fee</span><span>FREE</span></div>
             <hr class="bk-divider" />
             <div class="bk-total"><span class="lbl">Total</span><span class="amt" id="sumTotal">$185</span></div>
-            <div class="bk-reg-note"><strong>Registration fee waived</strong> — the usual $30 one-time fee is free until July 31.</div>
 
             <button type="button" class="bk-pay-btn" id="payBtn" style="margin-top:1.5rem;">Proceed to Payment</button>
             <p class="bk-error bk-hidden" id="bkError"></p>
@@ -413,6 +419,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     'private-1week': { price: 720, perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
   };
 
+  // Fully booked through January 2027.
+  const FIRST_AVAILABLE_DATE = '2027-02-01';
+
   const $ = (id) => document.getElementById(id);
   const courseEl = $('course'), peopleEl = $('people'), dateEl = $('date'),
         locationEl = $('location'), nameEl = $('name'), phoneEl = $('phone');
@@ -472,7 +481,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       altInput: true,
       altFormat: 'F j, Y',
       dateFormat: 'Y-m-d',
-      minDate: 'today',
+      minDate: FIRST_AVAILABLE_DATE,
       disableMobile: true,
     });
   }
@@ -485,6 +494,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (!nameEl.value.trim()) { showError('Please enter your name.'); nameEl.focus(); return; }
     if (!phoneEl.value.trim()) { showError('Please enter your phone number.'); phoneEl.focus(); return; }
     if (!dateEl.value) { showError('Please choose a preferred start date.'); dateEl.focus(); return; }
+    if (dateEl.value < FIRST_AVAILABLE_DATE) { showError('We are fully booked through January 2027. Please choose a date from February 1, 2027.'); return; }
 
     const btn = $('payBtn');
     btn.disabled = true; btn.textContent = 'Loading payment…';

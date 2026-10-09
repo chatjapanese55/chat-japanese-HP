@@ -37,18 +37,15 @@ function smoothScroll(e, id) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
-/* ── Campaign banner: measure height so the fixed navbar + heroes offset correctly ── */
+/* ── Measure the fixed navbar so heroes offset correctly ── */
 (function () {
-  const banner = document.querySelector('.campaign-banner');
   const nav = document.getElementById('navbar');
-  if (!banner) return;
+  if (!nav) return;
   const root = document.documentElement;
   const apply = () => {
-    const bh = banner.offsetHeight;
-    const nh = nav ? nav.offsetHeight : 0;
-    root.style.setProperty('--banner-h', bh + 'px');
+    const nh = nav.offsetHeight;
     root.style.setProperty('--nav-h', nh + 'px');
-    root.style.setProperty('--header-h', (bh + nh) + 'px');
+    root.style.setProperty('--header-h', nh + 'px');
   };
   apply();
   window.addEventListener('resize', apply);
