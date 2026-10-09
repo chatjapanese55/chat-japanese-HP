@@ -144,6 +144,7 @@ a { text-decoration: none; color: inherit; }
 }
 .nav-logo-name .chat     { color: var(--brand); }
 .nav-logo-name .japanese { color: var(--brand2); }
+.nav-logo-name .tokyo    { color: var(--dark); margin-left: 0.22em; }
 .nav-logo-sub {
   font-size: 0.5rem;
   letter-spacing: 0.13em;
@@ -237,6 +238,20 @@ a { text-decoration: none; color: inherit; }
   white-space: nowrap;
 }
 .nav-apply:hover { background: #e08820; }
+
+/* Keep logo + Apply + hamburger on one row on phones (logo images carry inline 44px sizes) */
+@media (max-width: 480px) {
+  .nav-logo img, .nav-brand img { width: 36px !important; height: 36px !important; }
+  .nav-logo-name { font-size: 0.95rem; }
+  .nav-apply { padding-left: 0.8rem; padding-right: 0.8rem; }
+}
+@media (max-width: 360px) {
+  .nav-logo img, .nav-brand img { width: 30px !important; height: 30px !important; }
+  .nav-logo-name { font-size: 0.82rem; }
+  .nav-logo-sub { font-size: 0.44rem; }
+  .nav-inner { gap: 0.5rem; }
+  .nav-apply { padding-left: 0.6rem; padding-right: 0.6rem; letter-spacing: 0.05em; }
+}
 
 /* Hamburger */
 .nav-hamburger {
@@ -655,7 +670,7 @@ a { text-decoration: none; color: inherit; }
   gap: 2.5rem;
   margin-bottom: 3rem;
 }
-@media (min-width: 640px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem; } }
+@media (min-width: 640px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; } }
 .footer-brand-name {
   font-family: 'Anton', sans-serif;
   font-size: 1.4rem;
@@ -664,6 +679,7 @@ a { text-decoration: none; color: inherit; }
 }
 .footer-brand-name .chat     { color: var(--brand); }
 .footer-brand-name .japanese { color: var(--brand2); }
+.footer-brand-name .tokyo    { color: #fff; }
 .footer-brand p { font-size: 0.75rem; line-height: 1.65; max-width: 220px; }
 .footer-brand a {
   display: inline-block;

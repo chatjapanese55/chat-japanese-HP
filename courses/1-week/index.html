@@ -30,10 +30,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1-week Course Japanese Course — 2 hours lesson with city tour | Chat Japanese</title>
-  <meta name="description" content="Conversational and Cultural japanese Lessons: Linguistic Connection through conversation-first lessons + Cultural Connection through city tour after class. Absolute beginner to intermediate. $245/week." />
-  <meta name="keywords" content="1-week Japanese course, learn Japanese immersion, Japanese language school Japan, JLPT N5 course, Japanese for travelers" />
-  <meta property="og:title" content="1-Week Japanese Course | Chat Japanese" />
+  <title>1-Week Japanese Course in Tokyo — Café Lessons &amp; City Walks | Chat Japanese Tokyo</title>
+  <meta name="description" content="A 1-week Japanese course in Tokyo: conversation-first café lessons plus city walks through local neighbourhoods like Sangenjaya, Monzen-Nakacho and Kiyosumi-Shirakawa. Absolute beginner to intermediate. $245/week." />
+  <meta name="keywords" content="1-week Japanese course, Japanese school in Tokyo, Japanese lessons for travelers in Tokyo, city walk around Tokyo neighbourhoods, Japanese lessons in non-touristy Tokyo, JLPT N5 course" />
+  <meta property="og:title" content="1-Week Japanese Course in Tokyo | Chat Japanese Tokyo" />
   <meta property="og:description" content="Conversation-first lessons 4 days a week. The fastest path to real Japanese connection." />
   <meta property="og:type" content="website" />
   
@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "description": "Four weekday mornings of conversation-first Japanese lessons in Tokyo cafés, followed by city walks with a local instructor. Designed for travelers who want practical Japanese in a short time.",
     "provider": {
       "@type": "EducationalOrganization",
-      "name": "Chat Japanese",
+      "name": "Chat Japanese Tokyo",
       "url": "https://www.chat-japanese.com"
     },
     "courseMode": "onsite",
@@ -252,6 +252,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       line-height: 1.6;
     }
 
+    /* ── Tokyo neighbourhoods ── */
+    .activities-section {
+      background: #f5f0e8;
+    }
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.25rem;
+    }
+    @media (max-width: 768px) {
+      .activities-grid { grid-template-columns: 1fr; gap: 1rem; }
+    }
+    .activity-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e8e0d4;
+    }
+    .activity-card-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .activity-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .activity-card:hover .activity-card-img img {
+      transform: scale(1.04);
+    }
+    .activity-card-body {
+      padding: 1.25rem;
+    }
+    .activity-card-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: #f99b30;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+    .activity-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #2c2218;
+      margin: 0 0 0.6rem;
+    }
+    .activity-card p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.84rem;
+      color: #5a4e40;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .activities-notice {
+      margin-top: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      background: #fff;
+      border: 1px solid #e8e0d4;
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+    }
+    .activities-notice-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .activities-notice p {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: #5a4e40;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .activities-notice strong { color: #2c2218; font-weight: 500; }
+
     /* ── Field Lessons ── */
     .field-grid {
       display: grid;
@@ -371,10 +453,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="nav-inner">
 
       <a href="/" class="nav-logo">
-        <img src="../../logo-chat-japanese.webp" alt="Chat Japanese logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
+        <img src="../../logo-chat-japanese.webp" alt="Chat Japanese Tokyo logo" width="44" height="44" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />
         <div>
           <div class="nav-logo-name">
-            <span class="chat">Chat</span><span class="japanese">Japanese</span>
+            <span class="chat">Chat</span><span class="japanese">Japanese</span><span class="tokyo">Tokyo</span>
           </div>
           <div class="nav-logo-sub">Japanese School</div>
         </div>
@@ -383,25 +465,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ul class="nav-links">
         <li class="has-dropdown" id="nav-courses">
           <button onclick="toggleNav('nav-courses')">
-            Courses
+            Programs
             <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
           </button>
           <div class="nav-dropdown">
-            <a href="#">1-Week Course</a>
-          </div>
-        </li>
-        <li class="has-dropdown" id="nav-locations">
-          <button onclick="toggleNav('nav-locations')">
-            Locations
-            <svg class="nav-chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
-          </button>
-          <div class="nav-dropdown">
-            <a href="/locations/tokyo">Tokyo</a>
+            <a href="/courses/1-week">1-Week Course</a>
+            <a href="/tour">Bar Hopping Tour</a>
+            <a href="/private-lesson">Private Tour</a>
           </div>
         </li>
         <li><a href="../pricing">Pricing</a></li>
-        <li><a href="../tour">Tour</a></li>
-        <li><a href="/private-lesson">Private Tour</a></li>
         <li class="has-dropdown" id="nav-company">
           <button onclick="toggleNav('nav-company')">
             Company
@@ -430,25 +503,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <button class="mobile-close" onclick="toggleMobileMenu()">✕</button>
   <div class="mobile-nav-item">
     <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
-      Courses
+      Programs
       <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
     </button>
     <div class="mobile-sub">
-      <a href="#">1-Week Course</a>
-    </div>
-  </div>
-  <div class="mobile-nav-item">
-    <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
-      Locations
-      <svg width="16" height="16" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 1l4 4 4-4"/></svg>
-    </button>
-    <div class="mobile-sub">
-      <a href="/locations/tokyo">Tokyo</a>
+      <a href="/courses/1-week">1-Week Course</a>
+      <a href="/tour">Bar Hopping Tour</a>
+      <a href="/private-lesson">Private Tour</a>
     </div>
   </div>
   <div class="mobile-nav-item"><a class="mobile-nav-link" href="../pricing">Pricing</a></div>
-  <div class="mobile-nav-item"><a class="mobile-nav-link" href="../tour">Tour</a></div>
-  <div class="mobile-nav-item"><a class="mobile-nav-link" href="/private-lesson">Private Tour</a></div>
   <div class="mobile-nav-item">
     <button class="mobile-nav-toggle" onclick="toggleMobileSub(this)">
       Company
@@ -562,6 +626,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- TOKYO NEIGHBOURHOODS -->
+<section class="course-section activities-section">
+  <div class="container">
+    <p class="c-label">Our Classroom</p>
+    <h2 class="c-title">Our classroom is the town itself.</h2>
+    <p class="c-body">Visit quiet, local spots full of history and nature. See the real Tokyo, far away from the busy tourist crowds.</p>
+    <div class="activities-grid">
+
+      <!-- Sancha -->
+      <div class="activity-card fade-up">
+        <div class="activity-card-img">
+          <img
+            src="/courses/1-week/sangenjaya.jpg"
+            alt="Scenery in Sangenjaya"
+            loading="lazy"
+          />
+        </div>
+        <div class="activity-card-body">
+          <div class="activity-card-num">Neighbourhood 01</div>
+          <h3>Sangenjaya　三軒茶屋</h3>
+          <p>Sangenjaya is a local favorite known for its friendly vibe and beautiful spots like Setagaya Park. It’s the perfect place to chat while walking through the greenery or enjoying a famous Imagawayaki sweet from a local shop.</p>
+        </div>
+      </div>
+
+      <!-- Monnaka -->
+      <div class="activity-card fade-up" style="transition-delay:0.1s">
+        <div class="activity-card-img">
+          <img
+            src="/courses/1-week/monnaka.jpg"
+            alt="Scenery in Monzen-nakacho"
+            loading="lazy"
+          />
+        </div>
+        <div class="activity-card-body">
+          <div class="activity-card-num">Neighbourhood 02</div>
+          <h3>Monzenn-Nakacho　門前仲町</h3>
+          <p>Monzen-Nakacho is a historic district home to famous shrines and a warm, traditional atmosphere. Its calm streets and local charm make it the perfect, stress-free place to practice Japanese.</p>
+        </div>
+      </div>
+
+      <!-- Kiyosumi -->
+      <div class="activity-card fade-up" style="transition-delay:0.2s">
+        <div class="activity-card-img">
+          <img
+            src="/courses/1-week/kiyosumi.jpg"
+            alt="Scenery in Kiyosumishirakawa"
+            loading="lazy"
+          />
+        </div>
+        <div class="activity-card-body">
+          <div class="activity-card-num">Neighbourhood 03</div>
+          <h3>Kiyosumi-Shirakawa　清澄白河</h3>
+          <p>Kiyosumi-Shirakawa is a peaceful area where old history meets modern coffee culture. You can walk through the beautiful Kiyosumi Garden and then enjoy a great cup of coffee at a local cafe.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="activities-notice">
+      <p><strong>Our Method; Dynamic Classroom for the further understanding of Tokyo.</strong> Tokyo is the largest city in the world and there are too many places to visit. We change our location every single day so that you can see the other side of Tokyo where normal tourist would never see.</p>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <!-- ============================================================
      WHAT IS CHAT JAPANESE
@@ -654,24 +781,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-brand-name">
-          <span class="chat">Chat</span><br><span class="japanese">Japanese</span>
+          <span class="chat">Chat</span><br><span class="japanese">Japanese</span><br><span class="tokyo">Tokyo</span>
         </div>
         <p>A language school built for travelers. Learn Japanese through café lessons, city walks, and authentic cultural experiences in Tokyo.</p>
         <a href="../apply/apply.html" class="btn-primary" style="font-size:0.62rem;margin-top:1.25rem;">Apply Now →</a>
       </div>
       <div class="footer-col">
-        <h4>Courses</h4>
+        <h4>Programs</h4>
         <ul>
           <li><a href="/courses/1-week">1-Week Course</a></li>
-          <li><a href="../pricing">Pricing</a></li>
-          <li><a href="../tour">Tour</a></li>
+          <li><a href="/tour">Bar Hopping Tour</a></li>
           <li><a href="/private-lesson">Private Tour</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Locations</h4>
-        <ul>
-          <li><a href="/locations/tokyo">Tokyo</a></li>
+          <li><a href="/pricing">Pricing</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -684,7 +805,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Chat Japanese. All rights reserved.</p>
+      <p>© 2026 Chat Japanese Tokyo. All rights reserved.</p>
       <a href="https://www.instagram.com/chat_community.japan" target="_blank" rel="noopener" class="footer-insta">@chat_community.japan</a>
     </div>
   </div>
