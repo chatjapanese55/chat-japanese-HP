@@ -179,7 +179,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="nav-dropdown">
             <a href="/courses/1-week">1-Week Course</a>
             <a href="/tour">Bar Hopping Tour</a>
-            <a href="/private-lesson">Private Tour</a>
           </div>
         </li>
         <li><a href="/pricing">Pricing</a></li>
@@ -209,7 +208,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="mobile-sub">
       <a href="/courses/1-week">1-Week Course</a>
       <a href="/tour">Bar Hopping Tour</a>
-      <a href="/private-lesson">Private Tour</a>
     </div>
   </div>
   <div class="mobile-nav-item"><a class="mobile-nav-link" href="/pricing">Pricing</a></div>
@@ -249,9 +247,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <select id="course" name="course">
               <option value="1-week">1-Week Course — $245 / person</option>
               <option value="tour">Friday Bar Hopping Tour — $75 / person</option>
-              <option value="private-1day">Private Tour — 1 Day — $250 / group</option>
-              <option value="private-2days">Private Tour — 2 Days — $450 / group</option>
-              <option value="private-1week">Private Tour — 1 Week — $720 / group</option>
             </select>
           </div>
 
@@ -298,7 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="bk-error bk-hidden" id="bkError"></p>
           </div>
 
-          <!-- Contact-required notice (private > 5, or group > max) -->
+          <!-- Contact-required notice (group > max) -->
           <div class="bk-contact bk-hidden" id="contactBox">
             <strong>Planning for a larger group?</strong><br>
             For groups beyond this size, we arrange your program individually. Please contact us and we'll take care of the details.<br>
@@ -341,7 +336,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <ul>
           <li><a href="/courses/1-week">1-Week Course</a></li>
           <li><a href="/tour">Bar Hopping Tour</a></li>
-          <li><a href="/private-lesson">Private Tour</a></li>
           <li><a href="/pricing">Pricing</a></li>
         </ul>
       </div>
@@ -371,9 +365,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   const COURSES = {
     '1-week':        { price: 245, perPerson: true,  maxPeople: 8, label: '1-Week Course' },
     'tour':          { price: 75,  perPerson: true,  maxPeople: 8, label: 'Friday Bar Hopping Tour' },
-    'private-1day':  { price: 250, perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Day' },
-    'private-2days': { price: 450, perPerson: false, maxPeople: 5, label: 'Private Tour — 2 Days' },
-    'private-1week': { price: 720, perPerson: false, maxPeople: 5, label: 'Private Tour — 1 Week' },
   };
 
   // Fully booked through December 2026.
